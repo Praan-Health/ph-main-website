@@ -1,5 +1,6 @@
 import { Button } from '../components/Button'
 import { HEALTH_PASS, SPECIALITIES } from '../content/site'
+import { asset } from '../lib/asset'
 
 export function Clinics() {
   return (
@@ -22,7 +23,7 @@ export function Clinics() {
           </div>
           <img
             className="clinics__photo"
-            src="/assets/6a6acab5e27bb0574e45713d_header-image.jpg"
+            src={asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg')}
             alt="A Praan clinic consultation room"
             width="720"
             height="480"

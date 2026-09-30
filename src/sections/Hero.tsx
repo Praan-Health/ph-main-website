@@ -1,6 +1,7 @@
 import { Button } from '../components/Button'
 import { CAL_URL, HERO_CONDITIONS } from '../content/site'
 import { useTypewriter } from '../hooks/useTypewriter'
+import { asset } from '../lib/asset'
 
 export function Hero() {
   const typed = useTypewriter(HERO_CONDITIONS)
@@ -26,14 +27,14 @@ export function Hero() {
         <div className="hero__media">
           <img
             className="hero__photo"
-            src="/assets/6a0b0af0686e8aac45bd1234_daddi.webp"
+            src={asset('/assets/6a0b0af0686e8aac45bd1234_daddi.webp')}
             alt="A smiling older woman in a sari"
             width="986"
             height="1316"
             fetchPriority="high"
           />
-          <img className="hero__chip hero__chip--hba1c" src="/assets/ui/Bubble-1.webp" alt="HbA1c 6.2%, improving" width="180" height="180" />
-          <img className="hero__chip hero__chip--steps" src="/assets/ui/Bubble-2.webp" alt="7,328 steps today" width="140" height="140" />
+          <img className="hero__chip hero__chip--hba1c" src={asset('/assets/ui/Bubble-1.webp')} alt="HbA1c 6.2%, improving" width="180" height="180" />
+          <img className="hero__chip hero__chip--steps" src={asset('/assets/ui/Bubble-2.webp')} alt="7,328 steps today" width="140" height="140" />
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { Button } from '../components/Button'
 import { CAL_URL, CARE_TEAM, NUMBERS, PROTOCOL_DELIVERY } from '../content/site'
+import { asset } from '../lib/asset'
 
 export function Protocols() {
   return (
@@ -23,7 +24,7 @@ export function Protocols() {
           <article className="card team-card">
             <h3>Your care team</h3>
             <div className="team-card__center">
-              <img src="/assets/team/Dr.-Rachit-Gulati.png" alt="Dr. Rachit Gulati" width="160" height="160" loading="lazy" />
+              <img src={asset('/assets/team/Dr.-Rachit-Gulati.png')} alt="Dr. Rachit Gulati" width="160" height="160" loading="lazy" />
               <div>
                 <strong>Doctor</strong>
                 <span>At the centre of your protocol</span>

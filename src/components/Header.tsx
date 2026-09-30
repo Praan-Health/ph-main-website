@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CAL_URL, HEADER_LINKS } from '../content/site'
 import { Button } from './Button'
+import { asset } from '../lib/asset'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -9,7 +10,7 @@ export function Header() {
     <header className="header">
       <div className="container header__bar">
         <a href="#top" className="header__logo" aria-label="Praan Health home">
-          <img src="/assets/logo.svg" alt="Praan Health" width="98" height="36" />
+          <img src={asset('/assets/logo.svg')} alt="Praan Health" width="98" height="36" />
         </a>
         <nav className={`nav ${open ? 'is-open' : ''}`} aria-label="Primary">
           {HEADER_LINKS.map((link) => (

@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 // All homepage copy lives here so it can be edited without touching layout code.
 // Items marked TODO are placeholders that need real content/assets.
 
@@ -29,19 +31,19 @@ export const PILLARS = [
     id: 'protocols',
     title: 'Protocols',
     body: 'Doctor-led, at-home and online 1:1 strength training and rehabilitation.',
-    image: '/assets/ui/Card.webp',
+    image: asset('/assets/ui/Card.webp'),
   },
   {
     id: 'clinics',
     title: 'Clinics',
     body: 'Non-surgical treatment for lasting relief from chronic pain.',
-    image: '/assets/6a0b0af0686e8aac45bd1234_daddi.webp',
+    image: asset('/assets/6a0b0af0686e8aac45bd1234_daddi.webp'),
   },
   {
     id: 'nutrition',
     title: 'Nutrition',
     body: 'Everyday nutrition that supports active ageing.',
-    image: '/assets/ui/Card-2.webp',
+    image: asset('/assets/ui/Card-2.webp'),
   },
 ] as const
 

@@ -1,12 +1,13 @@
 import { CAL_URL, NAV_LINKS } from '../content/site'
 import { Button } from './Button'
+import { asset } from '../lib/asset'
 
 export function Footer() {
   return (
     <footer className="footer" id="about">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <img src="/assets/logo-white.svg" alt="Praan Health" width="130" height="48" />
+          <img src={asset('/assets/logo-white.svg')} alt="Praan Health" width="130" height="48" />
           <p>Chronic care for ageing parents — even from far away.</p>
           <Button href={CAL_URL} variant="inverse">
             Talk to an advisor
