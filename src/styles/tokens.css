@@ -1,0 +1,100 @@
+/* Praan Health — design tokens. Source of truth: docs/DESIGN_SYSTEM.md */
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-Italic.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Brand */
+  --orange: #fd7118;
+  --orange-hover: #f06b17;
+  --orange-soft: #fe9c5d;
+  --blue: #303880;
+  --blue-deep: #171a3a;
+  --linen: #f6e9e0;
+  --white: #ffffff;
+  --teal: #63c5b8;
+  --charcoal: #1a1a1a;
+
+  /* Tints & neutrals */
+  --orange-50: #fff1e8;
+  --orange-100: #ffe7d6;
+  --orange-200: #fed7aa;
+  --teal-50: #e9f6f2;
+  --ink: #303880; /* headings */
+  --ink-body: #4a4f63; /* body copy */
+  --line: #e2e0e6;
+  --line-on-dark: rgb(255 255 255 / 0.2);
+
+  /* Type */
+  --font-sans: 'Aeonik', 'Helvetica Neue', Arial, sans-serif;
+  --font-accent: 'Libre Baskerville', Georgia, serif;
+
+  --fs-display: clamp(2.75rem, 1.6rem + 5.4vw, 5.25rem);
+  --fs-h1: clamp(2.25rem, 1.5rem + 3.4vw, 4rem);
+  --fs-h2: clamp(1.875rem, 1.3rem + 2.4vw, 2.75rem);
+  --fs-h3: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+  --fs-h4: 1.125rem;
+  --fs-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.75rem;
+
+  --tracking-heading: -0.03em;
+  --tracking-body: -0.01em;
+  --tracking-eyebrow: 0.08em;
+
+  /* Space (fluid) */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --section-y: clamp(4rem, 2.5rem + 6vw, 7.5rem);
+  --gutter: clamp(1.25rem, 0.5rem + 4vw, 4.5rem);
+  --max-w: 70.375rem; /* side margin = steps bubble centre, ~157px at 1440 */
+
+  /* Shape */
+  --r-sm: 0.5rem;
+  --r-md: 1rem;
+  --r-lg: 1.75rem;
+  --r-pill: 100vw;
+
+  /* Elevation — near flat */
+  --shadow-soft: 0 2px 14px rgb(20 20 43 / 0.07);
+  --shadow-offset: 0 3px 0 var(--orange-200);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 240ms;
+}

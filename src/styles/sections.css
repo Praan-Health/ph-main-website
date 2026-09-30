@@ -1,0 +1,88 @@
+/* Hero */
+.hero { padding-block: clamp(1.25rem, 0.75rem + 1.5vw, 2rem) 0; background: var(--white) url('/assets/6a017e2ca38f1875af2739c3_home-hero-gradient.webp') right bottom / cover no-repeat; overflow: hidden; }
+.hero__grid { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
+.hero__copy { display: grid; gap: var(--space-4); justify-items: start; }
+.hero__eyebrow { margin-bottom: -0.625rem; }
+.hero__title { font-size: clamp(2.125rem, 1.25rem + 3.3vw, 3.625rem); line-height: 1.2; }
+.hero__sub { max-width: 34rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
+/* Typed condition in the eyebrow, with a blinking caret. */
+.hero__typed::after { content: ''; display: inline-block; width: 2px; height: 0.95em; margin-left: 2px; vertical-align: -0.12em; background: currentColor; animation: caret 1s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .hero__typed::after { display: none; } }
+.hero__media { position: relative; align-self: end; justify-self: center; width: min(100%, 26rem); }
+.hero__photo { width: 100%; height: auto; }
+.hero__chip { position: absolute; z-index: 2; height: auto; filter: drop-shadow(0 12px 24px rgb(48 56 128 / 0.18)); animation: float 6s ease-in-out infinite; will-change: transform; }
+.hero__chip--hba1c { width: 48%; left: -25%; top: 26%; }
+.hero__chip--steps { width: 40%; left: 55%; top: 3%; animation-duration: 7.5s; animation-delay: -2.5s; }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(2deg); } }
+@media (prefers-reduced-motion: reduce) { .hero__chip { animation: none; } }
+
+@media (min-width: 900px) {
+  /* Fill the first screen under the sticky header. */
+  .hero { position: relative; display: flex; align-items: center; min-height: max(36rem, calc(100svh - 5.5rem)); }
+  .hero__grid { width: 100%; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+  .hero__copy { padding-bottom: 1rem; }
+  /* Image is 1:1.335. Sit on the bottom edge, but never let her head crop off the top. */
+  .hero__media { --photo-w: min(39vw, 38rem); position: absolute; top: max(1.5rem, calc(100% - var(--photo-w) * 1.335)); right: 1vw; width: var(--photo-w); margin: 0; }
+}
+
+/* Pillars */
+.pillars { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.pillar { display: grid; gap: var(--space-2); height: 100%; padding: var(--space-3); border-radius: var(--r-lg); background: var(--white); transition: transform var(--dur) var(--ease); }
+.pillar:hover { transform: translateY(-4px); }
+.pillar__media { overflow: hidden; aspect-ratio: 4 / 3; border-radius: var(--r-md); background: var(--orange-50); }
+.pillar__media img { width: 100%; height: 100%; object-fit: cover; }
+.pillar h3, .pillar p, .pillar__more { padding-inline: var(--space-2); }
+.pillar h3 { margin-top: var(--space-2); }
+.pillar__more { color: var(--orange); font-weight: 500; padding-bottom: var(--space-2); }
+
+/* Protocols */
+.protocol-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 900px) { .protocol-grid { grid-template-columns: 1fr 1fr; } }
+.team-card, .delivery-card { display: grid; gap: var(--space-4); align-content: start; }
+.team-card__center { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); border-radius: var(--r-md); background: var(--white); }
+.team-card__center img { width: 6rem; height: 6rem; border-radius: 50%; object-fit: cover; object-position: top; background: var(--orange-100); }
+.team-card__center div { display: grid; }
+.team-card__center strong { font-size: 1.25rem; font-weight: 500; color: var(--blue); }
+.delivery { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.delivery li { display: grid; gap: 0.25rem; padding: var(--space-3); border-radius: var(--r-md); background: var(--white); }
+.delivery__value { font-size: var(--fs-h2); font-weight: 400; letter-spacing: var(--tracking-heading); line-height: 1; color: var(--orange); }
+
+.numbers { margin-top: var(--space-6); padding: var(--space-5); border-radius: var(--r-lg); background: var(--blue); color: rgb(255 255 255 / 0.8); }
+.numbers__title { color: var(--white); margin-bottom: var(--space-4); }
+.numbers ul { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
+.numbers li { display: grid; gap: 0.25rem; }
+.numbers__value { font-size: var(--fs-h1); letter-spacing: var(--tracking-heading); line-height: 1; color: var(--white); }
+
+/* Clinics */
+.clinics__intro { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .clinics__intro { grid-template-columns: 1.1fr 0.9fr; } }
+.clinics__intro .section-head { margin-bottom: 0; }
+.clinics__photo { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-lg); }
+.specialities { display: grid; gap: var(--space-3); margin-top: var(--space-6); }
+
+.pass { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-5); margin-top: var(--space-6); padding: var(--space-5); border-radius: var(--r-lg); background: var(--linen); color: var(--ink-body); }
+.pass h3 { color: var(--blue); margin-block: var(--space-2) var(--space-3); }
+.pass h3 s { opacity: 0.5; font-weight: 400; }
+.pass__list { display: grid; gap: var(--space-1); }
+.pass__list li { position: relative; padding-left: 1.5rem; }
+.pass__list li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--orange); }
+
+/* Nutrition — full-width contrast banner */
+.nutrition { padding-block: var(--section-y); background: linear-gradient(115deg, var(--orange-hover), var(--orange-soft)); color: var(--white); }
+.nutrition h2, .nutrition h3 { color: var(--white); }
+.nutrition__grid { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .nutrition__grid { grid-template-columns: 0.9fr 1.1fr; } }
+.nutrition__copy { display: grid; gap: var(--space-3); justify-items: start; }
+.nutrition .eyebrow, .nutrition .accent { color: var(--white); }
+.products { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.product { display: grid; gap: var(--space-2); justify-items: start; padding: var(--space-3); border-radius: var(--r-lg); background: rgb(255 255 255 / 0.14); border: 1px solid var(--line-on-dark); }
+.product__shot { width: 100%; aspect-ratio: 1; border-radius: var(--r-md); background: rgb(255 255 255 / 0.22); }
+.product .btn { margin-top: var(--space-1); }
+
+/* Daily movement */
+.movement { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .movement { grid-template-columns: 0.9fr 1.1fr; } }
+.movement__media { aspect-ratio: 4 / 3; border-radius: var(--r-lg); background: var(--orange-100); }
+.movement__copy { display: grid; gap: var(--space-3); justify-items: start; }
