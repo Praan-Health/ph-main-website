@@ -1,5 +1,5 @@
 import { Button } from '../components/Button'
-import { CAL_URL, HEALTH_PASS, SPECIALITIES } from '../content/site'
+import { SPECIALITIES } from '../content/site'
 import { asset } from '../lib/asset'
 
 export function Clinics() {
@@ -12,12 +12,10 @@ export function Clinics() {
             <h2 id="clinics-title">
               Non-surgical treatment for <span className="accent">lasting</span> relief from chronic pain
             </h2>
+            <p className="clinics__specialities">{SPECIALITIES.join(' · ')}</p>
             <div className="row">
               <Button href={asset('/clinics/')} variant="inverse">
                 Book an appointment
-              </Button>
-              <Button href={asset('/clinics/')} variant="ghost">
-                How we can help you
               </Button>
             </div>
           </div>
@@ -30,30 +28,6 @@ export function Clinics() {
             loading="lazy"
           />
         </div>
-
-        <div className="specialities">
-          <h3>Our speciality</h3>
-          <ul className="chips chips--dark">
-            {SPECIALITIES.map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ul>
-        </div>
-
-        <aside className="pass" id="health-pass" aria-labelledby="pass-title">
-          <div>
-            <span className="eyebrow">Health Pass</span>
-            <h3 id="pass-title">
-              Everything you need to start — for <strong>{HEALTH_PASS.price}</strong> <s>{HEALTH_PASS.was}</s>
-            </h3>
-            <ul className="pass__list">
-              {HEALTH_PASS.benefits.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
-          </div>
-          <Button href={CAL_URL}>Book Free Consultation</Button>
-        </aside>
       </div>
     </section>
   )

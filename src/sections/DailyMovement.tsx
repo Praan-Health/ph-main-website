@@ -1,11 +1,18 @@
 import { Button } from '../components/Button'
+import { asset } from '../lib/asset'
 
 export function DailyMovement() {
   return (
-    <section className="section section--linen" id="movement" aria-labelledby="movement-title">
+    <section className="section section--linen section--flush-bottom" id="movement" aria-labelledby="movement-title">
       <div className="container movement">
-        {/* TODO: replace with the Daily Movement / Navneeth imagery */}
-        <div className="movement__media" role="img" aria-label="Daily movement with Navneeth — image coming soon" />
+        <img
+          className="movement__media"
+          src={asset('/assets/daily-movement.webp')}
+          alt="Navneeth with two members of the community, arms crossed and smiling"
+          width="1454"
+          height="963"
+          loading="lazy"
+        />
         <div className="movement__copy">
           <span className="eyebrow">Daily movement</span>
           <h2 id="movement-title">

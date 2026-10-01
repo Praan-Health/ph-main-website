@@ -9,7 +9,7 @@ export function Protocols() {
     <section className="section section--linen" id="protocols" aria-labelledby="protocols-title">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">Protocols</span>
+          <span className="eyebrow">Personalised Care Protocols</span>
           <h2 id="protocols-title">
             Doctor-led, <span className="accent">comprehensive</span> protocols
           </h2>

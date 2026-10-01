@@ -24,6 +24,7 @@ export default defineConfig({
         main: fromRoot('./index.html'),
         protocols: fromRoot('./protocols/index.html'),
         clinics: fromRoot('./clinics/index.html'),
+        about: fromRoot('./about/index.html'),
       },
     },
   },

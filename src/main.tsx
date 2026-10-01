@@ -5,6 +5,7 @@ import './styles/base.css'
 import './styles/components.css'
 import './styles/sections.css'
 import './styles/careteam.css'
+import './styles/helpstack.css'
 import App from './App'
 
 createRoot(document.getElementById('root')!).render(

@@ -4,7 +4,7 @@ const LIVE_SITE = "https://praan.health";
 const BASE = import.meta.env.BASE_URL;
 
 /** Pages built in this project; every other internal route still lives on the live site. */
-const LOCAL_ROUTES: Record<string, string> = { "/": BASE, "/protocols": `${BASE}protocols/`, "/clinics": `${BASE}clinics/` };
+const LOCAL_ROUTES: Record<string, string> = { "/": BASE, "/protocols": `${BASE}protocols/`, "/clinics": `${BASE}clinics/`, "/about": `${BASE}about/` };
 
 export function resolveHref(href: string): string {
   if (!href.startsWith("/") || href.startsWith("//")) return href;
