@@ -27,16 +27,6 @@
   .hero__media { --photo-w: min(39vw, 38rem); position: absolute; top: max(1.5rem, calc(100% - var(--photo-w) * 1.335)); right: 1vw; width: var(--photo-w); margin: 0; }
 }
 
-/* Pillars */
-.pillars { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
-.pillar { display: grid; gap: var(--space-2); height: 100%; padding: var(--space-3); border-radius: var(--r-lg); background: var(--linen); transition: transform var(--dur) var(--ease); }
-.pillar:hover { transform: translateY(-4px); }
-.pillar__media { overflow: hidden; aspect-ratio: 4 / 3; border-radius: var(--r-md); background: var(--orange-50); }
-.pillar__media img { width: 100%; height: 100%; object-fit: cover; }
-.pillar h3, .pillar p, .pillar__more { padding-inline: var(--space-2); }
-.pillar h3 { margin-top: var(--space-2); }
-.pillar__more { color: var(--orange); font-weight: 500; padding-bottom: var(--space-2); }
-
 /* Protocols — layout, care-team diagram and checklist live in careteam.css */
 .numbers { margin-top: var(--space-6); padding: var(--space-5); border-radius: var(--r-lg); background: var(--blue); color: rgb(255 255 255 / 0.8); }
 .numbers__title { color: var(--white); margin-bottom: var(--space-4); }
@@ -49,30 +39,30 @@
 @media (min-width: 900px) { .clinics__intro { grid-template-columns: 1.1fr 0.9fr; } }
 .clinics__intro .section-head { margin-bottom: 0; }
 .clinics__photo { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-lg); }
-.specialities { display: grid; gap: var(--space-3); margin-top: var(--space-6); }
+.clinics__specialities { font-size: var(--fs-small); line-height: 1.5; color: rgb(255 255 255 / 0.85); }
 
-.pass { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-5); margin-top: var(--space-6); padding: var(--space-5); border-radius: var(--r-lg); background: var(--linen); color: var(--ink-body); }
-.pass h3 { color: var(--blue); margin-block: var(--space-2) var(--space-3); }
-.pass h3 s { opacity: 0.5; font-weight: 400; }
-.pass__list { display: grid; gap: var(--space-1); }
-.pass__list li { position: relative; padding-left: 1.5rem; }
-.pass__list li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--orange); }
-
-/* Nutrition — full-width contrast banner */
-.nutrition { padding-block: var(--section-y); background: linear-gradient(115deg, var(--orange-hover), var(--orange-soft)); color: var(--white); }
-.nutrition h2, .nutrition h3 { color: var(--white); }
-.nutrition__grid { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .nutrition__grid { grid-template-columns: 0.9fr 1.1fr; } }
-.nutrition__copy { display: grid; gap: var(--space-3); justify-items: start; }
+/* Nutrition — full-width product photo; the photo already carries the product details. */
+.nutrition {
+  display: flex;
+  align-items: center;
+  min-height: clamp(28rem, 43vw, 40rem);
+  padding-block: var(--section-y);
+  background: linear-gradient(90deg, rgb(110 45 15 / 0.35), transparent 55%), url('/assets/nutrition-bg.webp') right center / cover no-repeat, #c67649;
+  color: var(--white);
+}
+.nutrition h2 { color: var(--white); }
 .nutrition .eyebrow, .nutrition .accent { color: var(--white); }
-.products { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
-.product { display: grid; gap: var(--space-2); justify-items: start; padding: var(--space-3); border-radius: var(--r-lg); background: rgb(255 255 255 / 0.14); border: 1px solid var(--line-on-dark); }
-.product__shot { width: 100%; aspect-ratio: 1; border-radius: var(--r-md); background: rgb(255 255 255 / 0.22); }
-.product .btn { margin-top: var(--space-1); }
-.product__meta { font-weight: 500; opacity: 0.95; }
+.nutrition__inner { width: 100%; }
+.nutrition__copy { display: grid; gap: var(--space-3); justify-items: start; max-width: 28rem; }
+@media (max-width: 720px) {
+  /* Text on top, products showing underneath. */
+  .nutrition { align-items: flex-start; padding-bottom: 72vw; background-size: auto 72vw; background-position: 86% 100%; background-color: #c67649; }
+}
 
 /* Daily movement */
-.movement { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .movement { grid-template-columns: 0.9fr 1.1fr; } }
-.movement__media { aspect-ratio: 4 / 3; border-radius: var(--r-lg); background: var(--orange-100); }
-.movement__copy { display: grid; gap: var(--space-3); justify-items: start; }
+.section--flush-bottom { padding-bottom: 0; }
+.movement { display: grid; gap: var(--space-6); align-items: end; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .movement { grid-template-columns: 1.15fr 0.85fr; } }
+.movement__media { display: block; width: 100%; max-width: 40rem; height: auto; justify-self: center; }
+.movement__copy { display: grid; gap: var(--space-3); justify-items: start; align-self: center; padding-bottom: var(--section-y); }
+@media (max-width: 899px) { .movement__copy { order: -1; padding-bottom: 0; } }

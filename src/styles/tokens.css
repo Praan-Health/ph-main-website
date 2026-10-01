@@ -55,7 +55,7 @@
   --line-on-dark: rgb(255 255 255 / 0.2);
 
   /* Type */
-  --font-sans: 'Aeonik', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans: 'Anek Latin', 'Helvetica Neue', Arial, sans-serif; /* was 'Aeonik' */
   --font-accent: 'Libre Baskerville', Georgia, serif;
 
   --fs-display: clamp(2.75rem, 1.6rem + 5.4vw, 5.25rem);

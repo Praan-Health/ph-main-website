@@ -1,0 +1,77 @@
+/* "How Praan Health helps you": heading + tabs on the left, a perspective card stack on the right. */
+
+.help { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
+.help__side { display: grid; gap: var(--space-5); }
+.help__intro { margin-bottom: 0; }
+@media (min-width: 900px) { .help { grid-template-columns: 0.9fr 1.1fr; } }
+
+/* Tabs with a progress bar on the active one */
+.help__tabs { display: grid; gap: var(--space-2); max-width: 22rem; }
+.help__tab { display: grid; gap: 0.5rem; padding: 0.5rem 0; border: 0; background: none; text-align: left; cursor: pointer; color: var(--ink-body); opacity: 0.55; transition: opacity var(--dur) var(--ease); }
+.help__tab:hover, .help__tab.is-active { opacity: 1; }
+.help__tab-label { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.02em; color: var(--blue); }
+.help__tab-track { height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.help__tab-fill { display: block; height: 100%; background: var(--orange); transform-origin: 0 50%; animation: help-progress 4.5s linear forwards; }
+.help.is-paused .help__tab-fill { animation-play-state: paused; }
+@keyframes help-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Focus shift: one large focus card plus a column of smaller cards. Each turn the next card grows
+   into the focus slot and the old focus card shrinks into the column. */
+.stack { position: relative; width: 100%; aspect-ratio: 1.25 / 1; touch-action: pan-y; }
+.stack-card {
+  --l: 0%; --t: 0%; --w: 62%; --h: 100%;
+  position: absolute;
+  left: var(--l);
+  top: var(--t);
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  border-radius: var(--r-lg);
+  background: var(--orange-50);
+  transition: left 0.85s var(--ease), top 0.85s var(--ease), width 0.85s var(--ease), height 0.85s var(--ease);
+}
+.stack-card[data-slot='0'] { --l: 0%; --t: 0%; --w: 62%; --h: 100%; z-index: 2; }
+.stack-card[data-slot='1'] { --l: 65%; --t: 0%; --w: 35%; --h: 48.5%; cursor: pointer; }
+.stack-card[data-slot='2'] { --l: 65%; --t: 51.5%; --w: 35%; --h: 48.5%; cursor: pointer; }
+
+.stack-card__frame { position: absolute; inset: 0; }
+.stack-card__media { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.85s var(--ease); }
+.stack-card:not([data-slot='0']):hover .stack-card__media { transform: scale(1.04); }
+/* Dark scrim so white titles stay readable on any photo: a base gradient on every card, and a slightly taller
+   one that replaces it on the focus card, where the text block is longer. */
+.stack-card__frame::before,
+.stack-card__frame::after { content: ''; position: absolute; inset: 0; pointer-events: none; }
+.stack-card__frame::after { background: linear-gradient(0deg, rgb(0 0 0 / 0.9) 0%, rgb(0 0 0 / 0.7) 26%, rgb(0 0 0 / 0.28) 50%, transparent 72%); transition: opacity 0.85s var(--ease); }
+.stack-card[data-slot='0'] .stack-card__frame::after { opacity: 0; }
+.stack-card__frame::before { z-index: 1; opacity: 0; background: linear-gradient(0deg, rgb(0 0 0 / 0.84) 0%, rgb(0 0 0 / 0.62) 28%, rgb(0 0 0 / 0.25) 50%, transparent 70%); transition: opacity 0.85s var(--ease); }
+.stack-card[data-slot='0'] .stack-card__frame::before { opacity: 1; }
+
+.stack-card__body { position: absolute; inset: auto 0 0 0; z-index: 1; display: grid; gap: 0.35rem; padding: var(--space-4); color: var(--white); }
+.stack-card__body { text-shadow: 0 1px 14px rgb(0 0 0 / 0.45); }
+.stack-card__body h3 { color: var(--white); font-size: 1rem; transition: font-size 0.85s var(--ease); }
+.stack-card[data-slot='0'] .stack-card__body h3 { font-size: 1.75rem; }
+/* Description and link only on the focus card. */
+.stack-card__body p, .stack-card__more { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.6s var(--ease), opacity 0.5s ease; }
+.stack-card[data-slot='0'] .stack-card__body p, .stack-card[data-slot='0'] .stack-card__more { max-height: 6rem; opacity: 1; transition-delay: 0.35s; }
+.stack-card__body p { color: rgb(255 255 255 / 0.9); }
+.stack-card__more { color: var(--white); font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 899px) {
+  .stack { aspect-ratio: 1 / 1.1; }
+  .stack-card[data-slot='0'] { --l: 0%; --t: 0%; --w: 100%; --h: 63%; }
+  .stack-card[data-slot='1'] { --l: 0%; --t: 66%; --w: 48.5%; --h: 34%; }
+  .stack-card[data-slot='2'] { --l: 51.5%; --t: 66%; --w: 48.5%; --h: 34%; }
+  .stack-card__body { padding: var(--space-3); }
+  .stack-card[data-slot='0'] .stack-card__body h3 { font-size: 1.5rem; }
+  .help__tabs { max-width: none; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .help__tab-label { font-size: 1rem; }
+}
+
+/* Reduced motion: no timer or movement — three plain cards, all details visible. */
+@media (prefers-reduced-motion: reduce) {
+  .help__tabs { display: none; }
+  .stack { aspect-ratio: auto; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  .stack-card, .stack-card[data-slot] { position: relative; left: auto; top: auto; width: auto; height: 20rem; transition: none; cursor: default; }
+  .stack-card__body p, .stack-card__more { max-height: none; opacity: 1; }
+  .stack-card__body h3, .stack-card[data-slot] .stack-card__body h3 { font-size: 1.5rem; transition: none; }
+}

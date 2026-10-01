@@ -13,7 +13,12 @@ export function Header() {
         </a>
         <nav className={`nav ${open ? 'is-open' : ''}`} aria-label="Primary">
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              {...('external' in link ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            >
               {link.label}
               {'tag' in link && <span className="nav__tag">{link.tag}</span>}
             </a>

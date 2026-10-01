@@ -15,7 +15,7 @@ export function Footer() {
         </div>
         <nav className="footer__links" aria-label="Footer">
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a key={link.href} href={link.href} {...('external' in link ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
               {link.label}
             </a>
           ))}

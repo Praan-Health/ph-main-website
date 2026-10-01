@@ -15,31 +15,43 @@ export const HERO_CONDITIONS = [
   'Joint pain',
 ] as const
 
+// Nutrition is sold on the shop; the Nutrition section's CTA and the nav link open it.
+export const SHOP_URL = 'https://shop.praan.health'
+
+// Each link opens its own page (built here or, for the shop, external).
 export const NAV_LINKS = [
-  { label: 'Protocols', href: '#protocols' },
-  { label: 'Clinics', href: '#clinics' },
-  { label: 'Nutrition', href: '#nutrition', tag: 'New' },
-  { label: 'About', href: '#about' },
+  { label: 'Protocols', href: asset('/protocols/') },
+  { label: 'Clinics', href: asset('/clinics/') },
+  { label: 'Nutrition', href: SHOP_URL, tag: 'New', external: true },
+  { label: 'About', href: asset('/about/') },
 ] as const
 
+// Each pillar's media slot shows `poster` until a `video` is supplied.
+// TODO: add the card videos (set `video` to a path under /public) when they arrive.
 export const PILLARS = [
   {
     id: 'protocols',
     title: 'Protocols',
     body: 'Doctor-led, at-home and online 1:1 strength training and rehabilitation.',
-    image: asset('/assets/ui/Card.webp'),
+    poster: asset('/assets/ui/Card.webp'),
+    posterPosition: '50% 100%',
+    video: undefined as string | undefined,
   },
   {
     id: 'clinics',
     title: 'Clinics',
     body: 'Non-surgical treatment for lasting relief from chronic pain.',
-    image: asset('/assets/6a0b0af0686e8aac45bd1234_daddi.webp'),
+    poster: asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg'),
+    posterPosition: '60% 50%',
+    video: undefined as string | undefined,
   },
   {
     id: 'nutrition',
     title: 'Nutrition',
     body: 'Everyday nutrition that supports active ageing.',
-    image: asset('/assets/ui/Card-2.webp'),
+    poster: asset('/assets/nutrition-bg.webp'),
+    posterPosition: '78% 55%',
+    video: undefined as string | undefined,
   },
 ] as const
 
@@ -80,21 +92,3 @@ export const SPECIALITIES = [
   'Osteoporosis',
 ] as const
 
-export const HEALTH_PASS = {
-  price: '₹3,999',
-  was: '₹8,999',
-  // TODO: confirm the benefits list against the Health Pass details page.
-  benefits: [
-    'Doctor consultation with a specialist',
-    'Diagnostics and a movement assessment',
-    'A personalised care plan',
-    'Priority booking at Praan Clinics',
-  ],
-} as const
-
-// TODO: swap placeholder imagery for the product shots.
-// Each product opens its page on the shop.
-export const NUTRITION_PRODUCTS = [
-  { name: 'Daily Protein', size: '1 kg', price: '₹2,499', blurb: 'Clean, everyday protein for strong muscles.', href: 'https://shop.praan.health/products/daily-protein' },
-  { name: 'Protein Food Mix', size: '400 g', price: '₹1,199', blurb: 'A ready mix built around how we age.', href: 'https://shop.praan.health/products/protein-food-mix' },
-] as const
