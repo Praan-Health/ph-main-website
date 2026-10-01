@@ -26,6 +26,33 @@ export const NAV_LINKS = [
   { label: 'About', href: asset('/about/') },
 ] as const
 
+// Same profiles as the live praan.health footer.
+export const SOCIAL_LINKS = [
+  { network: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/company/praanhealth' },
+  { network: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/praan_health' },
+  { network: 'youtube', label: 'YouTube', href: 'https://youtube.com/@praan_health/' },
+] as const
+
+// Footer columns. Services open the pages built here (or the shop); quick links open the legal and support pages built here.
+export const FOOTER_SERVICES = [
+  { label: 'Protocols', href: asset('/protocols/') },
+  { label: 'Clinics', href: asset('/clinics/') },
+  { label: 'Nutrition', href: SHOP_URL, external: true },
+] as const
+
+export const FOOTER_QUICK_LINKS = [
+  { label: 'Terms', href: asset('/tnc/') },
+  { label: 'Privacy', href: asset('/privacy/') },
+  { label: 'Refund Policy', href: asset('/refund-policy/') },
+  { label: 'Support', href: asset('/team-support/') },
+] as const
+
+// Same details as the live footer. The email address shown is care@, but the live site mails support@.
+export const FOOTER_CONTACT = [
+  { kind: 'whatsapp', label: '+91 73494 32805', href: 'https://wa.me/917349432805' },
+  { kind: 'email', label: 'care@praan.health', href: 'mailto:support@praan.health?subject=You%20have%20an%20email%20from%20Website' },
+] as const
+
 // Each pillar's media slot shows `poster` until a `video` is supplied.
 // TODO: add the card videos (set `video` to a path under /public) when they arrive.
 export const PILLARS = [

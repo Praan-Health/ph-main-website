@@ -36,7 +36,7 @@
 
 /* Clinics */
 .clinics__intro { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .clinics__intro { grid-template-columns: 1.1fr 0.9fr; } }
+@media (min-width: 900px) { .clinics__intro { grid-template-columns: 0.9fr 1.1fr; } .clinics__photo { order: -1; } } /* photo left, text right on desktop */
 .clinics__intro .section-head { margin-bottom: 0; }
 .clinics__photo { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-lg); }
 .clinics__specialities { font-size: var(--fs-small); line-height: 1.5; color: rgb(255 255 255 / 0.85); }
