@@ -1,0 +1,158 @@
+[
+  {
+    "id": "6a0d3cbb48a1afa95fb15d0f",
+    "slug": "dr-rachit-gulati",
+    "name": "Dr. Rachit Gulati",
+    "role": "Doctor - leads the care plan",
+    "image": {
+      "src": "/images/dr-rachit-gulati.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>CMO, MBBS, MD (PM&amp;R), FIPM, Cert. In Rheumatology (EULAR), CCEBDM</p>"
+  },
+  {
+    "id": "6a0d3cb4afe0208ded81fc34",
+    "slug": "coach-suhas-satish-gzcon",
+    "name": "Coach Suhas Satish",
+    "role": "Strength coach - guides strength and mobility",
+    "image": {
+      "src": "/images/coach-suhas-satish.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>Certified Strength Coach<br></p>"
+  },
+  {
+    "id": "6a0b325d9448f3484fdd5140",
+    "slug": "dr-yogesh-kaushik",
+    "name": "Dr. Yogesh Kaushik",
+    "role": "Doctor - leads the care plan",
+    "image": {
+      "src": "/images/dr-yogesh-kaushik.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>MBBS, MD General Medicine, DM Neurology</p>"
+  },
+  {
+    "id": "6a0b323b0fcead2935671903",
+    "slug": "manaswini-m",
+    "name": "Manaswini.M",
+    "role": "Mental health coach – supports wellbeing",
+    "image": {
+      "src": "/images/manaswini-m.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>M.Sc Psychology</p>"
+  },
+  {
+    "id": "6a0b3218c5ae2fc74e3467e1",
+    "slug": "dr-sandria-burra",
+    "name": "Dr. Sandria Burra",
+    "role": "Physiotherapist – restores movement",
+    "image": {
+      "src": "/images/dr-sandria-burra.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>MPT Neurology</p>"
+  },
+  {
+    "id": "6a0b31eff28978179c6930f8",
+    "slug": "krithika-shruthi-parthasarathy",
+    "name": "Krithika Shruthi Parthasarathy",
+    "role": "Nutritionist – improves dietary health",
+    "image": {
+      "src": "/images/krithika-shruthi-parthasarathy.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>M.Sc. in Food Nutrition and Dietetics</p>"
+  },
+  {
+    "id": "6a0b31a6d92e33d9ad8ccc7c",
+    "slug": "dr-sumit-soni",
+    "name": "Dr. Sumit Soni",
+    "role": "Doctor - leads the care plan",
+    "image": {
+      "src": "/images/dr-sumit-soni.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>MBBS, FICC</p>"
+  },
+  {
+    "id": "6a0b2fd9bddb0326a000ac76",
+    "slug": "coach-nikhil-antony",
+    "name": "Coach Nikhil Antony",
+    "role": "Strength coach - guides strength and mobility",
+    "image": {
+      "src": "/images/coach-nikhil-antony.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>Strength and conditioning specialist (TFA)</p>"
+  },
+  {
+    "id": "6a0b2f828ec683ccfd36bf2e",
+    "slug": "dr-shreshta-tripathi",
+    "name": "Dr. Shreshta Tripathi",
+    "role": "Doctor - leads the care plan",
+    "image": {
+      "src": "/images/dr-shreshta-tripathi.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>MBBS, MD Medicine, DM Nephrology</p>"
+  },
+  {
+    "id": "6a0b2f62c37b0ef7104055e1",
+    "slug": "dr-nichenametla-nagasai",
+    "name": "Dr. Nichenametla Nagasai",
+    "role": "Physiotherapist – restores movement",
+    "image": {
+      "src": "/images/dr-nichenametla-nagasai.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>MPT Neurology</p>"
+  },
+  {
+    "id": "6a0b2e360949fc2cde42502c",
+    "slug": "saksham-batra",
+    "name": "Saksham Batra",
+    "role": "Mental health coach – supports wellbeing",
+    "image": {
+      "src": "/images/saksham-batra.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>M.A Clinical Psychology</p>"
+  },
+  {
+    "id": "6a0b2d8d3c8585c2ba246abb",
+    "slug": "harshita-shah",
+    "name": "Harshita Shah",
+    "role": "Nutritionist – improves dietary health",
+    "image": {
+      "src": "/images/harshita-shah.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>M.Sc. in Nutrition and Dietitics</p>"
+  },
+  {
+    "id": "6a0ae67e98ed419f248725ba",
+    "slug": "sd-sandhya",
+    "name": "SD Sandhya",
+    "role": "Nutritionist – improves dietary health",
+    "image": {
+      "src": "/images/sd-sandhya.png",
+      "alt": ""
+    },
+    "praanAcademyCertified": true,
+    "description": "<p>M.Sc. in Clinical Nutrition</p>"
+  }
+]

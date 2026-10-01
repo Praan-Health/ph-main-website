@@ -2,7 +2,7 @@ import { PILLARS } from '../content/site'
 
 export function HowWeHelp() {
   return (
-    <section className="section section--linen" aria-labelledby="how-title">
+    <section className="section" aria-labelledby="how-title">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">How Praan Health helps you</span>

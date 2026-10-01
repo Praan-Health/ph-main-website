@@ -1,0 +1,400 @@
+[
+  {
+    "id": "6a0c377241a9a78382618f12",
+    "slug": "chandrasekhar-m",
+    "name": "Chandrasekhar M",
+    "age": 73,
+    "location": "BENGALURU",
+    "readTime": "3 Min Read",
+    "conditionTag": "Diabetes",
+    "secondaryCondition": "Hypothyroidism",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-3-39-53-pm.png",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/hm04vBeXsTI?feature=share",
+    "metric": {
+      "label": "HbA1c",
+      "before": "8.1",
+      "after": "7.1",
+      "unit": "%"
+    },
+    "heading": "From surgery to steady movement",
+    "summary": "Also overcame hypothyroidism and significantly improved energy levels",
+    "conditions": [
+      "diabetes",
+      "hypertension"
+    ],
+    "story": "<p>Three months after her knee replacement surgery, Lakshmi S. couldn't walk to the kitchen without holding the wall. Her daughter, living in Singapore, was worried — not just about the knee, but about the cluster of conditions her mother had been quietly managing alone for years: Type 2 diabetes, high cholesterol, a thyroid imbalance, and now a post-surgical joint that needed careful rehabilitation.</p><p>‍</p><p>When she enrolled in Praan, there was no single problem to solve. There were four — each interacting with the others in ways a single specialist couldn't fully see.</p><blockquote>“I had so many doctors but no one was talking to each other. Praan was the first time someone looked at the whole picture.\"</blockquote><h2>The first 30 days</h2><p>A Praan physician conducted a full intake — reviewing not just her post-operative reports but her diabetes markers, lipid panel, and thyroid levels together. A care plan was assembled within the week: a dietitian adjusted her meals to support both her blood sugar and her cholesterol. A strength trainer began visiting her home three times a week, starting from bed exercises and progressing at her pace.</p>",
+    "careTeamRole": "<h2>The role of the care team</h2><p>What made the difference wasn't any single intervention — it was coordination. When Lakshmi's trainer noticed her fatigue worsening mid-program, it flagged a thyroid dosage review with the physician. The dietitian adjusted her post-workout meals after seeing her blood sugar patterns. Every specialist was in the loop.</p>",
+    "timeline": [
+      {
+        "heading": "Baseline & Care Plan",
+        "body": "<p>Comprehensive clinical intake. Custom meal plan and home physiotherapy sessions begin.</p>"
+      },
+      {
+        "heading": "First Steps on their own",
+        "body": "<p>Walks unaided for the first time post-surgery. HbA1c drops from 8.1 to 7.4.</p>"
+      },
+      {
+        "heading": "Strength Gains",
+        "body": "<p>Graduates to group strength sessions. LDL cholesterol within healthy range for the first time in two years.</p>"
+      },
+      {
+        "heading": "Back to Normal Life",
+        "body": "<p>Walks 4,000 steps daily. Reports the best sleep she's had in years.</p>"
+      }
+    ],
+    "conclusion": "<p>Today, six months in, Lakshmi attends a morning walk with her neighbour daily. Her daughter calls it \"the version of her mum she'd been trying to find for three years.\" The goal was never just the knee,it was returning Lakshmi to her life.</p>",
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0c36cc57152119e3e57646",
+    "slug": "jaya-setty-sn",
+    "name": "Jaya Setty SN",
+    "age": 69,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "Lung cancer",
+    "secondaryCondition": "Hypertension",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-3-36-17-pm.webp",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/RIuCSBV7ckw?feature=share",
+    "metric": {
+      "label": "Strength",
+      "before": "Impaired",
+      "after": "Restored",
+      "unit": null
+    },
+    "heading": null,
+    "summary": "Retained and built strength and confidence while undergoing chemotherapy",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0c28ad6ec3280a80a3a443",
+    "slug": "shylaja-k",
+    "name": "Shylaja K",
+    "age": 53,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "Arthritis",
+    "secondaryCondition": "Diabetes",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-2-38-26-pm.png",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/bHTXu_HfR70",
+    "metric": {
+      "label": "HbA1c",
+      "before": "6.5",
+      "after": "Ongoing",
+      "unit": "%"
+    },
+    "heading": null,
+    "summary": "Also avoided knee surgery through comprehensive guidance",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0c27c97c7dcfa519cdb541",
+    "slug": "ravindra-b",
+    "name": "Ravindra B",
+    "age": 64,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "Diabetes",
+    "secondaryCondition": "Hypertension",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-2-33-35-pm.png",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/hXB02S5xBto?feature=share",
+    "metric": {
+      "label": "HbA1c",
+      "before": "8.4",
+      "after": "6.6",
+      "unit": "%"
+    },
+    "heading": null,
+    "summary": "Also lost weight while building core and muscle strength",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0c25ab486c83e4cd3c3e2a",
+    "slug": "ramesh-kumar-t",
+    "name": "Ramesh Kumar T",
+    "age": 68,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "Knee pain",
+    "secondaryCondition": "Diabetes",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-2-24-04-pm.png",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/ih4gB_SH7rA",
+    "metric": {
+      "label": "Knee Mobility",
+      "before": "Limited",
+      "after": "Relieved",
+      "unit": null
+    },
+    "heading": null,
+    "summary": "Building a better lifestyle while losing weight and controlling diabetes",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0c24c73a634f46b7772672",
+    "slug": "balachandran-p",
+    "name": "Balachandran P",
+    "age": 67,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "High cholesterol",
+    "secondaryCondition": "Arthritis",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-6-03-05-pm.png",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/IEa4Q681w9k",
+    "metric": {
+      "label": "MSK mobility",
+      "before": "Restricted",
+      "after": "Enhanced",
+      "unit": null
+    },
+    "heading": null,
+    "summary": "Overcame arthritic joint stiffness and physical mobility while",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0b15cd4cb219be02bb1a3e",
+    "slug": "meera-k",
+    "name": "Meera K",
+    "age": 63,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "Diabetes",
+    "secondaryCondition": "Knee pain",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-2-17-37-pm.png",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/iC4y1mLTtZs?feature=share",
+    "metric": {
+      "label": "HbA1c",
+      "before": "7.5",
+      "after": "Ongoing",
+      "unit": "%"
+    },
+    "heading": null,
+    "summary": "Also reduced high cholesterol and knee pain through the same protocol",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0b15c54818e46c2dc33100",
+    "slug": "keshavayya-y",
+    "name": "Keshavayya Y",
+    "age": 68,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "Diabetes",
+    "secondaryCondition": "Hypertension",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-3-34-09-pm.png",
+      "alt": ""
+    },
+    "videoUrl": "https://www.youtube.com/shorts/mz8c7QIyFr0?feature=share",
+    "metric": {
+      "label": "HbA1c",
+      "before": "6.9",
+      "after": "Ongoing",
+      "unit": "%"
+    },
+    "heading": null,
+    "summary": "Experiencing stubborn fat loss through the protocol",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  },
+  {
+    "id": "6a0b15bc9c13636012934431",
+    "slug": "lakshmi-narayan",
+    "name": "Lakshmi Narayan",
+    "age": 65,
+    "location": null,
+    "readTime": null,
+    "conditionTag": "Hypothyroidism",
+    "secondaryCondition": "Fatty liver",
+    "thumbnail": {
+      "src": "/images/screenshot-2026-05-19-at-2-25-56-pm.png",
+      "alt": ""
+    },
+    "videoUrl": null,
+    "metric": {
+      "label": "TSH",
+      "before": "8.1",
+      "after": "Ongoing",
+      "unit": "mIU/L"
+    },
+    "heading": "From surgery to steady movement",
+    "summary": "Also building emotional resilience and independence",
+    "conditions": [],
+    "story": null,
+    "careTeamRole": null,
+    "timeline": [],
+    "conclusion": null,
+    "highlights": [
+      {
+        "value": "1.1",
+        "label": "HbA1c points reduced over 3 months"
+      },
+      {
+        "value": "4k+",
+        "label": "Steps daily by month 5"
+      },
+      {
+        "value": "3",
+        "label": "Conditions Managed Together"
+      }
+    ]
+  }
+]

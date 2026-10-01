@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/protocols/*"],
+      "next/link": ["./src/protocols/shims/link.tsx"],
+      "next/image": ["./src/protocols/shims/image.tsx"],
+      "next/navigation": ["./src/protocols/shims/navigation.ts"]
+    },
+    "resolveJsonModule": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "es2023",
     "lib": ["ES2023", "DOM"],
