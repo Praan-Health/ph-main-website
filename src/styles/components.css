@@ -40,7 +40,7 @@
 .header__bar { display: flex; align-items: center; justify-content: space-between; min-height: 5.5rem; padding-block: 1rem; }
 .header__logo img { height: 2.25rem; width: auto; }
 
-.nav { display: flex; align-items: center; gap: var(--space-5); font-size: 0.9375rem; color: var(--blue); }
+.nav { display: flex; align-items: center; gap: var(--space-5); font-size: 1.0625rem; color: var(--blue); }
 .nav a:not(.btn) { position: relative; }
 .nav a:not(.btn):hover { color: var(--orange); }
 .nav__tag {
@@ -92,8 +92,27 @@
 
 /* Footer */
 .footer { background: var(--blue-deep); color: rgb(255 255 255 / 0.75); padding-top: var(--section-y); }
-.footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-6); }
-.footer__brand { display: grid; gap: var(--space-4); max-width: 22rem; justify-items: start; }
-.footer__links { display: grid; grid-template-columns: repeat(2, auto); gap: var(--space-2) var(--space-6); align-content: start; }
-.footer__links a:hover { color: var(--orange-soft); }
+.footer__inner { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
+@media (min-width: 900px) { .footer__inner { grid-template-columns: 1.25fr 0.8fr 0.9fr 1.35fr; gap: var(--space-5); } }
+.footer__brand { display: grid; gap: var(--space-4); max-width: 22rem; justify-items: start; align-content: start; }
+
+.footer__col { display: grid; gap: var(--space-4); align-content: start; }
+.footer__heading { display: flex; align-items: center; gap: var(--space-3); font-size: 0.8125rem; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); }
+.footer__heading::after { content: ''; flex: 1; height: 2px; border-radius: 2px; background: rgb(255 255 255 / 0.12); }
+.footer__list { display: grid; gap: var(--space-3); }
+.footer__list a:hover { color: var(--orange-soft); }
+
+.footer__contact { display: grid; gap: var(--space-2); justify-items: start; }
+.footer__contact a { display: inline-flex; align-items: center; gap: var(--space-3); min-width: 15rem; padding: 0.7rem 1.4rem 0.7rem 1rem; border: 1px solid rgb(255 255 255 / 0.16); border-radius: var(--r-pill); background: rgb(255 255 255 / 0.05); color: var(--white); transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.footer__contact a:hover { background: rgb(255 255 255 / 0.1); border-color: rgb(255 255 255 / 0.3); }
+.footer__contact-icon { display: grid; place-items: center; width: 1.75rem; color: var(--white); }
+/* The ported mail icon is a filled orange shape; recolour it white. */
+.footer__contact-icon--email svg path { fill: var(--white); }
+
+/* White glyphs only: the icon files draw an orange square behind the glyph; hide it. */
+.footer__social { display: flex; gap: var(--space-1); margin-left: -0.8rem; }
+.footer__social svg path:first-of-type { fill: none; }
+.footer__social svg { width: 3.25rem; height: 3.25rem; }
+.footer__social a { display: block; border-radius: var(--r-md); transition: transform var(--dur) var(--ease); }
+.footer__social a:hover { transform: translateY(-2px); }
 .footer__legal { margin-top: var(--space-6); padding-block: var(--space-4); border-top: 1px solid var(--line-on-dark); font-size: var(--fs-small); }

@@ -7,12 +7,11 @@ export type NavLink = {
   badge?: string;
 };
 
+// Same links as the new homepage header.
 export const navigation: NavLink[] = [
-  { label: "Conditions", href: "/condition" },
+  { label: "Protocols", href: "/protocols" },
   { label: "Clinics", href: "/clinics" },
   { label: "Nutrition", href: "https://shop.praan.health", external: true, badge: "New" },
-  { label: "For Families", href: "/for-families" },
-  { label: "Health Pass", href: "/health-pass" },
   { label: "About", href: "/about" },
 ];
 
@@ -24,10 +23,11 @@ export const announcement = {
   cta: "Get one now",
 };
 
+// Vector logo, as on the new homepage header.
 export const logo = {
-  src: "/images/logo-orange.webp",
-  width: 156,
-  height: 58,
+  src: "/images/logo.svg",
+  width: 98,
+  height: 36,
   alt: "Praan Health",
 };
 
