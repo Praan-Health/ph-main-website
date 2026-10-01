@@ -1,0 +1,283 @@
+@import "tailwindcss";
+/* Library CSS goes in the base layer so Tailwind utilities can override it (unlayered CSS would always win). */
+@import "swiper/css" layer(base);
+
+/*
+ * Praan design tokens.
+ * Values are taken from what praan.health actually renders (see praan-website/tools/audit-styles.mjs),
+ * not from the Webflow framework defaults, which include unused starter values.
+ * Tailwind's default palette is disabled so only brand colours can be used, as exact sRGB hex.
+ */
+@theme {
+  --color-*: initial;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  /* Brand orange */
+  --color-orange-500: #fd7118;
+  --color-orange-300: #fe9c5d;
+  --color-orange-200: #fec6a3;
+  --color-orange-150: #fed4ba;
+  --color-peach-200: #fed7aa;
+  --color-peach-100: #ffe7d6;
+  --color-peach-50: #fff1e8;
+  --color-orange-50: #fff7ed;
+  --color-rust: #ba4325;
+  --color-sand: #f2d9c3;
+  --color-cream: #fbf8f2;
+  --color-linen: #f7f7f0;
+
+  /* Navy */
+  --color-navy-900: #171a3a;
+  --color-navy-700: #2f387f;
+  --color-navy-500: #596099;
+  --color-navy-300: #c1c3d9;
+  --color-navy-200: #d5d7e5;
+  --color-navy-100: #eaebf2;
+
+  /* Teal */
+  --color-teal-600: #1f9e8c;
+  --color-teal-400: #63c5b8;
+  --color-teal-100: #e1f4f0;
+  --color-teal-75: #e9f6f2;
+  --color-teal-50: #f0f8f6;
+  --color-ink: #142f45;
+
+  /* Slate / neutral text and surfaces */
+  --color-slate-900: #0f172a;
+  --color-slate-600: #475569;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-gray-700: #454a54;
+  --color-gray-650: #4a4f63;
+  --color-gray-500: #8b90a0;
+  --color-gray-400: #a3a3a3;
+  --color-gray-300: #c1c1c1;
+  --color-gray-250: #d7d9df;
+  --color-gray-200: #dddddd;
+  --color-gray-100: #eeeeee;
+
+  --color-whatsapp: #25d366;
+
+  /* Typefaces */
+  --font-sans: var(--font-aeonik-overview), Arial, sans-serif;
+  --font-aeonik: var(--font-aeonik), Arial, sans-serif;
+  --font-serif: var(--font-libre-baskerville), Georgia, serif;
+  --font-quote: var(--font-roboto-serif), Georgia, serif;
+
+  /* Fluid type (Webflow scale: interpolates between 320px and 1440px viewports) */
+  --text-fluid-body: clamp(0.9rem, 0.871428571rem + 0.142857143vw, 1rem);
+  --text-fluid-h5: clamp(1.125rem, 1.089285714rem + 0.178571429vw, 1.25rem);
+  --text-fluid-h4: clamp(1.25rem, 1.178571429rem + 0.357142857vw, 1.5rem);
+  --text-fluid-h2: clamp(2rem, 1.821428571rem + 0.892857143vw, 2.625rem);
+  --text-fluid-h1: clamp(3rem, 2.714285714rem + 1.428571429vw, 4rem);
+  --text-fluid-display: clamp(4rem, 3.142857143rem + 4.285714286vw, 7rem);
+
+  --tracking-body: -0.01rem;
+  --tracking-heading: -0.06rem;
+
+  /* Fluid spacing */
+  --spacing-fluid-1: clamp(0.375rem, 0.339285714rem + 0.178571429vw, 0.5rem);
+  --spacing-fluid-2: clamp(0.625rem, 0.589285714rem + 0.178571429vw, 0.75rem);
+  --spacing-fluid-3: clamp(0.875rem, 0.839285714rem + 0.178571429vw, 1rem);
+  --spacing-fluid-4: clamp(1.25rem, 1.178571429rem + 0.357142857vw, 1.5rem);
+  --spacing-fluid-5: clamp(1.75rem, 1.678571429rem + 0.357142857vw, 2rem);
+  --spacing-fluid-6: clamp(2rem, 1.857142857rem + 0.714285714vw, 2.5rem);
+  --spacing-fluid-7: clamp(2.25rem, 2.035714286rem + 1.071428571vw, 3rem);
+  --spacing-fluid-8: clamp(2.5rem, 2.071428571rem + 2.142857143vw, 4rem);
+  --spacing-section-sm: clamp(2.5rem, 2.071428571rem + 2.142857143vw, 4rem);
+  --spacing-section: clamp(4rem, 3.428571429rem + 2.857142857vw, 6rem);
+  --spacing-section-lg: clamp(5rem, 4.142857143rem + 4.285714286vw, 8rem);
+  --spacing-page-top: clamp(10rem, 8.857142857rem + 5.714285714vw, 14rem);
+  --spacing-gutter: clamp(1rem, 0.714285714rem + 1.428571429vw, 2rem);
+  --spacing-margin: clamp(1.125rem, 0.589285714rem + 2.678571429vw, 3rem);
+
+  /* Layout */
+  --container-main: 69rem;
+  --container-small: 50rem;
+  --spacing-nav: 4rem;
+  --spacing-banner: 2.4rem;
+
+  /* Webflow breakpoints (max-width 991 / 767 / 479 become min-width 992 / 768 / 480) */
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 48rem;
+  --breakpoint-md: 62rem;
+  --breakpoint-lg: 80rem;
+  --breakpoint-xl: 90rem;
+  --breakpoint-2xl: 120rem;
+
+  /* Easing curves used by the original Webflow interactions */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-quad: cubic-bezier(0.11, 0, 0.5, 0);
+
+  /* Hero bubbles drift up/down forever (GSAP sine.inOut yoyo on the Webflow site). */
+  --animate-float-up: float-up 4.4s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+  --animate-float-down: float-down 5.6s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+
+  @keyframes float-up {
+    to { translate: 0 -24px; }
+  }
+
+  @keyframes float-down {
+    to { translate: 0 20px; }
+  }
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2rem;
+  --radius-pill: 100vw;
+}
+
+/*
+ * Line-height trim (from the site's Lumos framework code): headings and paragraphs drop the
+ * half-leading above and below their text, trimming to .33em/.38em of the font's metrics.
+ * Use `text-trim` to apply it to other elements and `trim-off` to opt out.
+ */
+@layer base {
+  :root {
+    --trim-top: 0.33em;
+    --trim-bottom: 0.38em;
+  }
+
+  :not(.trim-off) > :is(h1, h2, h3, h4, h5, h6, p):not(.trim-off)::before,
+  .text-trim:not(.trim-off)::before {
+    content: "";
+    display: table;
+    margin-bottom: calc(-0.5lh + var(--trim-top));
+  }
+
+  :not(.trim-off) > :is(h1, h2, h3, h4, h5, h6, p):not(.trim-off)::after,
+  .text-trim:not(.trim-off)::after {
+    content: "";
+    display: table;
+    margin-bottom: calc(-0.5lh + var(--trim-bottom));
+  }
+
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    display: flow-root;
+  }
+
+  /* Form controls keep the browser's normal letter-spacing (Webflow's reset did not inherit it). */
+  :is(button, input, select, textarea) {
+    letter-spacing: normal;
+  }
+}
+
+/* Global behaviour carried over from the site-wide custom code. */
+@layer base {
+  html {
+    height: -webkit-fill-available;
+    view-transition-name: root;
+  }
+
+  * {
+    backface-visibility: hidden;
+  }
+
+  body {
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    background: var(--color-white);
+    color: var(--color-slate-600);
+    font-family: var(--font-sans);
+    font-size: var(--text-fluid-body);
+    line-height: 1.5;
+    letter-spacing: var(--tracking-body);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus {
+    outline: 0;
+  }
+
+  :focus-visible {
+    outline: 0.125rem solid var(--color-navy-700);
+    outline-offset: 0.1875rem;
+  }
+
+  ::selection {
+    background: var(--color-orange-200);
+    color: var(--color-slate-600);
+  }
+
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
+::view-transition-old(root) {
+  animation: dim-out 400ms ease forwards;
+}
+
+::view-transition-new(root) {
+  animation: brighten-in 800ms ease forwards;
+}
+
+@keyframes dim-out {
+  from { filter: brightness(1); opacity: 1; }
+  to { filter: brightness(0.8); opacity: 0; }
+}
+
+@keyframes brighten-in {
+  from { filter: brightness(0.9); opacity: 0; }
+  to { filter: brightness(1); opacity: 1; }
+}
+
+/* Slider pagination dots (Swiper bullets), themed for dark and light sections. */
+@layer components {
+  .slider-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 999px;
+    background: var(--color-gray-250);
+    transition:
+      width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .slider-dot.is-active {
+    width: 24px;
+    background: var(--color-orange-500);
+  }
+
+  [data-slider-theme="dark"] .slider-dot {
+    background: var(--color-navy-500);
+  }
+
+  [data-slider-theme="dark"] .slider-dot.is-active {
+    background: var(--color-white);
+  }
+}
+
+/* Per-page chrome opt-outs (see src/components/layout/PageChrome.tsx). */
+body:has([data-no-announcement-bar]) [data-announcement-bar],
+body:has([data-no-cookie-consent]) [data-cookie-consent] {
+  display: none !important;
+}
+

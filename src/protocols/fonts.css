@@ -1,0 +1,13 @@
+/* Self-hosted faces, matching the variables the original Next fonts module provided. */
+@font-face { font-family: "Aeonik Overview Local"; src: url("/protocols-fonts/aeonik-overview-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik Overview Local"; src: url("/protocols-fonts/aeonik-overview-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik Local"; src: url("/protocols-fonts/aeonik-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik Local"; src: url("/protocols-fonts/aeonik-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libre Baskerville Local"; src: url("/protocols-fonts/libre-baskerville-italic.woff2") format("woff2"); font-weight: 400 700; font-style: italic; font-display: swap; }
+
+:root {
+  --font-aeonik-overview: "Aeonik Overview Local";
+  --font-aeonik: "Aeonik Local";
+  --font-libre-baskerville: "Libre Baskerville Local";
+  --font-roboto-serif: "Roboto Serif";
+}

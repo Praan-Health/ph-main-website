@@ -1,0 +1,40 @@
+/* Styles for /clinics that need keyframes or selectors Tailwind classes can't express. */
+
+/* "As featured in" marquee (the page's `prx-*` embed): the list is doubled and slides left by half. */
+.pressTrack {
+  animation: press-scroll 36s linear infinite;
+}
+
+.pressWrap:hover .pressTrack {
+  animation-play-state: paused;
+}
+
+.pressMask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+@keyframes press-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pressTrack {
+    animation-play-state: paused;
+  }
+}
+
+/* The testimonial track scrolls horizontally without a visible scrollbar. */
+.noScrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}
