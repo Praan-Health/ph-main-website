@@ -29,7 +29,7 @@
 
 /* Pillars */
 .pillars { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
-.pillar { display: grid; gap: var(--space-2); height: 100%; padding: var(--space-3); border-radius: var(--r-lg); background: var(--white); transition: transform var(--dur) var(--ease); }
+.pillar { display: grid; gap: var(--space-2); height: 100%; padding: var(--space-3); border-radius: var(--r-lg); background: var(--linen); transition: transform var(--dur) var(--ease); }
 .pillar:hover { transform: translateY(-4px); }
 .pillar__media { overflow: hidden; aspect-ratio: 4 / 3; border-radius: var(--r-md); background: var(--orange-50); }
 .pillar__media img { width: 100%; height: 100%; object-fit: cover; }
@@ -37,18 +37,7 @@
 .pillar h3 { margin-top: var(--space-2); }
 .pillar__more { color: var(--orange); font-weight: 500; padding-bottom: var(--space-2); }
 
-/* Protocols */
-.protocol-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
-@media (min-width: 900px) { .protocol-grid { grid-template-columns: 1fr 1fr; } }
-.team-card, .delivery-card { display: grid; gap: var(--space-4); align-content: start; }
-.team-card__center { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); border-radius: var(--r-md); background: var(--white); }
-.team-card__center img { width: 6rem; height: 6rem; border-radius: 50%; object-fit: cover; object-position: top; background: var(--orange-100); }
-.team-card__center div { display: grid; }
-.team-card__center strong { font-size: 1.25rem; font-weight: 500; color: var(--blue); }
-.delivery { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
-.delivery li { display: grid; gap: 0.25rem; padding: var(--space-3); border-radius: var(--r-md); background: var(--white); }
-.delivery__value { font-size: var(--fs-h2); font-weight: 400; letter-spacing: var(--tracking-heading); line-height: 1; color: var(--orange); }
-
+/* Protocols — layout, care-team diagram and checklist live in careteam.css */
 .numbers { margin-top: var(--space-6); padding: var(--space-5); border-radius: var(--r-lg); background: var(--blue); color: rgb(255 255 255 / 0.8); }
 .numbers__title { color: var(--white); margin-bottom: var(--space-4); }
 .numbers ul { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
@@ -80,6 +69,7 @@
 .product { display: grid; gap: var(--space-2); justify-items: start; padding: var(--space-3); border-radius: var(--r-lg); background: rgb(255 255 255 / 0.14); border: 1px solid var(--line-on-dark); }
 .product__shot { width: 100%; aspect-ratio: 1; border-radius: var(--r-md); background: rgb(255 255 255 / 0.22); }
 .product .btn { margin-top: var(--space-1); }
+.product__meta { font-weight: 500; opacity: 0.95; }
 
 /* Daily movement */
 .movement { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }

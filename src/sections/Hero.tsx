@@ -16,7 +16,7 @@ export function Hero() {
               Care for <span className="hero__typed">{typed}</span>
             </span>
           </span>
-          <h1 className="hero__title">Complete healthcare for your parents, all in one place.</h1>
+          <h1 className="hero__title">India's first holistic ecosystem for chronic pain management.</h1>
           <p className="lead hero__sub">
             Doctor-led care, clinics, nutrition and personalised protocols designed around their evolving health needs.
           </p>

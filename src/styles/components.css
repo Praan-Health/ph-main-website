@@ -18,6 +18,8 @@
 }
 .btn:active { transform: translateY(1px); }
 
+.btn--lg { padding: 0.95rem 1.9rem; font-size: 1.125rem; }
+
 .btn--primary { background: var(--orange); color: var(--white); box-shadow: var(--shadow-offset); }
 .btn--primary:hover { background: var(--orange-hover); }
 
@@ -50,7 +52,6 @@
   font-size: 0.6875rem;
   font-weight: 500;
 }
-.nav__cta { padding: 0.55rem 1.1rem; font-size: 0.9375rem; }
 
 .header__toggle { display: none; width: 2.5rem; height: 2.5rem; padding: 0; background: none; border: 0; cursor: pointer; }
 .header__toggle span { display: block; width: 1.5rem; height: 2px; margin: 6px auto; background: var(--blue); }

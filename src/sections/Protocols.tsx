@@ -1,52 +1,53 @@
 import { Button } from '../components/Button'
-import { CAL_URL, CARE_TEAM, NUMBERS, PROTOCOL_DELIVERY } from '../content/site'
+import { CareTeamDiagram } from '../components/CareTeamDiagram'
+import { CheckIcon } from '../components/icons'
+import { CAL_URL, NUMBERS, WHAT_INCLUDED } from '../content/site'
 import { asset } from '../lib/asset'
 
 export function Protocols() {
   return (
-    <section className="section" id="protocols" aria-labelledby="protocols-title">
+    <section className="section section--linen" id="protocols" aria-labelledby="protocols-title">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">Protocols</span>
           <h2 id="protocols-title">
             Doctor-led, <span className="accent">comprehensive</span> protocols
           </h2>
-          <p className="lead">One doctor runs everything. A dedicated team delivers it — at home and online.</p>
+          <p className="lead">
+            One doctor builds your plan and directs a specialist team to deliver it — at home and online.
+          </p>
           <div className="row">
-            <Button href={CAL_URL}>Start your journey</Button>
-            <Button href="/protocols" variant="secondary">
+            <Button href={CAL_URL} className="btn--lg">
+              Start your journey
+            </Button>
+            <Button href={asset("/protocols/")} variant="secondary" className="btn--lg">
               Know more
             </Button>
           </div>
         </div>
 
-        <div className="protocol-grid">
-          <article className="card team-card">
-            <h3>Your care team</h3>
-            <div className="team-card__center">
-              <img src={asset('/assets/team/Dr.-Rachit-Gulati.png')} alt="Dr. Rachit Gulati" width="160" height="160" loading="lazy" />
-              <div>
-                <strong>Doctor</strong>
-                <span>At the centre of your protocol</span>
-              </div>
-            </div>
-            <ul className="chips">
-              {CARE_TEAM.map((role) => (
-                <li key={role}>{role}</li>
-              ))}
-            </ul>
+        <div className="protocol-layout">
+          <article className="card">
+            <h3>How your care team works</h3>
+            <CareTeamDiagram />
           </article>
 
-          <article className="card delivery-card">
-            <h3>How your protocol is delivered</h3>
-            <ul className="delivery">
-              {PROTOCOL_DELIVERY.map((item) => (
-                <li key={item.label}>
-                  <span className="delivery__value">{item.value}</span>
-                  <span>{item.label}</span>
+          <article className="card included">
+            <h3>What's included</h3>
+            <ul className="included__list">
+              {WHAT_INCLUDED.map((item) => (
+                <li key={item.text}>
+                  <span className="included__check">
+                    <CheckIcon size={16} />
+                  </span>
+                  <span className="included__text">{item.text}</span>
+                  <span className="included__tag">{item.tag}</span>
                 </li>
               ))}
             </ul>
+            <Button href={CAL_URL} className="btn--lg included__cta">
+              Start your journey
+            </Button>
           </article>
         </div>
 

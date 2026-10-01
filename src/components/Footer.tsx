@@ -10,7 +10,7 @@ export function Footer() {
           <img src={asset('/assets/logo-white.svg')} alt="Praan Health" width="130" height="48" />
           <p>Chronic care for ageing parents — even from far away.</p>
           <Button href={CAL_URL} variant="inverse">
-            Talk to an advisor
+            Book Free Consultation
           </Button>
         </div>
         <nav className="footer__links" aria-label="Footer">

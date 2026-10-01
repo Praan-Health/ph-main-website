@@ -19,6 +19,9 @@ export function Nutrition() {
               <div className="product__shot" role="img" aria-label={`${p.name} — image coming soon`} />
               <h3>{p.name}</h3>
               <p>{p.blurb}</p>
+              <span className="product__meta">
+                {p.size} · {p.price}
+              </span>
               <Button href={p.href} variant="inverse">
                 View product
               </Button>

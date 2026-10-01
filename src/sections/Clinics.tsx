@@ -1,5 +1,5 @@
 import { Button } from '../components/Button'
-import { HEALTH_PASS, SPECIALITIES } from '../content/site'
+import { CAL_URL, HEALTH_PASS, SPECIALITIES } from '../content/site'
 import { asset } from '../lib/asset'
 
 export function Clinics() {
@@ -13,10 +13,10 @@ export function Clinics() {
               Non-surgical treatment for <span className="accent">lasting</span> relief from chronic pain
             </h2>
             <div className="row">
-              <Button href="/clinics/book" variant="inverse">
+              <Button href={asset('/clinics/')} variant="inverse">
                 Book an appointment
               </Button>
-              <Button href="/clinics" variant="ghost">
+              <Button href={asset('/clinics/')} variant="ghost">
                 How we can help you
               </Button>
             </div>
@@ -52,7 +52,7 @@ export function Clinics() {
               ))}
             </ul>
           </div>
-          <Button href="/health-pass">See Health Pass benefits</Button>
+          <Button href={CAL_URL}>Book Free Consultation</Button>
         </aside>
       </div>
     </section>
