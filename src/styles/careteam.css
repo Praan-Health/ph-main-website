@@ -1,13 +1,12 @@
-/* Protocols: layout, care-team diagram, "What's included" checklist. */
+/* Protocols: layout, care-team diagram. */
 
 .protocol-layout { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
-@media (min-width: 980px) { .protocol-layout { grid-template-columns: 1.4fr 1fr; align-items: stretch; } }
 
 .section--linen .card { background: var(--white); display: grid; gap: var(--space-4); align-content: start; }
 .card h3 { font-size: 1.375rem; }
 
 /* ---------- Care team diagram ---------- */
-.care-team { container-type: inline-size; display: grid; gap: var(--space-3); }
+.care-team { container-type: inline-size; display: grid; gap: var(--space-3); width: 100%; max-width: 40.625rem; margin-inline: auto; }
 .care-team__box { position: relative; width: 100%; aspect-ratio: 650 / 560; }
 
 .ct-node {
@@ -135,19 +134,3 @@
   .care-team .spoke::before { transform: scaleX(1); animation: none !important; }
   .care-team .spoke__dot, .care-team .ct-node--doctor::before { display: none; }
 }
-
-/* ---------- What's included ---------- */
-.included__list { display: grid; gap: var(--space-2); }
-.included__list li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.25rem 0.85rem;
-  align-items: center;
-  padding: 0.9rem 1rem;
-  border-radius: var(--r-md);
-  background: var(--linen);
-}
-.included__check { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: var(--orange); color: var(--white); grid-row: span 2; }
-.included__text { font-weight: 500; color: var(--blue); line-height: 1.3; }
-.included__tag { justify-self: start; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--orange); }
-.included__cta { justify-self: start; margin-top: var(--space-2); }

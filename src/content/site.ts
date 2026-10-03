@@ -18,6 +18,9 @@ export const HERO_CONDITIONS = [
 // Nutrition is sold on the shop; the Nutrition section's CTA and the nav link open it.
 export const SHOP_URL = 'https://shop.praan.health'
 
+// Daily Movement sessions are booked on their own site.
+export const EVERYDAY_URL = 'https://everyday.praan.health'
+
 // Each link opens its own page (built here or, for the shop, external).
 export const NAV_LINKS = [
   { label: 'Protocols', href: asset('/protocols/') },
@@ -90,14 +93,6 @@ export const CARE_TEAM = [
   { id: 'trainer', role: 'Strength Trainer', does: 'Guided sessions, 3× a week', x: 75, y: 87 },
   { id: 'physio', role: 'Physiotherapist', does: 'Rehab and pain relief', x: 25, y: 87 },
   { id: 'counsellor', role: 'Counsellor', does: 'Mind, mood and motivation', x: 16, y: 36 },
-] as const
-
-export const WHAT_INCLUDED = [
-  { tag: 'To start', text: 'Diagnostic review with 100+ markers' },
-  { tag: 'Monthly', text: 'Monthly doctor consultations' },
-  { tag: 'Weekly', text: 'Weekly dietician reviews' },
-  { tag: '3× a week', text: '3× week strength training and rehabilitation' },
-  { tag: 'Always on', text: 'Personalised care plan for your journey' },
 ] as const
 
 export const NUMBERS = [
