@@ -1,7 +1,6 @@
 import { Button } from '../components/Button'
 import { CareTeamDiagram } from '../components/CareTeamDiagram'
-import { CheckIcon } from '../components/icons'
-import { CAL_URL, NUMBERS, WHAT_INCLUDED } from '../content/site'
+import { CAL_URL, NUMBERS } from '../content/site'
 import { asset } from '../lib/asset'
 
 export function Protocols() {
@@ -30,24 +29,6 @@ export function Protocols() {
           <article className="card">
             <h3>How your care team works</h3>
             <CareTeamDiagram />
-          </article>
-
-          <article className="card included">
-            <h3>What's included</h3>
-            <ul className="included__list">
-              {WHAT_INCLUDED.map((item) => (
-                <li key={item.text}>
-                  <span className="included__check">
-                    <CheckIcon size={16} />
-                  </span>
-                  <span className="included__text">{item.text}</span>
-                  <span className="included__tag">{item.tag}</span>
-                </li>
-              ))}
-            </ul>
-            <Button href={CAL_URL} className="btn--lg included__cta">
-              Start your journey
-            </Button>
           </article>
         </div>
 

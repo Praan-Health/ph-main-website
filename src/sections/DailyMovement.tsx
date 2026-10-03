@@ -1,4 +1,5 @@
 import { Button } from '../components/Button'
+import { EVERYDAY_URL } from '../content/site'
 import { asset } from '../lib/asset'
 
 export function DailyMovement() {
@@ -21,7 +22,7 @@ export function DailyMovement() {
           <p className="lead">
             Short, guided sessions that fit into your parents' morning and build strength and balance over time.
           </p>
-          <Button href="#">Join a session</Button>
+          <Button href={EVERYDAY_URL}>Secure your Spot</Button>
         </div>
       </div>
     </section>

@@ -6,8 +6,9 @@
 @font-face { font-family: "Libre Baskerville Local"; src: url("/protocols-fonts/libre-baskerville-italic.woff2") format("woff2"); font-weight: 400 700; font-style: italic; font-display: swap; }
 
 :root {
-  --font-aeonik-overview: "Aeonik Overview Local";
-  --font-aeonik: "Aeonik Local";
+  /* Anek Latin replaces Aeonik site-wide (loaded from Google Fonts in each page head). */
+  --font-aeonik-overview: "Anek Latin";
+  --font-aeonik: "Anek Latin";
   --font-libre-baskerville: "Libre Baskerville Local";
   --font-roboto-serif: "Roboto Serif";
 }
