@@ -4,7 +4,7 @@ import { asset } from '../lib/asset'
 
 export function DailyMovement() {
   return (
-    <section className="section section--linen section--flush-bottom" id="movement" aria-labelledby="movement-title">
+    <section className="section section--flush-bottom" id="movement" aria-labelledby="movement-title">
       <div className="container movement">
         <img
           className="movement__media"
