@@ -23,7 +23,6 @@
 .journey__who { font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); }
 .journey__title { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); line-height: 1.15; letter-spacing: var(--tracking-heading); color: var(--blue); }
 .journey__does { max-width: 26rem; font-size: 1.0625rem; line-height: 1.5; color: var(--ink-body); }
-.journey__coordinator { grid-row: 2; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; padding: 0.4rem 0.9rem; border-radius: var(--r-pill); background: var(--white); color: var(--blue); font-size: var(--fs-small); font-weight: 500; }
 
 /* Dots: vertical on desktop with the active one stretched, a row on phones. */
 .journey__dots { display: flex; gap: 0.6rem; margin: 0; padding: 0; list-style: none; justify-content: center; }
@@ -42,5 +41,4 @@
   .journey__frame { display: none; }
   .journey__copy { gap: var(--space-5); }
   .journey__text { grid-area: auto; opacity: 1; transform: none; pointer-events: auto; }
-  .journey__coordinator { grid-row: auto; }
-}
+  }

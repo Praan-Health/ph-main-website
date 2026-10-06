@@ -9,9 +9,12 @@ type Submission = {
 };
 
 /** Client helper for site forms. Returns true when the submission was stored. */
+// Pages has no server, so the endpoint can be pointed at a hosted one with VITE_FORMS_ENDPOINT.
+const FORMS_ENDPOINT = (import.meta as { env?: Record<string, string | undefined> }).env?.VITE_FORMS_ENDPOINT || "/api/forms";
+
 export async function submitForm({ formName, fields, forward }: Submission): Promise<boolean> {
   try {
-    const res = await fetch("/api/forms", {
+    const res = await fetch(FORMS_ENDPOINT, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ formName, fields, forward, pagePath: window.location.pathname, pageUrl: window.location.href }),

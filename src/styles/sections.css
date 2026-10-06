@@ -51,7 +51,7 @@
 @media (min-width: 900px) { .doctors { grid-template-columns: repeat(5, 1fr); } }
 .doctor { display: grid; gap: 0.35rem; justify-items: center; text-align: center; }
 .doctor__photo { width: 100%; max-width: 11rem; aspect-ratio: 1; border-radius: 50%; object-fit: cover; }
-.doctor__photo--placeholder { display: grid; place-items: center; background: var(--linen); color: var(--blue); font-size: 2.25rem; font-weight: 500; letter-spacing: var(--tracking-heading); }
+.doctor__photo--placeholder { display: grid; place-items: center; background: var(--white); color: var(--blue); font-size: 2.25rem; font-weight: 500; letter-spacing: var(--tracking-heading); }
 .doctor__name { margin-top: var(--space-2); font-size: 1.125rem; font-weight: 500; color: var(--blue); }
 .doctor__role { font-size: var(--fs-small); color: var(--orange); }
 
