@@ -82,6 +82,7 @@
   --space-7: 4rem;
   --section-y: clamp(4rem, 2.5rem + 6vw, 7.5rem);
   --gutter: clamp(1.25rem, 0.5rem + 4vw, 4.5rem);
+  --header-h: 5.5rem;
   --max-w: 70.375rem; /* side margin = steps bubble centre, ~157px at 1440 */
 
   /* Shape */

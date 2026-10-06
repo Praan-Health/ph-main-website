@@ -35,9 +35,33 @@
 .row { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
 /* Header */
-.header { position: sticky; top: 0; z-index: 50; background: var(--white); border-bottom: 1px solid var(--line); }
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  isolation: isolate;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), backdrop-filter var(--dur) var(--ease);
+}
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 -1.5rem 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.94) 0%, rgb(255 255 255 / 0.82) 55%, rgb(255 255 255 / 0) 100%);
+  transition: opacity var(--dur) var(--ease);
+}
+.header.is-solid::before { opacity: 0; }
+.header.is-solid {
+  background: rgb(255 255 255 / 0.82);
+  border-bottom-color: var(--line);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+}
 
-.header__bar { display: flex; align-items: center; justify-content: space-between; min-height: 5.5rem; padding-block: 1rem; }
+.header__bar { display: flex; align-items: center; justify-content: space-between; min-height: var(--header-h); padding-block: 1rem; }
 .header__logo img { height: 2.25rem; width: auto; }
 
 .nav { display: flex; align-items: center; gap: var(--space-5); font-size: 1.0625rem; color: var(--blue); }
@@ -52,6 +76,30 @@
   font-size: 0.6875rem;
   font-weight: 500;
 }
+
+/* Services dropdown: opens on hover and keyboard focus. */
+.nav__group { position: relative; }
+.nav__parent { display: inline-flex; align-items: center; gap: 0.4rem; }
+.nav__caret { transition: transform var(--dur) var(--ease); }
+.nav__group:hover .nav__caret, .nav__group:focus-within .nav__caret { transform: rotate(180deg); }
+.nav__menu {
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  display: none;
+  min-width: 13rem;
+  padding: 0.5rem;
+  margin-top: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--white);
+  box-shadow: 0 12px 32px rgb(48 56 128 / 0.12);
+}
+/* Bridges the gap so the menu does not close while the pointer travels to it. */
+.nav__menu::before { content: ''; position: absolute; inset: -0.7rem 0 auto 0; height: 0.7rem; }
+.nav__group:hover .nav__menu, .nav__group:focus-within .nav__menu { display: grid; }
+.nav__menu a { padding: 0.6rem 0.75rem; border-radius: var(--r-sm); }
+.nav__menu a:hover { background: var(--orange-50); }
 
 .header__toggle { display: none; width: 2.5rem; height: 2.5rem; padding: 0; background: none; border: 0; cursor: pointer; }
 .header__toggle span { display: block; width: 1.5rem; height: 2px; margin: 6px auto; background: var(--blue); }
@@ -71,6 +119,11 @@
     font-size: 1.125rem;
   }
   .nav.is-open { display: flex; }
+  .nav__caret { display: none; }
+  .nav__menu { position: static; display: grid; margin: 0.25rem 0 0; padding: 0 0 0 1rem; border: 0; box-shadow: none; min-width: 0; }
+  .nav__menu::before { display: none; }
+  .nav__menu a { padding: 0.35rem 0; }
+  .nav__menu a:hover { background: none; }
 }
 
 /* Cards & chips */
@@ -85,6 +138,7 @@
   font-size: var(--fs-small);
   font-weight: 500;
 }
+.chips--linen li { background: var(--linen); }
 .chips--dark li { background: transparent; color: var(--white); border: 1px solid var(--line-on-dark); }
 
 .eyebrow--light { color: var(--orange-soft); }

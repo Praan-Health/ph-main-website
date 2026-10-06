@@ -6,14 +6,11 @@ import { asset } from '../lib/asset'
 // TODO: replace with the real Cal.com booking link for Praan Advisors.
 export const CAL_URL = 'https://cal.id/team/advisor/consultation-with-praan'
 
-export const HERO_CONDITIONS = [
-  'Diabetes',
-  'Blood pressure',
-  'Thyroid',
-  'Heart health',
-  'Menopause',
-  'Joint pain',
-] as const
+// Pain areas the hero eyebrow types through.
+export const HERO_PAIN_AREAS = ['back pain', 'knee pain', 'shoulder pain', 'neck pain'] as const
+
+// "Request Callback" opens the callback form on the Clinics page.
+export const CALLBACK_HREF = asset('/clinics/?callback=1')
 
 // Nutrition is sold on the shop; the Nutrition section's CTA and the nav link open it.
 export const SHOP_URL = 'https://shop.praan.health'
@@ -21,13 +18,27 @@ export const SHOP_URL = 'https://shop.praan.health'
 // Daily Movement sessions are booked on their own site.
 export const EVERYDAY_URL = 'https://everyday.praan.health'
 
-// Each link opens its own page (built here or, for the shop, external).
-export const NAV_LINKS = [
-  { label: 'Protocols', href: asset('/protocols/') },
-  { label: 'Clinics', href: asset('/clinics/') },
-  { label: 'Nutrition', href: SHOP_URL, tag: 'New', external: true },
+// Services is the clinic first; protocols and nutrition sit under it as sub-tabs.
+export interface NavLink {
+  label: string
+  href: string
+  tag?: string
+  external?: boolean
+  children?: readonly NavLink[]
+}
+
+export const NAV_LINKS: readonly NavLink[] = [
+  {
+    label: 'Services',
+    href: asset('/clinics/'),
+    children: [
+      { label: 'Clinics', href: asset('/clinics/') },
+      { label: 'Protocols', href: asset('/protocols/') },
+      { label: 'Nutrition', href: SHOP_URL, tag: 'New', external: true },
+    ],
+  },
   { label: 'About', href: asset('/about/') },
-] as const
+]
 
 // Same profiles as the live praan.health footer.
 export const SOCIAL_LINKS = [
@@ -56,33 +67,74 @@ export const FOOTER_CONTACT = [
   { kind: 'email', label: 'care@praan.health', href: 'mailto:support@praan.health?subject=You%20have%20an%20email%20from%20Website' },
 ] as const
 
-// Each pillar's media slot shows `poster` until a `video` is supplied.
+// The three parts of holistic pain management, in the order a patient moves through them. Each
+// step's media slot shows `poster` until a `video` is supplied.
 // TODO: add the card videos (set `video` to a path under /public) when they arrive.
 export const PILLARS = [
   {
-    id: 'protocols',
-    title: 'Protocols',
-    body: 'Doctor-led, at-home and online 1:1 strength training and rehabilitation.',
+    id: 'consultation',
+    tab: 'Understanding your pain', // short label on the left-hand list
+    href: asset('/clinics/'),
+    title: 'Doctor review and analysis',
+    body: 'Your doctor understands your pain and suggests interventional, non-surgical care if required.',
+    poster: asset('/assets/6a0de0c1c1e0593386b2be34_clinic-bg.webp'),
+    posterPosition: '50% 50%',
+    video: undefined as string | undefined,
+  },
+  {
+    id: 'rehab',
+    tab: 'Rehabilitating', // short label on the left-hand list
+    href: asset('/protocols/'),
+    title: 'Physiotherapy rehab',
+    body: 'We rehabilitate the affected area through physiotherapy so movement comes back.',
     poster: asset('/assets/ui/Card.webp'),
     posterPosition: '50% 100%',
     video: undefined as string | undefined,
   },
   {
-    id: 'clinics',
-    title: 'Clinics',
-    body: 'Non-surgical treatment for lasting relief from chronic pain.',
-    poster: asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg'),
-    posterPosition: '60% 50%',
-    video: undefined as string | undefined,
-  },
-  {
-    id: 'nutrition',
-    title: 'Nutrition',
-    body: 'Everyday nutrition that supports active ageing.',
+    id: 'strength',
+    tab: 'Long term relief from pain', // short label on the left-hand list
+    href: asset('/protocols/'),
+    title: 'Strength and nutrition',
+    body: 'Strength training and nutrition for long-term pain relief and to manage the conditions behind it.',
     poster: asset('/assets/nutrition-bg.webp'),
     posterPosition: '78% 55%',
     video: undefined as string | undefined,
   },
+] as const
+
+// Pain areas the clinic leads with.
+export const PAIN_AREAS = [
+  { id: 'back', label: 'Back pain', note: 'Lower back, disc and sciatica' },
+  { id: 'knee', label: 'Knee pain', note: 'Arthritis, ligament and joint wear' },
+  { id: 'shoulder', label: 'Shoulder pain', note: 'Frozen shoulder, rotator cuff and tendon' },
+  { id: 'neck', label: 'Neck pain', note: 'Cervical spine, stiffness and headaches' },
+] as const
+
+// TODO: confirm the procedure list with the clinical team.
+export const PROCEDURES = [
+  'PRP (platelet-rich plasma)',
+  'RFA (radiofrequency ablation)',
+  'Diagnostic nerve block',
+  'Hyaluronic acid (gel shot)',
+  'Prolotherapy',
+  'Trigger point & tendon injections',
+] as const
+
+// Clinic and programme numbers shown near the top of the homepage.
+export const CLINIC_STATS = [
+  { value: '4.9★', label: 'Rated on Google' },
+  { value: '800+', label: 'Patients helped in 2 months' },
+  { value: '7.5K+', label: 'Families helped' },
+] as const
+
+// TODO: add each doctor's photo when they arrive. `photo` falls back to initials.
+export const DOCTORS = [
+  { name: 'Dr. Prajwal Venugopal', role: 'Chief Medical Officer', photo: undefined as string | undefined },
+  { name: 'Dr. Anindya Debnath', role: 'FIPM Rehab Specialist', photo: undefined as string | undefined },
+  { name: 'Dr. Arpitha K', role: 'Pain Specialist', photo: undefined as string | undefined },
+  { name: 'Dr. Yashvanth Gowda', role: 'Pain Physician', photo: undefined as string | undefined },
+  { name: 'Dr. Milan Prathipal', role: 'Internal Medicine', photo: undefined as string | undefined },
 ] as const
 
 // TODO: confirm each specialist's one-line description with the clinical team.
@@ -101,16 +153,3 @@ export const NUMBERS = [
   { value: '1.2L+', label: 'Sessions delivered' },
   { value: '84%', label: 'Graduate to independent routines' },
 ] as const
-
-// TODO: confirm the specialities list with the clinical team.
-export const SPECIALITIES = [
-  'Knee pain',
-  'Back & neck pain',
-  'Arthritis',
-  'Sciatica',
-  'Shoulder pain',
-  'Sports & muscle injury',
-  'Post-surgery recovery',
-  'Osteoporosis',
-] as const
-

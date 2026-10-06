@@ -7,8 +7,13 @@ export function HowWeHelp() {
         <HelpStack
           intro={
             <div className="section-head help__intro">
-              <span className="eyebrow">How Praan Health helps you</span>
-              <h2 id="how-title">Three ways we look after the people you love</h2>
+              <span className="eyebrow">Holistic pain management</span>
+              <h2 id="how-title">
+                Treating the <span className="accent">cause</span>, not just the pain
+              </h2>
+              <p className="lead">
+                Pain is often a sign of something deeper. We treat both, with one care coordinator beside you throughout.
+              </p>
             </div>
           }
         />
