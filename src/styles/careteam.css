@@ -1,6 +1,8 @@
 /* Protocols: layout, care-team diagram. */
 
-.protocol-layout { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+.recovery__diagram { max-width: 44rem; margin: var(--space-6) auto 0; }
+.recovery__cta { display: flex; justify-content: center; margin-top: var(--space-5); }
+.section-head--center { text-align: center; justify-items: center; margin-inline: auto; }
 
 .section--linen .card { background: var(--white); display: grid; gap: var(--space-4); align-content: start; }
 .card h3 { font-size: 1.375rem; }
@@ -59,6 +61,11 @@
   opacity: 0;
 }
 
+/* Ring of hand-offs between the specialists. */
+.ct-ring { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: visible; opacity: 0; }
+.ct-ring__path { fill: none; stroke: var(--orange); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 5 11; opacity: 0.85; }
+.ct-ring__chev { fill: var(--orange); }
+
 /* Spokes: a rotated bar from the doctor to each specialist, with a dot travelling out. */
 .spoke {
   position: absolute;
@@ -80,7 +87,9 @@
   transform: scaleX(0);
   transform-origin: 0 50%;
 }
+.spoke::after,
 .spoke__dot {
+  content: '';
   position: absolute;
   left: 0;
   top: 50%;
@@ -101,7 +110,13 @@
 .care-team.is-visible .ct-node--doctor { animation: doctor-in 0.6s var(--ease) both; }
 .care-team.is-visible .ct-node--doctor::before { animation: ring 2.6s ease-out 0.8s infinite; }
 .care-team.is-visible .spoke::before { animation: draw 0.55s var(--ease) forwards; animation-delay: calc(0.5s + var(--i) * 0.3s); }
-.care-team.is-visible .ct-node:not(.ct-node--doctor) { animation: node-in 0.5s var(--ease) both; animation-delay: calc(0.85s + var(--i) * 0.3s); }
+.care-team.is-visible .ct-node:not(.ct-node--doctor) {
+  animation: node-in 0.5s var(--ease) both, bob 5.5s ease-in-out infinite;
+  animation-delay: calc(0.85s + var(--i) * 0.3s), calc(2s + var(--i) * 0.6s);
+}
+.care-team.is-visible .ct-ring { animation: fade-in 0.9s ease 1.6s forwards; }
+.care-team.is-visible .ct-ring__path { animation: flow 1.4s linear infinite; }
+.care-team.is-visible .spoke::after { animation: travel-back 3.4s ease-in-out infinite; animation-delay: calc(4.3s + var(--i) * 0.55s); }
 .care-team.is-visible .spoke__dot { animation: travel 3.4s ease-in-out infinite; animation-delay: calc(2.6s + var(--i) * 0.55s); }
 .care-team.is-visible .care-team__caption { animation: fade-in 0.6s ease 2.6s forwards; }
 
@@ -115,12 +130,20 @@
   65% { opacity: 1; transform: translateX(calc(var(--len) * 1cqw)); }
   80%, 100% { opacity: 0; transform: translateX(calc(var(--len) * 1cqw)); }
 }
+@keyframes travel-back {
+  0% { opacity: 0; transform: translateX(calc(var(--len) * 1cqw)); }
+  10% { opacity: 1; }
+  65% { opacity: 1; transform: translateX(0); }
+  80%, 100% { opacity: 0; transform: translateX(0); }
+}
+@keyframes flow { to { stroke-dashoffset: -16; } }
+@keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
 @keyframes fade-in { to { opacity: 1; } }
 
 /* Narrow screens: no room for a ring, so stack the doctor over a list of specialists. */
 @media (max-width: 720px) {
   .care-team__box { aspect-ratio: auto; display: grid; gap: var(--space-2); }
-  .spoke { display: none; }
+  .spoke, .ct-ring { display: none; }
   .ct-node, .ct-node--doctor { position: static; transform: none; width: 100%; min-width: 0; }
   .ct-node--doctor { justify-self: stretch; border-radius: var(--r-md); }
   .care-team.is-visible .ct-node--doctor { animation: fade-in 0.5s ease both; }
@@ -132,5 +155,7 @@
 @media (prefers-reduced-motion: reduce) {
   .care-team .ct-node, .care-team .ct-node--doctor, .care-team__caption { opacity: 1 !important; animation: none !important; }
   .care-team .spoke::before { transform: scaleX(1); animation: none !important; }
-  .care-team .spoke__dot, .care-team .ct-node--doctor::before { display: none; }
+  .care-team .spoke__dot, .care-team .spoke::after, .care-team .ct-ring__chev, .care-team .ct-node--doctor::before { display: none; }
+  .care-team .ct-ring { opacity: 1 !important; }
+  .care-team .ct-ring__path { animation: none !important; }
 }
