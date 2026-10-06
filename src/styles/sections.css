@@ -62,18 +62,8 @@
 .numbers li { display: grid; gap: 0.25rem; }
 .numbers__value { font-size: var(--fs-h1); letter-spacing: var(--tracking-heading); line-height: 1; color: var(--white); }
 
-/* Clinics */
-.clinics__intro { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .clinics__intro { grid-template-columns: 0.9fr 1.1fr; } .clinics__photo { order: -1; } } /* photo left, text right on desktop */
-.clinics__intro .section-head { margin-bottom: 0; }
-.clinics__photo { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-lg); }
+/* Clinics: the "Where does it hurt?" explorer lives in pain.css */
 .clinics__sub { max-width: 34rem; color: rgb(255 255 255 / 0.85); }
-.clinics__label { margin-top: var(--space-6); margin-bottom: var(--space-3); font-size: 1.125rem; font-weight: 500; }
-.pain-areas { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
-.pain-areas__link { display: grid; gap: 0.35rem; height: 100%; padding: var(--space-4); border: 1px solid var(--line-on-dark); border-radius: var(--r-lg); transition: background var(--dur) var(--ease), transform var(--dur) var(--ease); }
-.pain-areas__link:hover { background: rgb(255 255 255 / 0.1); transform: translateY(-2px); }
-.pain-areas__name { font-size: 1.25rem; font-weight: 500; letter-spacing: var(--tracking-heading); color: var(--white); }
-.pain-areas__note { font-size: var(--fs-small); line-height: 1.4; color: rgb(255 255 255 / 0.75); }
 
 /* Nutrition — full-width product photo; the photo already carries the product details. */
 .nutrition {

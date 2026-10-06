@@ -6,7 +6,9 @@ import { DailyMovement } from './sections/DailyMovement'
 import { Hero } from './sections/Hero'
 import { HowWeHelp } from './sections/HowWeHelp'
 import { Nutrition } from './sections/Nutrition'
+import { Journey } from './sections/Journey'
 import { Protocols } from './sections/Protocols'
+import { Treatments } from './sections/Treatments'
 import { Stats } from './sections/Stats'
 
 export default function App() {
@@ -17,7 +19,9 @@ export default function App() {
         <Hero />
         <Stats />
         <HowWeHelp />
+        <Journey />
         <Clinics />
+        <Treatments />
         <Protocols />
         <Doctors />
         <Nutrition />

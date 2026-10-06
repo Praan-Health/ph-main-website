@@ -1,5 +1,4 @@
 import { Button } from '../components/Button'
-import { CareTeamDiagram } from '../components/CareTeamDiagram'
 import { CAL_URL, NUMBERS } from '../content/site'
 import { asset } from '../lib/asset'
 
@@ -23,13 +22,6 @@ export function Protocols() {
               Know more
             </Button>
           </div>
-        </div>
-
-        <div className="protocol-layout">
-          <article className="card">
-            <h3>How your care team works</h3>
-            <CareTeamDiagram />
-          </article>
         </div>
 
         <div className="numbers" aria-label="Strength in numbers">

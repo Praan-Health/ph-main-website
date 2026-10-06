@@ -1,0 +1,58 @@
+/* "Where does it hurt?": a body on the left, areas and likely causes on the right. */
+.pain { display: grid; gap: var(--space-5); align-items: center; grid-template-columns: 1fr; margin-top: var(--space-5); }
+@media (min-width: 900px) { .pain { grid-template-columns: auto 1fr; gap: var(--space-7, 4.5rem); } }
+
+.pain__body { position: relative; width: min(100%, 19rem); aspect-ratio: 768 / 1376; max-height: 70svh; margin-inline: auto; border-radius: var(--r-lg); background: var(--white); overflow: hidden; box-shadow: 0 20px 44px rgb(0 0 0 / 0.22); }
+@media (max-width: 899px) { .pain__body { width: min(100%, 13rem); } }
+.pain__view { position: absolute; left: var(--space-2); bottom: var(--space-2); padding: 0.25rem 0.7rem; border-radius: var(--r-pill); background: var(--linen); color: var(--blue); font-size: 0.75rem; font-weight: 500; }
+
+.body-map { display: block; width: 100%; height: 100%; }
+.body-map__focus { transform-origin: 0 0; transition: transform 1s var(--ease); }
+.body-map__turn { transform-box: fill-box; transform-origin: center; animation: body-turn 0.6s var(--ease); }
+@keyframes body-turn { 0% { transform: scaleX(1); opacity: 1; } 45% { transform: scaleX(0.08); opacity: 0.4; } 100% { transform: scaleX(1); opacity: 1; } }
+
+/* A red spot with a soft glow and two rings radiating out of it. */
+.body-map__glow { transform-box: fill-box; transform-origin: center; animation: pain-breathe 2.4s ease-in-out infinite; }
+@keyframes pain-breathe { 0%, 100% { opacity: 0.75; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.1); } }
+.body-map__dot { fill: #e5352b; stroke: #fff; stroke-width: 3; }
+.body-map__ring { fill: #e5352b; opacity: 0; transform-box: fill-box; transform-origin: center; animation: pain-radiate 2.2s ease-out infinite; animation-delay: calc(0.7s + var(--i) * 0.15s); }
+.body-map__ring--late { animation-delay: calc(1.8s + var(--i) * 0.15s); }
+@keyframes pain-radiate { 0% { opacity: 0.55; transform: scale(1); } 100% { opacity: 0; transform: scale(4.2); } }
+
+.pain__panel { display: grid; gap: var(--space-4); align-content: center; justify-items: start; }
+.pain__areas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.pain__area { padding: 0.6rem 1.15rem; border: 1px solid var(--line-on-dark); border-radius: var(--r-pill); background: transparent; color: var(--white); font: inherit; font-size: 1rem; cursor: pointer; transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.pain__area:hover { background: rgb(255 255 255 / 0.12); }
+.pain__area.is-active { background: var(--white); border-color: var(--white); color: var(--blue); font-weight: 500; }
+.pain__area:focus-visible { outline: 2px solid var(--orange-soft); outline-offset: 3px; }
+
+.pain__info { display: grid; gap: var(--space-3); align-content: start; min-height: 11rem; max-width: 34rem; }
+.pain__title { font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2rem); letter-spacing: var(--tracking-heading); }
+.pain__label { font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange-soft); }
+.pain__note { font-size: var(--fs-small); color: rgb(255 255 255 / 0.7); }
+.pain__hint { max-width: 26rem; font-size: 1.0625rem; line-height: 1.5; color: rgb(255 255 255 / 0.85); }
+.pain__info > * { animation: pain-in 0.5s var(--ease) both; }
+@keyframes pain-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .body-map__focus { transition: none; }
+  .body-map__turn, .body-map__ring, .body-map__glow, .pain__info > * { animation: none; }
+  .body-map__ring { display: none; }
+}
+
+/* Treatments: six procedure cards under the pain explorer. */
+.treatments { display: grid; gap: var(--space-3); margin: var(--space-6) 0 0; padding: 0; list-style: none; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .treatments { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .treatments { grid-template-columns: repeat(3, 1fr); } }
+.treatment { position: relative; display: grid; align-items: end; aspect-ratio: 4 / 3; overflow: hidden; isolation: isolate; border-radius: var(--r-lg); background: var(--linen); transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+.treatment:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgb(48 56 128 / 0.18); }
+.treatment__image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+.treatment:hover .treatment__image { transform: scale(1.04); }
+/* Dark fade so the title and text read over any picture. */
+.treatment::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(20 20 40 / 0) 30%, rgb(20 20 40 / 0.78) 100%); }
+.treatment__tag { position: absolute; top: var(--space-4); left: var(--space-4); padding: 0.4rem 0.9rem; border-radius: var(--r-pill); background: var(--orange); color: var(--white); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+.treatment__body { display: grid; gap: 0.35rem; padding: var(--space-4); }
+.treatment__title { font-size: 1.5rem; line-height: 1.15; letter-spacing: var(--tracking-heading); color: var(--white); }
+.treatment__text { font-size: var(--fs-small); line-height: 1.45; color: rgb(255 255 255 / 0.88); }
+.treatments__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; margin-top: var(--space-5); }
+@media (prefers-reduced-motion: reduce) { .treatment, .treatment__image { transition: none; } .treatment:hover, .treatment:hover .treatment__image { transform: none; } }
