@@ -155,6 +155,8 @@
 .footer__heading::after { content: ''; flex: 1; height: 2px; border-radius: 2px; background: rgb(255 255 255 / 0.12); }
 .footer__list { display: grid; gap: var(--space-3); }
 .footer__list a:hover { color: var(--orange-soft); }
+/* Taller tap area without changing the look. */
+.footer__list a { display: inline-block; padding-block: 0.5rem; margin-block: -0.5rem; }
 
 .footer__contact { display: grid; gap: var(--space-2); justify-items: start; }
 .footer__contact a { display: inline-flex; align-items: center; gap: var(--space-3); min-width: 15rem; padding: 0.7rem 1.4rem 0.7rem 1rem; border: 1px solid rgb(255 255 255 / 0.16); border-radius: var(--r-pill); background: rgb(255 255 255 / 0.05); color: var(--white); transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease); }
@@ -174,7 +176,7 @@
 /* Callback modal */
 .modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: var(--space-4); background: rgb(14 18 48 / 0.6); overflow-y: auto; animation: modal-fade 0.25s var(--ease); }
 .modal__panel { position: relative; width: min(100%, 28rem); padding: var(--space-5); border-radius: var(--r-lg); background: var(--white); box-shadow: 0 24px 60px rgb(0 0 0 / 0.3); animation: modal-rise 0.3s var(--ease); }
-.modal__close { position: absolute; top: var(--space-3); right: var(--space-3); display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; border: 0; border-radius: 50%; background: var(--linen); color: var(--blue); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.modal__close { position: absolute; top: var(--space-2); right: var(--space-2); display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; border: 0; border-radius: 50%; background: var(--linen); color: var(--blue); font-size: 1.75rem; line-height: 1; cursor: pointer; }
 .modal__close:hover { background: var(--orange-50); }
 .modal__title { padding-right: 2.5rem; font-size: 1.5rem; }
 .modal__intro { margin-top: var(--space-2); font-size: var(--fs-small); color: var(--ink-body); }

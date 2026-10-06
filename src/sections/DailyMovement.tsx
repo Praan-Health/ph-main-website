@@ -15,12 +15,11 @@ export function DailyMovement() {
           loading="lazy"
         />
         <div className="movement__copy">
-          <span className="eyebrow">Daily movement</span>
           <h2 id="movement-title">
-            Move a little, every day — with <span className="accent">Navneeth</span>
+            Move a little, every day, with <span className="accent">Navneeth</span>
           </h2>
           <p className="lead">
-            Short, guided sessions that fit into your parents' morning and build strength and balance over time.
+            Short, guided sessions that fit into your morning and build strength and balance over time.
           </p>
           <Button href={EVERYDAY_URL}>Secure your Spot</Button>
         </div>

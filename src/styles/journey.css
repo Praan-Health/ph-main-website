@@ -27,9 +27,10 @@
 /* Dots: vertical on desktop with the active one stretched, a row on phones. */
 .journey__dots { display: flex; gap: 0.6rem; margin: 0; padding: 0; list-style: none; justify-content: center; }
 @media (min-width: 900px) { .journey__dots { flex-direction: column; align-items: center; } }
-.journey__dot { display: block; width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 0.25rem; background: rgb(48 56 128 / 0.25); cursor: pointer; transition: background var(--dur) var(--ease), width var(--dur) var(--ease), height var(--dur) var(--ease); }
+.journey__dot { position: relative; display: block; width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 0.25rem; background: rgb(48 56 128 / 0.25); cursor: pointer; transition: background var(--dur) var(--ease), width var(--dur) var(--ease), height var(--dur) var(--ease); }
 .journey__dot.is-active { background: var(--orange); width: 1.75rem; }
 @media (min-width: 900px) { .journey__dot.is-active { width: 0.5rem; height: 2.25rem; } }
+.journey__dot::before { content: ''; position: absolute; inset: -0.9rem -0.45rem; } /* tap area */
 .journey__dot:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
 
 /* Reduced motion: no pinning. Every step shows in turn, one under another. */

@@ -12,7 +12,6 @@ export function Treatments() {
     <section className="section" id="treatments" aria-labelledby="treatments-title">
       <div className="container">
         <div className="section-head section-head--center">
-          <span className="eyebrow">{treatments.eyebrow}</span>
           <h2 id="treatments-title">{treatments.heading}</h2>
           <p className="lead">{treatments.sub}</p>
         </div>
