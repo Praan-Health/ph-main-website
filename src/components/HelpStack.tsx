@@ -73,7 +73,7 @@ export function HelpStack({ intro }: { intro: ReactNode }) {
     >
       <div className="help__side">
       {intro}
-      <div className="help__tabs" role="tablist" aria-label="How Praan Health helps you" onKeyDown={onTabKey}>
+      <div className="help__tabs" role="tablist" aria-label="Holistic pain management" onKeyDown={onTabKey}>
         {PILLARS.map((pillar, i) => (
           <button
             key={pillar.id}
@@ -84,7 +84,7 @@ export function HelpStack({ intro }: { intro: ReactNode }) {
             className={`help__tab ${i === active ? 'is-active' : ''}`}
             onClick={() => goTo(i)}
           >
-            <span className="help__tab-label">{pillar.title}</span>
+            <span className="help__tab-label">{pillar.tab}</span>
             <span className="help__tab-track" aria-hidden="true">
               {/* Advances to the next card when the bar finishes; pausing the animation pauses the loop. */}
               {i === active && <span key={active} className="help__tab-fill" onAnimationEnd={() => goTo(active + 1)} />}
@@ -112,7 +112,7 @@ export function HelpStack({ intro }: { intro: ReactNode }) {
               <div className="stack-card__body">
                 <h3>{pillar.title}</h3>
                 <p>{pillar.body}</p>
-                <a className="stack-card__more" href={`#${pillar.id}`} tabIndex={isFront || reducedMotion ? 0 : -1}>
+                <a className="stack-card__more" href={pillar.href} tabIndex={isFront || reducedMotion ? 0 : -1}>
                   Explore →
                 </a>
               </div>

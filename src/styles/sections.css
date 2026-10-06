@@ -1,31 +1,59 @@
-/* Hero */
-.hero { padding-block: clamp(1.25rem, 0.75rem + 1.5vw, 2rem) 0; background: var(--white) url('/assets/6a017e2ca38f1875af2739c3_home-hero-gradient.webp') right bottom / cover no-repeat; overflow: hidden; }
-.hero__grid { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
-.hero__copy { display: grid; gap: var(--space-4); justify-items: start; }
+/* Hero: clinic photo as a cover, a light gradient over it, text on top of the gradient. */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 34rem;
+  margin-top: calc(var(--header-h) * -1); /* slides under the transparent header */
+  padding-block: calc(var(--header-h) + clamp(2.5rem, 1.5rem + 4vw, 5rem)) clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.9) 0, rgb(255 255 255 / 0) 8rem),
+    linear-gradient(180deg, rgb(255 255 255 / 0.97) 0%, rgb(255 255 255 / 0.9) 55%, rgb(255 255 255 / 0.3) 100%),
+    url('/assets/clinic-front.webp') center 38% / cover no-repeat;
+  overflow: hidden;
+}
+.hero__grid { width: 100%; }
+.hero__copy { display: grid; gap: var(--space-4); justify-items: start; max-width: 38rem; }
 .hero__eyebrow { margin-bottom: -0.625rem; }
 .hero__title { font-size: clamp(2.125rem, 1.25rem + 3.3vw, 3.625rem); line-height: 1.2; }
 .hero__sub { max-width: 34rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
-/* Typed condition in the eyebrow, with a blinking caret. */
+/* Typed pain area in the eyebrow, with a blinking caret. */
 .hero__typed::after { content: ''; display: inline-block; width: 2px; height: 0.95em; margin-left: 2px; vertical-align: -0.12em; background: currentColor; animation: caret 1s steps(1) infinite; }
 @keyframes caret { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .hero__typed::after { display: none; } }
-.hero__media { position: relative; align-self: end; justify-self: center; width: min(100%, 26rem); }
-.hero__photo { width: 100%; height: auto; }
-.hero__chip { position: absolute; z-index: 2; height: auto; filter: drop-shadow(0 12px 24px rgb(48 56 128 / 0.18)); animation: float 6s ease-in-out infinite; will-change: transform; }
-.hero__chip--hba1c { width: 48%; left: -25%; top: 26%; }
-.hero__chip--steps { width: 40%; left: 55%; top: 3%; animation-duration: 7.5s; animation-delay: -2.5s; }
-@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(2deg); } }
-@media (prefers-reduced-motion: reduce) { .hero__chip { animation: none; } }
 
 @media (min-width: 900px) {
-  /* Fill the first screen under the sticky header. */
-  .hero { position: relative; display: flex; align-items: center; min-height: max(36rem, calc(100svh - 5.5rem)); }
-  .hero__grid { width: 100%; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
-  .hero__copy { padding-bottom: 1rem; }
-  /* Image is 1:1.335. Sit on the bottom edge, but never let her head crop off the top. */
-  .hero__media { --photo-w: min(39vw, 38rem); position: absolute; top: max(1.5rem, calc(100% - var(--photo-w) * 1.335)); right: 1vw; width: var(--photo-w); margin: 0; }
+  .hero { min-height: max(36rem, 100svh); }
+  /* Solid on the text side, fading out so the building shows on the right. */
+  .hero {
+    background:
+      linear-gradient(180deg, rgb(255 255 255 / 0.9) 0, rgb(255 255 255 / 0) 8rem),
+      linear-gradient(90deg, rgb(255 255 255 / 0.97) 0%, rgb(255 255 255 / 0.95) 48%, rgb(255 255 255 / 0.45) 68%, rgb(255 255 255 / 0) 100%),
+      url('/assets/clinic-front.webp') var(--hero-shift) 38% / cover no-repeat,
+      var(--white);
+    /* The word "Clinic" ends 85.5% across the photo; slide the photo right so it lands on the content's right margin. */
+    --hero-shift: max(0px, calc(14.5vw - max(var(--gutter), (100vw - var(--max-w)) / 2)));
+  }
 }
+
+/* Stats band under the hero */
+.stats { padding-block: var(--space-5); background: var(--blue); border-bottom: 1px solid var(--line-on-dark); }
+.stats__list { display: grid; gap: var(--space-4); grid-template-columns: repeat(3, 1fr); text-align: center; }
+.stats__item { display: grid; gap: 0.25rem; justify-items: center; }
+.stats__value { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem); font-weight: 500; line-height: 1; letter-spacing: var(--tracking-heading); color: var(--white); }
+.stats__star { display: inline-block; width: 0.7em; height: 0.7em; margin-left: 0.1em; vertical-align: baseline; }
+.stats__label { max-width: 14rem; font-size: var(--fs-small); line-height: 1.35; color: rgb(255 255 255 / 0.82); }
+@media (max-width: 640px) { .stats__list { grid-template-columns: 1fr; } }
+
+/* Doctors */
+.doctors { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); }
+@media (min-width: 900px) { .doctors { grid-template-columns: repeat(5, 1fr); } }
+.doctor { display: grid; gap: 0.35rem; justify-items: center; text-align: center; }
+.doctor__photo { width: 100%; max-width: 11rem; aspect-ratio: 1; border-radius: 50%; object-fit: cover; }
+.doctor__photo--placeholder { display: grid; place-items: center; background: var(--linen); color: var(--blue); font-size: 2.25rem; font-weight: 500; letter-spacing: var(--tracking-heading); }
+.doctor__name { margin-top: var(--space-2); font-size: 1.125rem; font-weight: 500; color: var(--blue); }
+.doctor__role { font-size: var(--fs-small); color: var(--orange); }
 
 /* Protocols — layout, care-team diagram and checklist live in careteam.css */
 .numbers { margin-top: var(--space-6); padding: var(--space-5); border-radius: var(--r-lg); background: var(--blue); color: rgb(255 255 255 / 0.8); }
@@ -39,7 +67,13 @@
 @media (min-width: 900px) { .clinics__intro { grid-template-columns: 0.9fr 1.1fr; } .clinics__photo { order: -1; } } /* photo left, text right on desktop */
 .clinics__intro .section-head { margin-bottom: 0; }
 .clinics__photo { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-lg); }
-.clinics__specialities { font-size: var(--fs-small); line-height: 1.5; color: rgb(255 255 255 / 0.85); }
+.clinics__sub { max-width: 34rem; color: rgb(255 255 255 / 0.85); }
+.clinics__label { margin-top: var(--space-6); margin-bottom: var(--space-3); font-size: 1.125rem; font-weight: 500; }
+.pain-areas { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+.pain-areas__link { display: grid; gap: 0.35rem; height: 100%; padding: var(--space-4); border: 1px solid var(--line-on-dark); border-radius: var(--r-lg); transition: background var(--dur) var(--ease), transform var(--dur) var(--ease); }
+.pain-areas__link:hover { background: rgb(255 255 255 / 0.1); transform: translateY(-2px); }
+.pain-areas__name { font-size: 1.25rem; font-weight: 500; letter-spacing: var(--tracking-heading); color: var(--white); }
+.pain-areas__note { font-size: var(--fs-small); line-height: 1.4; color: rgb(255 255 255 / 0.75); }
 
 /* Nutrition — full-width product photo; the photo already carries the product details. */
 .nutrition {
