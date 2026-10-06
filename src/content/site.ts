@@ -9,9 +9,6 @@ export const CAL_URL = 'https://cal.id/team/advisor/consultation-with-praan'
 // Pain areas the hero eyebrow types through.
 export const HERO_PAIN_AREAS = ['back pain', 'knee pain', 'shoulder pain', 'neck pain'] as const
 
-// "Request Callback" opens the callback form on the Clinics page.
-export const CALLBACK_HREF = asset('/clinics/?callback=1')
-
 // Nutrition is sold on the shop; the Nutrition section's CTA and the nav link open it.
 export const SHOP_URL = 'https://shop.praan.health'
 
@@ -135,9 +132,9 @@ export const CARE_TEAM = [
 export const JOURNEY_STEPS = [
   {
     id: 'understand',
-    title: 'We understand your pain',
+    title: 'We find the root cause of your pain',
     who: 'Doctor',
-    does: 'Your doctor listens, reviews your history and finds the cause of your pain.',
+    does: 'Your doctor listens, reviews your history, and assesses physical limitations with specialised equipment.',
     image: asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg'),
     cutout: false,
     position: '50% 50%',
@@ -184,5 +181,6 @@ export const NUMBERS = [
   { value: '7.5k+', label: 'Families served' },
   { value: '108+', label: 'Cities' },
   { value: '1.2L+', label: 'Sessions delivered' },
+  { value: '300+', label: 'Experts' },
   { value: '84%', label: 'Graduate to independent routines' },
 ] as const

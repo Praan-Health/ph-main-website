@@ -1,5 +1,5 @@
-import { Button } from '../components/Button'
-import { CALLBACK_HREF, HERO_PAIN_AREAS } from '../content/site'
+import { CallbackButton } from '../components/CallbackButton'
+import { HERO_PAIN_AREAS } from '../content/site'
 import { useTypewriter } from '../hooks/useTypewriter'
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
             Doctor-led, non-surgical treatment for back, knee, shoulder and neck pain — from precise diagnosis to long-term rehab, under one roof.
           </p>
           <div className="hero__actions">
-            <Button href={CALLBACK_HREF}>Request Callback</Button>
+            <CallbackButton />
           </div>
         </div>
       </div>

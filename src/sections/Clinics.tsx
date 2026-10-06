@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { BodyMap } from '../components/BodyMap'
-import { Button } from '../components/Button'
-import { CALLBACK_HREF } from '../content/site'
+import { CallbackButton } from '../components/CallbackButton'
 import { PAIN_AREAS } from '../content/pain'
 
 export function Clinics() {
@@ -22,19 +21,16 @@ export function Clinics() {
     <section className="section section--blue" id="clinics" aria-labelledby="clinics-title">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow eyebrow--light">Praan Clinics</span>
+          <span className="eyebrow eyebrow--light">Conditions we treat</span>
           <h2 id="clinics-title">
-            Where does it <span className="accent">hurt</span>?
+            Relief for pain across the <span className="accent">body</span>
           </h2>
-          <p className="clinics__sub">Pick an area to see what could be behind your pain.</p>
+          <p className="clinics__sub">
+            From joints to spine to nerves — our non-surgical protocols are tailored to the conditions most common after 50
+          </p>
         </div>
 
         <div className="pain">
-          <div className="pain__body">
-            <BodyMap area={area} view={shownView} />
-            {area && <span className="pain__view">{shownView === 'back' ? 'Back view' : 'Front view'}</span>}
-          </div>
-
           <div className="pain__panel">
             <ul className="pain__areas" aria-label="Areas of pain">
               {PAIN_AREAS.map((a) => (
@@ -59,16 +55,19 @@ export function Clinics() {
                   <p className="pain__note">This is a guide, not a diagnosis. Our doctors find the exact cause.</p>
                 </>
               ) : (
-                <p className="pain__hint">Select where it hurts and we will show you the spot and the common causes.</p>
+                <p className="pain__hint">Choose an area to see where it hurts and the conditions we treat there.</p>
               )}
             </div>
 
             <div className="row">
-              <Button href={CALLBACK_HREF} variant="inverse">
-                Request Callback
-              </Button>
+              <CallbackButton variant="inverse" />
             </div>
           </div>
+          <div className="pain__body">
+            <BodyMap area={area} view={shownView} />
+            {area && <span className="pain__view">{shownView === 'back' ? 'Back view' : 'Front view'}</span>}
+          </div>
+
         </div>
       </div>
     </section>

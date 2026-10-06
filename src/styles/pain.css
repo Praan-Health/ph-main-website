@@ -1,9 +1,9 @@
 /* "Where does it hurt?": a body on the left, areas and likely causes on the right. */
 .pain { display: grid; gap: var(--space-5); align-items: center; grid-template-columns: 1fr; margin-top: var(--space-5); }
-@media (min-width: 900px) { .pain { grid-template-columns: auto 1fr; gap: var(--space-7, 4.5rem); } }
+@media (min-width: 900px) { .pain { grid-template-columns: 1fr auto; gap: var(--space-7, 4.5rem); } }
 
 .pain__body { position: relative; width: min(100%, 19rem); aspect-ratio: 768 / 1376; max-height: 70svh; margin-inline: auto; border-radius: var(--r-lg); background: var(--white); overflow: hidden; box-shadow: 0 20px 44px rgb(0 0 0 / 0.22); }
-@media (max-width: 899px) { .pain__body { width: min(100%, 13rem); } }
+@media (max-width: 899px) { .pain__body { order: -1; width: min(100%, 13rem); } }
 .pain__view { position: absolute; left: var(--space-2); bottom: var(--space-2); padding: 0.25rem 0.7rem; border-radius: var(--r-pill); background: var(--linen); color: var(--blue); font-size: 0.75rem; font-weight: 500; }
 
 .body-map { display: block; width: 100%; height: 100%; }
@@ -56,3 +56,29 @@
 .treatment__text { font-size: var(--fs-small); line-height: 1.45; color: rgb(255 255 255 / 0.88); }
 .treatments__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; margin-top: var(--space-5); }
 @media (prefers-reduced-motion: reduce) { .treatment, .treatment__image { transition: none; } .treatment:hover, .treatment:hover .treatment__image { transform: none; } }
+
+/* Patient stories: a snapping row of video thumbnails (3 / 2 / 1 per view). */
+.stories { position: relative; margin-top: var(--space-6); }
+.stories__track { display: flex; gap: 1.25rem; margin: 0; padding: 0; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.stories__track::-webkit-scrollbar { display: none; }
+.stories__item { flex: 0 0 calc((100% - 2.5rem) / 3); min-width: 0; scroll-snap-align: start; }
+@media (max-width: 860px) { .stories__item { flex-basis: calc((100% - 1.25rem) / 2); } }
+@media (max-width: 560px) { .stories__item { flex-basis: 100%; } }
+.story { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; padding: 0; overflow: hidden; border: 0; border-radius: var(--r-lg); background: #000; box-shadow: 0 2px 12px rgb(20 20 40 / 0.1); cursor: pointer; }
+.story__thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s var(--ease); }
+.story:hover .story__thumb { transform: scale(1.04); }
+.story__frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.story__play { position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 3.6rem; height: 3.6rem; padding-left: 0.2rem; border-radius: 50%; background: rgb(255 255 255 / 0.94); color: var(--orange); box-shadow: 0 6px 22px rgb(0 0 0 / 0.32); transform: translate(-50%, -50%); transition: scale var(--dur) var(--ease); }
+.story:hover .story__play { scale: 1.08; }
+.stories__nav { position: absolute; top: 50%; z-index: 2; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; padding: 0; border: 1px solid rgb(0 0 0 / 0.1); border-radius: 50%; background: var(--white); color: var(--blue); box-shadow: 0 4px 14px rgb(0 0 0 / 0.12); transform: translateY(-50%); cursor: pointer; transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.stories__nav:hover { background: var(--orange); color: var(--white); }
+.stories__nav[hidden] { display: none; }
+.stories__nav--prev { left: -3.25rem; }
+.stories__nav--next { right: -3.25rem; }
+@media (max-width: 1180px) { .stories__nav--prev { left: 0.25rem; } .stories__nav--next { right: 0.25rem; } }
+@media (max-width: 560px) { .stories__nav { display: none; } }
+.stories__dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: var(--space-4); }
+.stories__dot { width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 50%; background: rgb(0 0 0 / 0.18); cursor: pointer; transition: background var(--dur) var(--ease), scale var(--dur) var(--ease); }
+.stories__dot:hover { background: rgb(0 0 0 / 0.32); }
+.stories__dot.is-active { background: var(--orange); scale: 1.25; }
+@media (prefers-reduced-motion: reduce) { .story__thumb, .story__play { transition: none; } .story:hover .story__thumb { transform: none; } }

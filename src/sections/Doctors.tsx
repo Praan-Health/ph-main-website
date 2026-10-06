@@ -11,7 +11,7 @@ function initials(name: string): string {
 
 export function Doctors() {
   return (
-    <section className="section" id="doctors" aria-labelledby="doctors-title">
+    <section className="section section--linen" id="doctors" aria-labelledby="doctors-title">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">Meet your doctors</span>

@@ -1,5 +1,5 @@
 import { Button } from '../components/Button'
-import { CALLBACK_HREF } from '../content/site'
+import { CallbackButton } from '../components/CallbackButton'
 import { asset } from '../lib/asset'
 import { treatments } from '../protocols/content/clinics'
 
@@ -31,7 +31,7 @@ export function Treatments() {
         </ul>
 
         <div className="treatments__actions">
-          <Button href={CALLBACK_HREF}>Request Callback</Button>
+          <CallbackButton />
           <Button href={asset('/clinics/')} variant="secondary">
             See all treatments
           </Button>

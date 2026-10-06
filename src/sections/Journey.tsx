@@ -1,4 +1,3 @@
-import { ClipboardCheckIcon } from '../components/icons'
 import { JOURNEY_STEPS } from '../content/site'
 import { useStickyProgress } from '../hooks/useStickyProgress'
 
@@ -17,6 +16,7 @@ export function Journey() {
             <h2 id="journey-title">
               From first visit to <span className="accent">lasting relief</span>
             </h2>
+            <p className="lead">We are with you every step of the way.</p>
           </div>
 
           <div className="journey__stage">
@@ -39,9 +39,6 @@ export function Journey() {
                   <p className="journey__does">{step.does}</p>
                 </div>
               ))}
-              <p className="journey__coordinator">
-                <ClipboardCheckIcon size={16} /> Your care coordinator is with you at every step
-              </p>
             </div>
 
             <ol className="journey__dots" aria-label="Journey steps">
