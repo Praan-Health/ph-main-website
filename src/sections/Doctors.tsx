@@ -14,7 +14,6 @@ export function Doctors() {
     <section className="section section--linen" id="doctors" aria-labelledby="doctors-title">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">Meet your doctors</span>
           <h2 id="doctors-title">
             The doctors behind your <span className="accent">recovery</span>
           </h2>

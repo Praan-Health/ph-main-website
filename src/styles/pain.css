@@ -3,7 +3,26 @@
 @media (min-width: 900px) { .pain { grid-template-columns: 1fr auto; gap: var(--space-7, 4.5rem); } }
 
 .pain__body { position: relative; width: min(100%, 19rem); aspect-ratio: 768 / 1376; max-height: 70svh; margin-inline: auto; border-radius: var(--r-lg); background: var(--white); overflow: hidden; box-shadow: 0 20px 44px rgb(0 0 0 / 0.22); }
-@media (max-width: 899px) { .pain__body { order: -1; width: min(100%, 13rem); } }
+/* Phones: area chips scroll in one row, then the body, then the conditions, all centred. */
+@media (max-width: 899px) {
+  .pain { grid-template-columns: 1fr; grid-template-areas: "areas" "body" "info" "cta"; gap: var(--space-4); align-items: start; justify-items: center; }
+  .pain .pain__panel { display: contents; }
+  .pain .pain__areas { grid-area: areas; justify-self: stretch; flex-wrap: nowrap; overflow-x: auto; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); padding-bottom: 0.25rem; scroll-snap-type: x proximity; scrollbar-width: none; }
+  .pain .pain__areas::-webkit-scrollbar { display: none; }
+  .pain .pain__areas li { flex: none; scroll-snap-align: start; }
+  .pain .pain__body { grid-area: body; width: min(100%, 13.5rem); max-height: none; margin: 0; }
+  .pain .pain__info { grid-area: info; min-height: 0; }
+  .pain .pain__panel .row { grid-area: cta; }
+  .pain .pain__title { font-size: 1.375rem; }
+
+  /* Centred on phones: heading block, chips, conditions and the button. */
+  #clinics .section-head { text-align: center; justify-items: center; }
+  #clinics .clinics__sub { margin-inline: auto; }
+  .pain .pain__areas { justify-content: safe center; }
+  .pain .pain__info { text-align: center; justify-items: center; }
+  .pain .pain__info .chips { justify-content: center; }
+  .pain .pain__panel .row { justify-content: center; }
+}
 .pain__view { position: absolute; left: var(--space-2); bottom: var(--space-2); padding: 0.25rem 0.7rem; border-radius: var(--r-pill); background: var(--linen); color: var(--blue); font-size: 0.75rem; font-weight: 500; }
 
 .body-map { display: block; width: 100%; height: 100%; }
@@ -28,7 +47,6 @@
 
 .pain__info { display: grid; gap: var(--space-3); align-content: start; min-height: 11rem; max-width: 34rem; }
 .pain__title { font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2rem); letter-spacing: var(--tracking-heading); }
-.pain__label { font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange-soft); }
 .pain__note { font-size: var(--fs-small); color: rgb(255 255 255 / 0.7); }
 .pain__hint { max-width: 26rem; font-size: 1.0625rem; line-height: 1.5; color: rgb(255 255 255 / 0.85); }
 .pain__info > * { animation: pain-in 0.5s var(--ease) both; }
@@ -46,6 +64,11 @@
 @media (min-width: 980px) { .treatments { grid-template-columns: repeat(3, 1fr); } }
 .treatment { position: relative; display: grid; align-items: end; aspect-ratio: 4 / 3; overflow: hidden; isolation: isolate; border-radius: var(--r-lg); background: var(--linen); transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
 .treatment:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgb(48 56 128 / 0.18); }
+@media (max-width: 639px) {
+  .treatment { aspect-ratio: 16 / 10; }
+  /* Phones show the first three; "See all treatments" leads to the rest. */
+  .treatment:nth-child(n + 4) { display: none; }
+}
 .treatment__image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
 .treatment:hover .treatment__image { transform: scale(1.04); }
 /* Dark fade so the title and text read over any picture. */
@@ -78,7 +101,8 @@
 @media (max-width: 1180px) { .stories__nav--prev { left: 0.25rem; } .stories__nav--next { right: 0.25rem; } }
 @media (max-width: 560px) { .stories__nav { display: none; } }
 .stories__dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: var(--space-4); }
-.stories__dot { width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 50%; background: rgb(0 0 0 / 0.18); cursor: pointer; transition: background var(--dur) var(--ease), scale var(--dur) var(--ease); }
+.stories__dot { position: relative; width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 50%; background: rgb(0 0 0 / 0.18); cursor: pointer; transition: background var(--dur) var(--ease), scale var(--dur) var(--ease); }
+.stories__dot::before { content: ''; position: absolute; inset: -0.9rem -0.4rem; } /* tap area */
 .stories__dot:hover { background: rgb(0 0 0 / 0.32); }
 .stories__dot.is-active { background: var(--orange); scale: 1.25; }
 @media (prefers-reduced-motion: reduce) { .story__thumb, .story__play { transition: none; } .story:hover .story__thumb { transform: none; } }

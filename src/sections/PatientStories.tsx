@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { testimonials } from '../protocols/content/clinics'
 
 const GAP_PX = 20
+const SUBHEADING = 'Real people who came to Praan with lasting pain, and got back to what they love without surgery.'
 
 function PlayIcon() {
   return (
@@ -68,9 +69,8 @@ export function PatientStories() {
     <section className="section" id="stories" aria-labelledby="stories-title">
       <div className="container">
         <div className="section-head section-head--center">
-          <span className="eyebrow">{testimonials.eyebrow}</span>
           <h2 id="stories-title">{testimonials.heading}</h2>
-          <p className="lead">{testimonials.sub}</p>
+          <p className="lead">{SUBHEADING}</p>
         </div>
 
         <div className="stories">

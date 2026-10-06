@@ -7,12 +7,11 @@ export function Protocols() {
     <section className="section section--linen" id="protocols" aria-labelledby="protocols-title">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">Long-term rehab protocols</span>
           <h2 id="protocols-title">
             Keep the relief with a doctor-led <span className="accent">protocol</span>
           </h2>
           <p className="lead">
-            After treatment, one doctor builds your plan and directs a physio, dietician and strength trainer to deliver it — at home and online.
+            After treatment, one doctor builds your plan and directs a physio, dietician and strength trainer to deliver it, at home and online.
           </p>
           <div className="row">
             <Button href={CAL_URL} className="btn--lg">

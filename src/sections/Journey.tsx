@@ -12,7 +12,6 @@ export function Journey() {
       <div className="journey__sticky">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Your journey</span>
             <h2 id="journey-title">
               From first visit to <span className="accent">lasting relief</span>
             </h2>

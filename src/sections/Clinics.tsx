@@ -26,7 +26,7 @@ export function Clinics() {
             Relief for pain across the <span className="accent">body</span>
           </h2>
           <p className="clinics__sub">
-            From joints to spine to nerves — our non-surgical protocols are tailored to the conditions most common after 50
+            From joints to spine to nerves, our non-surgical protocols are tailored to the conditions most common after 50
           </p>
         </div>
 
@@ -46,7 +46,6 @@ export function Clinics() {
               {area ? (
                 <>
                   <h3 className="pain__title">{area.label}</h3>
-                  <p className="pain__label">Could be</p>
                   <ul className="chips chips--dark">
                     {area.conditions.map((condition) => (
                       <li key={condition}>{condition}</li>
