@@ -5,13 +5,20 @@ export type NavLink = {
   href: string;
   external?: boolean;
   badge?: string;
+  children?: NavLink[];
 };
 
-// Same links as the new homepage header.
+// Same links as the new homepage header: Services leads to the clinics, with protocols and nutrition under it.
 export const navigation: NavLink[] = [
-  { label: "Protocols", href: "/protocols" },
-  { label: "Clinics", href: "/clinics" },
-  { label: "Nutrition", href: "https://shop.praan.health", external: true, badge: "New" },
+  {
+    label: "Services",
+    href: "/clinics",
+    children: [
+      { label: "Clinics", href: "/clinics" },
+      { label: "Protocols", href: "/protocols" },
+      { label: "Nutrition", href: "https://shop.praan.health", external: true, badge: "New" },
+    ],
+  },
   { label: "About", href: "/about" },
 ];
 
@@ -35,7 +42,7 @@ export type SocialNetwork = "linkedin" | "instagram" | "youtube";
 
 export const footer = {
   logo: { src: "/images/logo-dark.svg", width: 100, height: 37, alt: "Praan Health" },
-  tagline: "Chronic care for ageing parents - even from far away.",
+  tagline: "Non-surgical, doctor-led care for chronic pain.",
   social: [
     { network: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/praanhealth" },
     { network: "instagram", label: "Instagram", href: "https://www.instagram.com/praan_health" },

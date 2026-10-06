@@ -69,13 +69,15 @@ export function CallbackModal({
   useEffect(() => {
     if (!autoOpen) return;
     let t: ReturnType<typeof setTimeout>;
+    // The homepage's "Request Callback" links here with ?callback=1 and expects the form straight away.
+    const delay = new URLSearchParams(window.location.search).has("callback") ? 0 : AUTO_OPEN_DELAY_MS;
     const schedule = () => {
       t = setTimeout(() => {
         if (phaseRef.current !== "closed") return;
         returnFocusRef.current = null;
         setFormKey((k) => k + 1);
         setPhase("open");
-      }, AUTO_OPEN_DELAY_MS);
+      }, delay);
     };
     if (document.readyState === "complete") schedule();
     else window.addEventListener("load", schedule, { once: true });

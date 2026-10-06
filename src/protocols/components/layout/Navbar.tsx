@@ -54,7 +54,7 @@ export function Navbar() {
 
             <ul className="hidden w-[35%] flex-1 items-center justify-end gap-8 md:flex">
               {navigation.map((item) => (
-                <li key={item.href}>
+                <li key={item.label}>
                   <NavItem item={item} current={isCurrent(pathname, item)} />
                 </li>
               ))}
@@ -77,7 +77,7 @@ export function Navbar() {
           )}
         >
           {navigation.map((item) => (
-            <li key={item.href}>
+            <li key={item.label}>
               <NavItem item={item} current={isCurrent(pathname, item)} mobile />
             </li>
           ))}
@@ -89,19 +89,50 @@ export function Navbar() {
 
 function NavItem({ item, current, mobile }: { item: NavLink; current: boolean; mobile?: boolean }) {
   const external = item.external ? { target: "_blank", rel: "noopener" } : {};
+  const link = (
+    <Link
+      href={item.href}
+      aria-current={current ? "page" : undefined}
+      className="flex cursor-pointer items-center gap-2 text-[1.0625rem] text-navy-700 transition-colors duration-200 hover:text-orange-500"
+      {...external}
+    >
+      <span>{item.label}</span>
+      {item.badge && <span className="flex items-center justify-start pt-[0.13rem] text-[0.63rem] text-orange-500">{item.badge}</span>}
+      {item.children && !mobile && (
+        <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" className="transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180">
+          <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )}
+    </Link>
+  );
+
   return (
     <div className={cn("group relative flex flex-col", mobile && "px-[1.13rem] py-4")}>
-      <Link
-        href={item.href}
-        aria-current={current ? "page" : undefined}
-        className={cn(
-          "flex cursor-pointer gap-2 text-[1.0625rem] text-navy-700 transition-colors duration-200 hover:text-orange-500",
-        )}
-        {...external}
-      >
-        <span>{item.label}</span>
-        {item.badge && <span className="flex items-center justify-start pt-[0.13rem] text-[0.63rem] text-orange-500">{item.badge}</span>}
-      </Link>
+      {link}
+      {item.children && (
+        <div
+          className={cn(
+            mobile
+              ? "mt-3 flex flex-col gap-3 pl-4"
+              : "invisible absolute top-full -left-4 z-10 mt-2 grid min-w-52 gap-1 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-[0_12px_32px_rgb(48_56_128/0.12)] transition-opacity duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 before:absolute before:inset-x-0 before:-top-3 before:h-3 before:content-['']",
+          )}
+        >
+          {item.children.map((child) => (
+            <Link
+              key={child.label}
+              href={child.href}
+              className={cn(
+                "flex items-center gap-2 text-[1.0625rem] text-navy-700 transition-colors duration-200 hover:text-orange-500",
+                !mobile && "rounded-lg px-3 py-2 hover:bg-orange-50",
+              )}
+              {...(child.external ? { target: "_blank", rel: "noopener" } : {})}
+            >
+              <span>{child.label}</span>
+              {child.badge && <span className="pt-[0.13rem] text-[0.63rem] text-orange-500">{child.badge}</span>}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
