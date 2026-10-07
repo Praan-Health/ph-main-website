@@ -112,9 +112,6 @@ export function HelpStack({ intro }: { intro: ReactNode }) {
               <div className="stack-card__body">
                 <h3>{pillar.title}</h3>
                 <p>{pillar.body}</p>
-                <a className="stack-card__more" href={pillar.href} tabIndex={isFront || reducedMotion ? 0 : -1}>
-                  Explore →
-                </a>
               </div>
             </article>
           )
