@@ -1,5 +1,5 @@
 /* "Where does it hurt?": a body on the left, areas and likely causes on the right. */
-.pain { display: grid; gap: var(--space-5); align-items: center; grid-template-columns: 1fr; margin-top: var(--space-5); }
+.pain { display: grid; gap: var(--space-5); align-items: start; grid-template-columns: 1fr; margin-top: var(--space-4); }
 @media (min-width: 900px) { .pain { grid-template-columns: 1fr auto; gap: var(--space-7, 4.5rem); } }
 
 .pain__body { position: relative; width: min(100%, 19rem); aspect-ratio: 768 / 1376; max-height: 70svh; margin-inline: auto; border-radius: var(--r-lg); background: var(--white); overflow: hidden; box-shadow: 0 20px 44px rgb(0 0 0 / 0.22); }
@@ -38,7 +38,7 @@
 .body-map__ring--late { animation-delay: calc(1.8s + var(--i) * 0.15s); }
 @keyframes pain-radiate { 0% { opacity: 0.55; transform: scale(1); } 100% { opacity: 0; transform: scale(4.2); } }
 
-.pain__panel { display: grid; gap: var(--space-4); align-content: center; justify-items: start; }
+.pain__panel { display: grid; gap: var(--space-4); align-content: start; justify-items: start; }
 .pain__areas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
 .pain__area { padding: 0.6rem 1.15rem; border: 1px solid var(--line-on-dark); border-radius: var(--r-pill); background: transparent; color: var(--white); font: inherit; font-size: 1rem; cursor: pointer; transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
 .pain__area:hover { background: rgb(255 255 255 / 0.12); }
@@ -99,10 +99,20 @@
 .stories__nav--prev { left: -3.25rem; }
 .stories__nav--next { right: -3.25rem; }
 @media (max-width: 1180px) { .stories__nav--prev { left: 0.25rem; } .stories__nav--next { right: 0.25rem; } }
-@media (max-width: 560px) { .stories__nav { display: none; } }
+/* Phones keep the arrows (bigger, for thumbs) since swiping is not obvious. */
+@media (max-width: 560px) { .stories__nav { width: 2.75rem; height: 2.75rem; } .stories__nav--prev { left: 0.5rem; } .stories__nav--next { right: 0.5rem; } }
 .stories__dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: var(--space-4); }
 .stories__dot { position: relative; width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 50%; background: rgb(0 0 0 / 0.18); cursor: pointer; transition: background var(--dur) var(--ease), scale var(--dur) var(--ease); }
 .stories__dot::before { content: ''; position: absolute; inset: -0.9rem -0.4rem; } /* tap area */
 .stories__dot:hover { background: rgb(0 0 0 / 0.32); }
 .stories__dot.is-active { background: var(--orange); scale: 1.25; }
 @media (prefers-reduced-motion: reduce) { .story__thumb, .story__play { transition: none; } .story:hover .story__thumb { transform: none; } }
+
+/* Desktop: the body figure spans the heading block and the chips, so its top lines up with the top of the heading. */
+@media (min-width: 900px) {
+  #clinics > .container { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--space-7, 4.5rem); align-items: start; }
+  #clinics .section-head { grid-column: 1; grid-row: 1; margin-bottom: 0; }
+  #clinics .pain { display: contents; }
+  #clinics .pain__panel { grid-column: 1; grid-row: 2; margin-top: var(--space-5); }
+  #clinics .pain__body { grid-column: 2; grid-row: 1 / span 2; align-self: start; margin: 0; }
+}
