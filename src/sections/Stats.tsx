@@ -6,7 +6,7 @@ export function Stats() {
       <ul className="container stats__list">
         {CLINIC_STATS.map((stat) => (
           <li key={stat.label} className="stats__item">
-            <span className="stats__value">
+            <span className={`stats__value ${'isPlace' in stat ? 'stats__value--place' : ''}`}>
               {stat.value.replace('★', '')}
               {stat.value.endsWith('★') && (
                 <svg className="stats__star" viewBox="0 0 24 24" aria-hidden="true">

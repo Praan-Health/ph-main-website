@@ -51,10 +51,9 @@
 .stack-card__body h3 { color: var(--white); font-size: 1rem; transition: font-size 0.85s var(--ease); }
 .stack-card[data-slot='0'] .stack-card__body h3 { font-size: 1.75rem; }
 /* Description and link only on the focus card. */
-.stack-card__body p, .stack-card__more { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.6s var(--ease), opacity 0.5s ease; }
-.stack-card[data-slot='0'] .stack-card__body p, .stack-card[data-slot='0'] .stack-card__more { max-height: 6rem; opacity: 1; transition-delay: 0.35s; }
+.stack-card__body p { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.6s var(--ease), opacity 0.5s ease; }
+.stack-card[data-slot='0'] .stack-card__body p { max-height: 6rem; opacity: 1; transition-delay: 0.35s; }
 .stack-card__body p { color: rgb(255 255 255 / 0.9); }
-.stack-card__more { color: var(--white); font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
 
 @media (max-width: 899px) {
   .stack { aspect-ratio: 1 / 1.1; }
@@ -72,6 +71,5 @@
   .help__tabs { display: none; }
   .stack { aspect-ratio: auto; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
   .stack-card, .stack-card[data-slot] { position: relative; left: auto; top: auto; width: auto; height: 20rem; transition: none; cursor: default; }
-  .stack-card__body p, .stack-card__more { max-height: none; opacity: 1; }
-  .stack-card__body h3, .stack-card[data-slot] .stack-card__body h3 { font-size: 1.5rem; transition: none; }
+  .stack-card__body p,   .stack-card__body h3, .stack-card[data-slot] .stack-card__body h3 { font-size: 1.5rem; transition: none; }
 }

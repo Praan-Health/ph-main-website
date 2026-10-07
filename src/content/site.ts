@@ -71,7 +71,6 @@ export const PILLARS = [
   {
     id: 'consultation',
     tab: 'Understanding your pain', // short label on the left-hand list
-    href: asset('/clinics/'),
     title: 'Doctor review and analysis',
     body: 'Your doctor understands your pain and suggests interventional, non-surgical care if required.',
     poster: asset('/assets/6a0de0c1c1e0593386b2be34_clinic-bg.webp'),
@@ -81,7 +80,6 @@ export const PILLARS = [
   {
     id: 'rehab',
     tab: 'Rehabilitating', // short label on the left-hand list
-    href: asset('/protocols/'),
     title: 'Physiotherapy rehab',
     body: 'We rehabilitate the affected area through physiotherapy so movement comes back.',
     poster: asset('/assets/ui/Card.webp'),
@@ -91,7 +89,6 @@ export const PILLARS = [
   {
     id: 'strength',
     tab: 'Long term relief from pain', // short label on the left-hand list
-    href: asset('/protocols/'),
     title: 'Strength and nutrition',
     body: 'Strength training and nutrition for long-term pain relief and to manage the conditions behind it.',
     poster: asset('/assets/nutrition-bg.webp'),
@@ -104,7 +101,7 @@ export const PILLARS = [
 export const CLINIC_STATS = [
   { value: '4.9★', label: 'Rated on Google' },
   { value: '800+', label: 'Patients helped in 2 months' },
-  { value: '7.5K+', label: 'Families helped' },
+  { value: 'Koramangala', label: 'Bengaluru', isPlace: true },
 ] as const
 
 // TODO: add each doctor's photo when they arrive. `photo` falls back to initials.
