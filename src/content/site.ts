@@ -104,13 +104,19 @@ export const CLINIC_STATS = [
   { value: 'Koramangala', label: 'Bengaluru', isPlace: true },
 ] as const
 
-// TODO: add each doctor's photo when they arrive. `photo` falls back to initials.
+// TODO: add photos for Dr. Prajwal Venugopal and Dr. Yashvanth Gowda when they are ready; until then their
+// cards show initials on the same shape as the photos.
+const doctorPhoto = (slug: string) => asset(`/assets/doctors/${slug}.webp`)
+
 export const DOCTORS = [
   { name: 'Dr. Prajwal Venugopal', role: 'Chief Medical Officer', photo: undefined as string | undefined },
-  { name: 'Dr. Anindya Debnath', role: 'FIPM Rehab Specialist', photo: undefined as string | undefined },
-  { name: 'Dr. Arpitha K', role: 'Pain Specialist', photo: undefined as string | undefined },
+  { name: 'Dr. Anindya Debnath', role: 'FIPM Rehab Specialist', photo: doctorPhoto('anindya-debnath') },
+  { name: 'Dr. Arpitha K', role: 'Pain Specialist', photo: doctorPhoto('arpitha-k') },
   { name: 'Dr. Yashvanth Gowda', role: 'Pain Physician', photo: undefined as string | undefined },
-  { name: 'Dr. Milan Prathipal', role: 'Internal Medicine', photo: undefined as string | undefined },
+  { name: 'Dr. Milan Prathipal', role: 'Internal Medicine', photo: doctorPhoto('milan-prathipal') },
+  { name: 'Dr. Nitish Mandal', role: 'Pain Specialist', photo: doctorPhoto('nitish-mandal') },
+  { name: 'Dr. Nagasai Nihal', role: 'Lead Physiotherapist', photo: doctorPhoto('nagasai-nihal') },
+  { name: 'Dr. Sri Chakra', role: 'Physiotherapist', photo: doctorPhoto('sri-chakra') },
 ] as const
 
 // TODO: confirm each specialist's one-line description with the clinical team.
