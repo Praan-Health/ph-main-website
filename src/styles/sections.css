@@ -51,21 +51,17 @@
   .stats__label { font-size: 0.75rem; }
 }
 
-/* Doctors */
-.doctors { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); }
-@media (min-width: 900px) { .doctors { grid-template-columns: repeat(5, 1fr); } }
-@media (max-width: 559px) {
-  .doctors { grid-template-columns: repeat(2, 1fr); gap: var(--space-4) var(--space-3); }
-  .doctors .doctor__photo { max-width: 7.5rem; }
-  .doctors .doctor__photo--placeholder { font-size: 1.75rem; }
-  .doctors .doctor__name { font-size: 1rem; }
-  .doctors .doctor:last-child:nth-child(odd) { grid-column: 1 / -1; }
-}
-.doctor { display: grid; gap: 0.35rem; justify-items: center; text-align: center; }
-.doctor__photo { width: 100%; max-width: 11rem; aspect-ratio: 1; border-radius: 50%; object-fit: cover; }
-.doctor__photo--placeholder { display: grid; place-items: center; background: var(--white); color: var(--blue); font-size: 2.25rem; font-weight: 500; letter-spacing: var(--tracking-heading); }
+/* Doctors: photo cards (504 x 444, rounded) with the name and role underneath. */
+.doctors { display: grid; gap: var(--space-5) var(--space-4); grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin: 0; padding: 0; list-style: none; }
+@media (min-width: 900px) { .doctors { grid-template-columns: repeat(4, minmax(0, 15rem)); justify-content: space-between; } }
+@media (max-width: 559px) { .doctors { grid-template-columns: repeat(2, 1fr); gap: var(--space-4) var(--space-3); } }
+.doctor { display: grid; gap: 0.35rem; align-content: start; }
+.doctor__photo { display: block; width: 100%; height: auto; aspect-ratio: 504 / 444; object-fit: cover; }
+/* The photos carry their own rounded corners and hairline border; the placeholder copies that shape (radius 57 x 58px of 504 x 444). */
+.doctor__photo--placeholder { display: grid; place-items: center; border-radius: 11.4% / 13%; border: 1px solid rgb(48 56 128 / 0.1); background: var(--white); color: var(--blue); font-size: clamp(2rem, 1.4rem + 2vw, 3rem); font-weight: 500; letter-spacing: var(--tracking-heading); }
 .doctor__name { margin-top: var(--space-2); font-size: 1.125rem; font-weight: 500; color: var(--blue); }
 .doctor__role { font-size: var(--fs-small); color: var(--orange); }
+@media (max-width: 559px) { .doctor__name { font-size: 1rem; } }
 
 /* Protocols — layout, care-team diagram and checklist live in careteam.css */
 .numbers { margin-top: var(--space-6); padding: var(--space-5); border-radius: var(--r-lg); background: var(--blue); color: rgb(255 255 255 / 0.8); }

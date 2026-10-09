@@ -22,7 +22,7 @@ export function Doctors() {
           {DOCTORS.map((doctor) => (
             <li key={doctor.name} className="doctor">
               {doctor.photo ? (
-                <img className="doctor__photo" src={doctor.photo} alt={doctor.name} width="320" height="320" loading="lazy" />
+                <img className="doctor__photo" src={doctor.photo} alt={doctor.name} width="504" height="444" loading="lazy" />
               ) : (
                 <span className="doctor__photo doctor__photo--placeholder" aria-hidden="true">
                   {initials(doctor.name)}
