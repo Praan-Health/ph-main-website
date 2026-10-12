@@ -97,11 +97,18 @@ export const PILLARS = [
   },
 ] as const
 
-// Clinic and programme numbers shown near the top of the homepage.
-export const CLINIC_STATS = [
+// The clinic card under the hero: where it is, how to get there and two proof points.
+// TODO: replace `address` with the full street address when it is confirmed.
+export const CLINIC = {
+  name: 'Praan Health Clinic',
+  address: 'Koramangala, Bengaluru',
+  mapUrl: 'https://maps.app.goo.gl/mfGBBa5FmC2hhXq98',
+  photo: asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg'),
+} as const
+
+export const CLINIC_FACTS = [
   { value: '4.9★', label: 'Rated on Google' },
-  { value: '800+', label: 'Patients helped in 2 months' },
-  { value: 'Koramangala', label: 'Bengaluru', isPlace: true },
+  { value: '7.5K+', label: 'Families served' },
 ] as const
 
 // TODO: add photos for Dr. Prajwal Venugopal and Dr. Yashvanth Gowda when they are ready; until then their
@@ -181,7 +188,6 @@ export const JOURNEY_STEPS = [
 ] as const
 
 export const NUMBERS = [
-  { value: '7.5k+', label: 'Families served' },
   { value: '108+', label: 'Cities' },
   { value: '1.2L+', label: 'Sessions delivered' },
   { value: '300+', label: 'Experts' },

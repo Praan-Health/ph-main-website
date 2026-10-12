@@ -17,7 +17,7 @@ export function Hero() {
           </span>
           <h1 className="hero__title">India's first holistic ecosystem for chronic pain management.</h1>
           <p className="lead hero__sub">
-            Doctor-led, non-surgical treatment for back, knee, shoulder and neck pain. From precise diagnosis to long-term rehab, under one roof.
+            Advanced, minimally invasive chronic pain treatments for knee, back, shoulder, hip, and spine, combined with holistic rehabilitation through physiotherapy, strength training, nutrition, and counseling, delivered at our clinic and in the comfort of your home.
           </p>
           <div className="hero__actions">
             <CallbackButton />

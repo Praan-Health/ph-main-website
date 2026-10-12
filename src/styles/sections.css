@@ -16,7 +16,7 @@
 .hero__copy { display: grid; gap: var(--space-4); justify-items: start; max-width: 38rem; }
 .hero__eyebrow { margin-bottom: -0.625rem; }
 .hero__title { font-size: clamp(2.125rem, 1.25rem + 3.3vw, 3.625rem); line-height: 1.2; }
-.hero__sub { max-width: 34rem; }
+.hero__sub { max-width: 36rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
 /* Typed pain area in the eyebrow, with a blinking caret. */
 .hero__typed::after { content: ''; display: inline-block; width: 2px; height: 0.95em; margin-left: 2px; vertical-align: -0.12em; background: currentColor; animation: caret 1s steps(1) infinite; }
@@ -35,21 +35,22 @@
   }
 }
 
-/* Stats band under the hero */
-.stats { padding-block: var(--space-5); background: var(--blue); border-bottom: 1px solid var(--line-on-dark); }
-.stats__list { display: grid; gap: var(--space-4); grid-template-columns: repeat(3, 1fr); text-align: center; }
-.stats__item { display: grid; gap: 0.25rem; justify-items: center; align-content: start; }
-.stats__value { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem); font-weight: 500; line-height: 1; letter-spacing: var(--tracking-heading); color: var(--white); }
-.stats__value--place { display: flex; align-items: center; height: clamp(1.75rem, 1.2rem + 2vw, 2.75rem); font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); }
-.stats__star { display: inline-block; width: 0.7em; height: 0.7em; margin-left: 0.1em; vertical-align: baseline; }
-.stats__label { max-width: 14rem; font-size: var(--fs-small); line-height: 1.35; color: rgb(255 255 255 / 0.82); }
-@media (max-width: 640px) {
-  .stats { padding-block: var(--space-4); }
-  .stats__list { gap: var(--space-2); }
-  .stats__value { font-size: 1.625rem; }
-  .stats__value--place { height: 1.625rem; font-size: 1.1875rem; }
-  .stats__label { font-size: 0.75rem; }
-}
+/* Clinic card under the hero: photo | name, address and proof points | actions. */
+.clinic { padding-block: var(--space-6); background: var(--blue); color: rgb(255 255 255 / 0.85); }
+.clinic__card { display: grid; gap: var(--space-4); align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .clinic__card { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr) auto; gap: var(--space-6); } }
+.clinic__photo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-lg); }
+.clinic__body { display: grid; gap: var(--space-3); align-content: center; }
+.clinic__name { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem); line-height: 1.1; letter-spacing: var(--tracking-heading); color: var(--white); }
+.clinic__address { max-width: 30rem; font-size: 1.0625rem; line-height: 1.5; color: rgb(255 255 255 / 0.85); }
+.clinic__facts { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); margin: 0; padding: 0; list-style: none; }
+.clinic__fact { display: flex; align-items: baseline; gap: 0.5rem; }
+.clinic__value { display: inline-flex; align-items: center; gap: 0.2rem; font-size: 1.5rem; font-weight: 500; letter-spacing: var(--tracking-heading); color: var(--white); }
+.clinic__star { width: 0.8em; height: 0.8em; color: var(--orange-soft); }
+.clinic__label { font-size: var(--fs-small); color: rgb(255 255 255 / 0.8); }
+.clinic__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.clinic__actions .btn svg { flex: none; }
+@media (max-width: 899px) { .clinic { padding-block: var(--space-5); } .clinic__name { margin-top: var(--space-1); } }
 
 /* Doctors: photo cards (504 x 444, rounded) with the name and role underneath. */
 .doctors { display: grid; gap: var(--space-5) var(--space-4); grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin: 0; padding: 0; list-style: none; }

@@ -16,12 +16,12 @@ export function DailyMovement() {
         />
         <div className="movement__copy">
           <h2 id="movement-title">
-            Move a little, every day, with <span className="accent">Navneeth</span>
+            Make exercise a daily habit, with <span className="accent">Navneeth</span>
           </h2>
           <p className="lead">
-            Short, guided sessions that fit into your morning and build strength and balance over time.
+            45-min live guided sessions that fit into your everyday routine to build your strength, mobility, and balance
           </p>
-          <Button href={EVERYDAY_URL}>Secure your Spot</Button>
+          <Button href={EVERYDAY_URL}>Join Today</Button>
         </div>
       </div>
     </section>
