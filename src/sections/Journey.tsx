@@ -1,60 +1,42 @@
+import type { CSSProperties } from 'react'
 import { JOURNEY_STEPS } from '../content/site'
-import { useStickyProgress } from '../hooks/useStickyProgress'
+import { useScrollProgress } from '../hooks/useScrollProgress'
 
-const COUNT = JOURNEY_STEPS.length
+const GAPS = JOURNEY_STEPS.length - 1
 
 export function Journey() {
-  const { ref, progress, scrollTo } = useStickyProgress<HTMLElement>()
-  const active = Math.min(COUNT - 1, Math.floor(progress * COUNT))
+  const { ref, progress } = useScrollProgress<HTMLOListElement>()
+  // How far the line has drawn, in steps: 0 at the first dot, GAPS at the last.
+  const reached = progress * GAPS
 
   return (
-    <section ref={ref} className="journey" id="journey" aria-labelledby="journey-title" style={{ '--steps': COUNT } as React.CSSProperties}>
-      <div className="journey__sticky">
-        <div className="container">
-          <div className="section-head">
-            <h2 id="journey-title">
-              From first visit to <span className="accent">lasting relief</span>
-            </h2>
-            <p className="lead">We are with you every step of the way.</p>
-          </div>
-
-          <div className="journey__stage">
-            <div className="journey__frame">
-              {JOURNEY_STEPS.map((step, i) => (
-                <div key={step.id} className={`journey__media ${i === active ? 'is-active' : ''} ${step.cutout ? 'is-cutout' : ''}`}>
-                  <img src={step.image} alt="" loading="lazy" style={{ objectPosition: step.position }} />
-                </div>
-              ))}
-              <span className="journey__badge" aria-hidden="true">
-                {active + 1} / {COUNT}
-              </span>
-            </div>
-
-            <div className="journey__copy">
-              {JOURNEY_STEPS.map((step, i) => (
-                <div key={step.id} className={`journey__text ${i === active ? 'is-active' : ''}`} aria-hidden={i !== active}>
-                  <p className="journey__who">{step.who}</p>
-                  <h3 className="journey__title">{step.title}</h3>
-                  <p className="journey__does">{step.does}</p>
-                </div>
-              ))}
-            </div>
-
-            <ol className="journey__dots" aria-label="Journey steps">
-              {JOURNEY_STEPS.map((step, i) => (
-                <li key={step.id}>
-                  <button
-                    type="button"
-                    className={`journey__dot ${i === active ? 'is-active' : ''}`}
-                    aria-label={`Step ${i + 1}: ${step.title}`}
-                    aria-current={i === active ? 'step' : undefined}
-                    onClick={() => scrollTo((i + 0.5) / COUNT)}
-                  />
-                </li>
-              ))}
-            </ol>
-          </div>
+    <section className="journey" id="journey" aria-labelledby="journey-title">
+      <div className="container">
+        <div className="section-head section-head--center">
+          <h2 id="journey-title">
+            Your journey to <span className="accent">lasting pain relief</span>
+          </h2>
+          <p className="lead">We are with you every step of the way.</p>
         </div>
+
+        <ol ref={ref} className="timeline">
+          {JOURNEY_STEPS.map((step, i) => (
+            <li
+              key={step.id}
+              className={`timeline__step ${i % 2 === 0 ? 'is-left' : 'is-right'} ${reached >= i - 0.02 ? 'is-active' : ''}`}
+              style={{ '--seg': Math.min(1, Math.max(0, reached - i)) } as CSSProperties}
+            >
+              <span className="timeline__numeral" aria-hidden="true">
+                {step.numeral}.
+              </span>
+              <span className="timeline__dot" aria-hidden="true" />
+              <div className="timeline__text">
+                <h3 className="timeline__title">{step.title}</h3>
+                <p className="timeline__why">{step.why}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   )
