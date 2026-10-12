@@ -1,4 +1,4 @@
-/* "How Praan Health helps you": heading + tabs on the left, a perspective card stack on the right. */
+/* Our approach: heading + tabs on the left, a Focus Shift of the four pillar cards on the right. */
 
 .help { display: grid; gap: var(--space-6); align-items: center; grid-template-columns: 1fr; }
 .help__side { display: grid; gap: var(--space-5); }
@@ -28,11 +28,22 @@
   overflow: hidden;
   border-radius: var(--r-lg);
   background: var(--orange-50);
-  transition: left 0.85s var(--ease), top 0.85s var(--ease), width 0.85s var(--ease), height 0.85s var(--ease);
+  transition: left 0.85s var(--ease), top 0.85s var(--ease), width 0.85s var(--ease), height 0.85s var(--ease), background-color 0.85s var(--ease);
 }
 .stack-card[data-slot='0'] { --l: 0%; --t: 0%; --w: 62%; --h: 100%; z-index: 2; }
-.stack-card[data-slot='1'] { --l: 65%; --t: 0%; --w: 35%; --h: 48.5%; cursor: pointer; }
-.stack-card[data-slot='2'] { --l: 65%; --t: 51.5%; --w: 35%; --h: 48.5%; cursor: pointer; }
+.stack-card[data-slot='1'] { --l: 65%; --t: 0%; --w: 35%; --h: 31.3%; cursor: pointer; }
+.stack-card[data-slot='2'] { --l: 65%; --t: 34.35%; --w: 35%; --h: 31.3%; cursor: pointer; }
+.stack-card[data-slot='3'] { --l: 65%; --t: 68.7%; --w: 35%; --h: 31.3%; cursor: pointer; }
+
+/* Text-only cards: linen when small, brand blue when in focus. */
+.stack-card:not(.has-media) { background: var(--linen); }
+.stack-card:not(.has-media)[data-slot='0'] { background: var(--blue); }
+.stack-card:not(.has-media):not([data-slot='0']):hover { background: var(--orange-50); }
+.stack-card:not(.has-media) .stack-card__body { color: var(--blue); text-shadow: none; }
+.stack-card:not(.has-media) .stack-card__body h3 { color: var(--blue); transition: font-size 0.85s var(--ease), color 0.85s var(--ease); }
+.stack-card:not(.has-media)[data-slot='0'] .stack-card__body h3 { color: var(--white); }
+.stack-card__num { position: absolute; top: var(--space-3); left: var(--space-4); z-index: 1; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em; color: var(--orange); transition: color 0.85s var(--ease), font-size 0.85s var(--ease); }
+.stack-card[data-slot='0'] .stack-card__num { color: var(--orange-soft); font-size: clamp(3rem, 2rem + 3vw, 4.5rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1; top: var(--space-4); }
 
 .stack-card__frame { position: absolute; inset: 0; }
 .stack-card__media { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.85s var(--ease); }
@@ -56,20 +67,28 @@
 .stack-card__body p { color: rgb(255 255 255 / 0.9); }
 
 @media (max-width: 899px) {
-  .stack { aspect-ratio: 1 / 1.1; }
-  .stack-card[data-slot='0'] { --l: 0%; --t: 0%; --w: 100%; --h: 63%; }
-  .stack-card[data-slot='1'] { --l: 0%; --t: 66%; --w: 48.5%; --h: 34%; }
-  .stack-card[data-slot='2'] { --l: 51.5%; --t: 66%; --w: 48.5%; --h: 34%; }
+  .stack { aspect-ratio: 1 / 1.05; }
+  .stack-card[data-slot='0'] { --l: 0%; --t: 0%; --w: 100%; --h: 62%; }
+  .stack-card[data-slot='1'] { --l: 0%; --t: 65%; --w: 31.3%; --h: 35%; }
+  .stack-card[data-slot='2'] { --l: 34.35%; --t: 65%; --w: 31.3%; --h: 35%; }
+  .stack-card[data-slot='3'] { --l: 68.7%; --t: 65%; --w: 31.3%; --h: 35%; }
   .stack-card__body { padding: var(--space-3); }
+  .stack-card__body h3 { font-size: 0.9375rem; }
   .stack-card[data-slot='0'] .stack-card__body h3 { font-size: 1.5rem; }
-  .help__tabs { max-width: none; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .stack-card__num { left: var(--space-3); }
+  .stack-card[data-slot='0'] .stack-card__num { font-size: 2.5rem; top: var(--space-3); }
+  .help__tabs { max-width: none; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
   .help__tab-label { font-size: 1rem; }
 }
 
-/* Reduced motion: no timer or movement — three plain cards, all details visible. */
+/* Reduced motion: no timer or movement, four plain cards with every detail visible. */
 @media (prefers-reduced-motion: reduce) {
   .help__tabs { display: none; }
   .stack { aspect-ratio: auto; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
-  .stack-card, .stack-card[data-slot] { position: relative; left: auto; top: auto; width: auto; height: 20rem; transition: none; cursor: default; }
-  .stack-card__body p,   .stack-card__body h3, .stack-card[data-slot] .stack-card__body h3 { font-size: 1.5rem; transition: none; }
+  .stack-card, .stack-card[data-slot] { position: relative; left: auto; top: auto; width: auto; height: 14rem; transition: none; cursor: default; }
+  .stack-card:not(.has-media), .stack-card:not(.has-media)[data-slot] { background: var(--blue); }
+  .stack-card:not(.has-media) .stack-card__body h3, .stack-card:not(.has-media)[data-slot] .stack-card__body h3 { color: var(--white); }
+  .stack-card__num, .stack-card[data-slot] .stack-card__num { color: var(--orange-soft); font-size: 0.875rem; transition: none; }
+  .stack-card__body p { max-height: none; opacity: 1; color: rgb(255 255 255 / 0.9); }
+  .stack-card__body h3, .stack-card[data-slot] .stack-card__body h3 { font-size: 1.5rem; transition: none; }
 }
