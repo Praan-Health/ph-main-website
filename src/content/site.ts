@@ -100,8 +100,8 @@ export const PILLARS = [
 // The clinic card under the hero: where it is, how to get there and two proof points.
 // TODO: replace `address` with the full street address when it is confirmed.
 export const CLINIC = {
-  name: 'Koramangala, Bengaluru',
-  address: 'Praan Health Clinic, Koramangala, Bengaluru',
+  name: 'Praan Health Clinic',
+  address: 'Koramangala, Bengaluru',
   mapUrl: 'https://maps.app.goo.gl/mfGBBa5FmC2hhXq98',
   photo: asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg'),
 } as const
