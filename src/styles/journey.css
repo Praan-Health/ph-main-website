@@ -1,45 +1,46 @@
-/* Journey: a tall section with a sticky pane. Scrolling steps through the picture, the copy and the dots. */
-.journey { position: relative; height: calc(100svh + (var(--steps) - 1) * 55svh); background: var(--linen); }
-.journey__sticky { position: sticky; top: 0; display: flex; align-items: center; min-height: 100svh; padding-top: var(--header-h); padding-bottom: var(--space-5); overflow: hidden; }
-.journey__sticky .container { width: 100%; }
-.journey .section-head { margin-bottom: var(--space-5); }
+/* Journey: a vertical timeline. The line draws as you scroll; each step lights up when the line reaches it. */
+.journey { padding-block: var(--section-y); background: var(--linen); }
 
-.journey__stage { display: grid; gap: var(--space-5); align-items: center; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .journey__stage { grid-template-columns: 1.2fr 1fr auto; gap: var(--space-6); } }
+.timeline { --dot: 1.1rem; margin: var(--space-6) 0 0; padding: 0; list-style: none; }
+.timeline__step { position: relative; display: grid; gap: 0 var(--space-4); padding-bottom: var(--space-6); opacity: 0.5; transition: opacity 0.5s var(--ease); }
+.timeline__step:last-child { padding-bottom: 0; }
+.timeline__step.is-active { opacity: 1; }
 
-/* Picture: all steps stack on top of each other and cross-fade. */
-.journey__frame { position: relative; aspect-ratio: 4 / 3; max-height: 48svh; width: 100%; border-radius: var(--r-lg); background: var(--white); overflow: hidden; box-shadow: 0 18px 40px rgb(48 56 128 / 0.14); }
-.journey__media { position: absolute; inset: 0; opacity: 0; transform: scale(1.04); transition: opacity 0.6s var(--ease), transform 0.9s var(--ease); }
-.journey__media.is-active { opacity: 1; transform: scale(1); }
-.journey__media img { width: 100%; height: 100%; object-fit: cover; }
-.journey__media.is-cutout { background: var(--orange-50); }
-.journey__media.is-cutout img { object-fit: contain; }
-.journey__badge { position: absolute; left: var(--space-3); bottom: var(--space-3); padding: 0.3rem 0.75rem; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.9); color: var(--blue); font-size: 0.8125rem; font-weight: 500; }
+/* The segment from this step's dot down to the next one, grey underneath and orange as it fills. */
+.timeline__step::before,
+.timeline__step::after { content: ''; position: absolute; width: 2px; top: calc(var(--dot) / 2 + 0.35rem); bottom: calc(-1 * (var(--dot) / 2 + 0.35rem)); border-radius: 2px; }
+.timeline__step::before { background: rgb(48 56 128 / 0.16); }
+.timeline__step::after { background: var(--orange); transform-origin: 50% 0; transform: scaleY(var(--seg, 0)); }
+.timeline__step:last-child::before, .timeline__step:last-child::after { display: none; }
 
-/* Copy: steps share a cell too, so the block never changes height. */
-.journey__copy { display: grid; gap: var(--space-4); align-content: center; }
-.journey__text { grid-area: 1 / 1; display: grid; gap: var(--space-2); align-content: start; opacity: 0; transform: translateY(14px); transition: opacity 0.5s var(--ease), transform 0.6s var(--ease); pointer-events: none; }
-.journey__text.is-active { opacity: 1; transform: none; pointer-events: auto; }
-.journey__who { font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); }
-.journey__title { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); line-height: 1.15; letter-spacing: var(--tracking-heading); color: var(--blue); }
-.journey__does { max-width: 26rem; font-size: 1.0625rem; line-height: 1.5; color: var(--ink-body); }
+.timeline__dot { position: relative; z-index: 1; width: var(--dot); height: var(--dot); margin-top: 0.35rem; border: 2px solid rgb(48 56 128 / 0.3); border-radius: 50%; background: var(--linen); transition: background 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease); }
+.timeline__step.is-active .timeline__dot { background: var(--orange); border-color: var(--orange); transform: scale(1.15); }
 
-/* Dots: vertical on desktop with the active one stretched, a row on phones. */
-.journey__dots { display: flex; gap: 0.6rem; margin: 0; padding: 0; list-style: none; justify-content: center; }
-@media (min-width: 900px) { .journey__dots { flex-direction: column; align-items: center; } }
-.journey__dot { position: relative; display: block; width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 0.25rem; background: rgb(48 56 128 / 0.25); cursor: pointer; transition: background var(--dur) var(--ease), width var(--dur) var(--ease), height var(--dur) var(--ease); }
-.journey__dot.is-active { background: var(--orange); width: 1.75rem; }
-@media (min-width: 900px) { .journey__dot.is-active { width: 0.5rem; height: 2.25rem; } }
-.journey__dot::before { content: ''; position: absolute; inset: -0.9rem -0.45rem; } /* tap area */
-.journey__dot:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+.timeline__numeral { font-family: var(--font-accent); font-style: italic; font-size: 1.5rem; line-height: 1.2; color: var(--orange); }
+.timeline__title { font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem); line-height: 1.25; letter-spacing: var(--tracking-heading); color: var(--blue); }
+.timeline__why { margin-top: 0.4rem; max-width: 28rem; font-size: 1rem; line-height: 1.5; color: var(--ink-body); }
 
-/* Reduced motion: no pinning. Every step shows in turn, one under another. */
+/* Phones: the line runs down the left; numeral, title and line of text sit to its right. */
+@media (max-width: 899px) {
+  .timeline__step { grid-template-columns: var(--dot) 1fr; grid-template-areas: "dot numeral" "dot text"; }
+  .timeline__step::before, .timeline__step::after { left: calc(var(--dot) / 2 - 1px); }
+  .timeline__dot { grid-area: dot; }
+  .timeline__numeral { grid-area: numeral; }
+  .timeline__text { grid-area: text; }
+}
+
+/* Desktop: the line is centred; steps alternate sides, with the numeral opposite the text. */
+@media (min-width: 900px) {
+  .timeline__step { grid-template-columns: 1fr var(--dot) 1fr; align-items: start; }
+  .timeline__step::before, .timeline__step::after { left: calc(50% - 1px); }
+  .timeline__dot { grid-column: 2; grid-row: 1; }
+  .timeline__step.is-left .timeline__text { grid-column: 1; grid-row: 1; text-align: right; justify-self: end; }
+  .timeline__step.is-left .timeline__numeral { grid-column: 3; grid-row: 1; }
+  .timeline__step.is-right .timeline__numeral { grid-column: 1; grid-row: 1; text-align: right; }
+  .timeline__step.is-right .timeline__text { grid-column: 3; grid-row: 1; }
+  .timeline__step.is-left .timeline__why { margin-left: auto; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .journey { height: auto; }
-  .journey__sticky { position: static; min-height: 0; padding-block: var(--section-y); }
-  .journey__dots, .journey__badge { display: none; }
-  .journey__stage { gap: var(--space-4); }
-  .journey__frame { display: none; }
-  .journey__copy { gap: var(--space-5); }
-  .journey__text { grid-area: auto; opacity: 1; transform: none; pointer-events: auto; }
-  }
+  .timeline__step, .timeline__dot { transition: none; }
+}

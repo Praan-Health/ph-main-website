@@ -143,55 +143,13 @@ export const CARE_TEAM = [
   { id: 'counsellor', role: 'Counsellor', does: 'Mind, mood and motivation', x: 16, y: 36 },
 ] as const
 
-// The patient's path, in order. Each step has a picture beside it; `cutout` pictures are transparent
-// people shown on a tinted panel, the rest are photographs that fill it.
-// TODO: replace the placeholder pictures with photos or short videos of each step.
+// The patient's path, in order, shown as a timeline with roman numerals. Text only.
 export const JOURNEY_STEPS = [
-  {
-    id: 'understand',
-    title: 'We find the root cause of your pain',
-    who: 'Doctor',
-    does: 'Your doctor listens, reviews your history, and assesses physical limitations with specialised equipment.',
-    image: asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg'),
-    cutout: false,
-    position: '50% 50%',
-  },
-  {
-    id: 'treat',
-    title: 'We treat it, without surgery',
-    who: 'Doctor',
-    does: 'If needed, a minimally invasive procedure such as PRP or RFA targets the source.',
-    image: asset('/assets/6a0de0c1c1e0593386b2be34_clinic-bg.webp'),
-    cutout: false,
-    position: '50% 50%',
-  },
-  {
-    id: 'rehab',
-    title: 'We rebuild your movement',
-    who: 'Physiotherapist',
-    does: 'Guided physiotherapy rehabilitates the affected area so everyday movement comes back.',
-    image: asset('/assets/ui/Card.webp'),
-    cutout: false,
-    position: '50% 70%',
-  },
-  {
-    id: 'strengthen',
-    title: 'We keep the pain away',
-    who: 'Strength trainer and dietician',
-    does: 'Strength training and nutrition manage the conditions behind your pain for the long term.',
-    image: asset('/assets/daily-movement.webp'),
-    cutout: true,
-    position: '50% 100%',
-  },
-  {
-    id: 'relief',
-    title: 'You get back to living',
-    who: 'You, with your care coordinator beside you',
-    does: 'Less pain, more movement, and a team that keeps checking in.',
-    image: asset('/assets/6a0b0af0686e8aac45bd1234_daddi.webp'),
-    cutout: true,
-    position: '50% 100%',
-  },
+  { id: 'consultation', numeral: 'I', title: 'Consultation with the doctor', why: 'To understand your pain' },
+  { id: 'assessment', numeral: 'II', title: 'Functional assessment', why: 'To assess your pain, muscle strength and limitations' },
+  { id: 'procedure', numeral: 'III', title: 'Minimally invasive procedures, if needed', why: 'For instant relief from pain' },
+  { id: 'physio', numeral: 'IV', title: 'Physiotherapy', why: 'To rehabilitate and treat the affected area' },
+  { id: 'relief', numeral: 'V', title: 'Long-term pain relief', why: 'Through personalised protocols, strength training and nutrition' },
 ] as const
 
 export const NUMBERS = [
