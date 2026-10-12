@@ -39,7 +39,7 @@ function PillarMedia({ poster, position, video, isFront }: PillarMediaProps) {
   return <img className="stack-card__media" src={poster} alt="" style={{ objectPosition: position }} loading="lazy" />
 }
 
-/** Three pillar cards in a perspective stack; the front card changes on a timer, click or swipe. */
+/** The pillar cards as a Focus Shift: one large card and the rest small; the large one changes on a timer, click or swipe. */
 export function HelpStack({ intro }: { intro: ReactNode }) {
   const reducedMotion = usePrefersReducedMotion()
   const [active, setActive] = useState(0)
@@ -101,14 +101,20 @@ export function HelpStack({ intro }: { intro: ReactNode }) {
           return (
             <article
               key={pillar.id}
-              className="stack-card"
+              className={`stack-card ${pillar.poster ? 'has-media' : ''}`}
               data-slot={slot}
               aria-hidden={reducedMotion ? undefined : !isFront}
               onClick={() => !isFront && goTo(i)}
             >
-              <div className="stack-card__frame">
-                <PillarMedia poster={pillar.poster} position={pillar.posterPosition} video={pillar.video} isFront={isFront} />
-              </div>
+              {pillar.poster ? (
+                <div className="stack-card__frame">
+                  <PillarMedia poster={pillar.poster} position={pillar.posterPosition ?? '50% 50%'} video={pillar.video} isFront={isFront} />
+                </div>
+              ) : (
+                <span className="stack-card__num" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+              )}
               <div className="stack-card__body">
                 <h3>{pillar.title}</h3>
                 <p>{pillar.body}</p>

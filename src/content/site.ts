@@ -64,38 +64,45 @@ export const FOOTER_CONTACT = [
   { kind: 'email', label: 'care@praan.health', href: 'mailto:support@praan.health?subject=You%20have%20an%20email%20from%20Website' },
 ] as const
 
-// The three parts of holistic pain management, in the order a patient moves through them. Each
-// step's media slot shows `poster` until a `video` is supplied.
-// TODO: add the card videos (set `video` to a path under /public) when they arrive.
-export const PILLARS = [
+// The clinic's four pillars, as on its signboard: Pain, Mobility, Strength, Rehab. They show as a Focus Shift
+// (one large card, three small ones). The cards are text only for now; give a pillar a `poster` (and optionally a
+// `posterPosition` or `video`) to show a picture or looping video on its card.
+export interface Pillar {
+  id: string
+  tab: string
+  title: string
+  body: string
+  poster?: string
+  posterPosition?: string
+  video?: string
+}
+
+export const PILLARS: readonly Pillar[] = [
   {
-    id: 'consultation',
-    tab: 'Understanding your pain', // short label on the left-hand list
-    title: 'Doctor review and analysis',
-    body: 'Your doctor understands your pain and suggests interventional, non-surgical care if required.',
-    poster: asset('/assets/6a0de0c1c1e0593386b2be34_clinic-bg.webp'),
-    posterPosition: '50% 50%',
-    video: undefined as string | undefined,
+    id: 'pain',
+    tab: 'Pain',
+    title: 'Pain',
+    body: 'We find the root cause and relieve it, with minimally invasive treatment when needed.',
   },
   {
-    id: 'rehab',
-    tab: 'Rehabilitating', // short label on the left-hand list
-    title: 'Physiotherapy rehab',
-    body: 'We rehabilitate the affected area through physiotherapy so movement comes back.',
-    poster: asset('/assets/ui/Card.webp'),
-    posterPosition: '50% 100%',
-    video: undefined as string | undefined,
+    id: 'mobility',
+    tab: 'Mobility',
+    title: 'Mobility',
+    body: 'We assess how you move and restore your range of motion, so everyday movement feels easy again.',
   },
   {
     id: 'strength',
-    tab: 'Long term relief from pain', // short label on the left-hand list
-    title: 'Strength and nutrition',
-    body: 'Strength training and nutrition for long-term pain relief and to manage the conditions behind it.',
-    poster: asset('/assets/nutrition-bg.webp'),
-    posterPosition: '78% 55%',
-    video: undefined as string | undefined,
+    tab: 'Strength',
+    title: 'Strength',
+    body: 'Guided strength training builds the muscle and stability that protect your joints.',
   },
-] as const
+  {
+    id: 'rehab',
+    tab: 'Rehab',
+    title: 'Rehab',
+    body: 'Physiotherapy, nutrition and counselling help the pain stay away for good.',
+  },
+]
 
 // The clinic card under the hero: where it is, how to get there and two proof points.
 // TODO: replace `address` with the full street address when it is confirmed.
