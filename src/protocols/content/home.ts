@@ -84,11 +84,6 @@ export const findYourPlan = {
   headingAccent: "for you?",
   body: "Book a consultation with our Praan Advisor and get started.",
   calLink: "team/advisor/consultation-with-praan",
-  clinics: {
-    heading: "Praan Clinics",
-    body: "Praan Clinics extend your health journey with expert doctors, diagnostics, and lifestyle guidance in one dedicated space.",
-    note: "Coming soon!",
-  },
 };
 
 export const faq = {

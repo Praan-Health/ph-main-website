@@ -134,16 +134,16 @@ export const conditions = {
   ],
 };
 
-const stepImage = (file: string, alt: string): ClinicImage => ({ src: `/images/${file}`, width: 1536, height: 1024, alt });
+const stepImage = (file: string, alt: string): ClinicImage => ({ src: `/images/${file}`, width: 1200, height: 800, alt });
 
 export const steps = {
   eyebrow: "How it works",
   heading: "A step-by-step path to pain-free movement",
   sub: "We don't guess. We follow a clinically proven, three-step protocol so your recovery is precise and lasting.",
   cards: [
-    { num: "1", title: "Root-cause identification", text: "A 360° diagnosis of posture, muscle balance, and nerve function to find what triggers your pain.", image: stepImage("step-1.png", "Diagnosis") },
-    { num: "2", title: "Targeted intervention", text: "Advanced, image-guided procedures to stop pain signals or repair damaged tissue.", image: stepImage("step-2.png", "Treatment") },
-    { num: "3", title: "Functional restoration", text: "Guided physiotherapy rebuilds strength and stability so pain doesn't return.", image: stepImage("step-3.png", "Recovery") },
+    { num: "1", title: "Root-cause identification", text: "A 360° diagnosis of posture, muscle balance, and nerve function to find what triggers your pain.", image: stepImage("step-1.webp", "Diagnosis") },
+    { num: "2", title: "Targeted intervention", text: "Advanced, image-guided procedures to stop pain signals or repair damaged tissue.", image: stepImage("step-2.webp", "Treatment") },
+    { num: "3", title: "Functional restoration", text: "Guided physiotherapy rebuilds strength and stability so pain doesn't return.", image: stepImage("step-3.webp", "Recovery") },
   ] satisfies ImgCardItem[],
 };
 

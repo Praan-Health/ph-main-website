@@ -5,13 +5,12 @@ import { ForYouCircle } from "@/components/home/home-tail-icons";
 import { findYourPlan } from "@/content/home";
 
 /**
- * "Find your plan": booking calendar (Cal.id inline embed) and the Praan Clinics teaser.
+ * "Find your plan": booking calendar (Cal.id inline embed).
  * The live section also contains a "Find Your Plan Form" questionnaire, but it is hidden (`form.hide`)
  * and never renders, so only its empty wrapper is kept (it still adds one flex gap).
  */
 export function FindYourPlan() {
   const [line1, line2] = findYourPlan.headingLines;
-  const { clinics } = findYourPlan;
   return (
     <section data-section="find-your-plan" className="relative flex flex-col items-stretch justify-center bg-linen text-wrap text-slate-600">
       <SectionSpacer size="md" />
@@ -38,14 +37,6 @@ export function FindYourPlan() {
               <CalEmbed calLink={findYourPlan.calLink} />
             </div>
             <div className="max-xs:relative" />
-          </div>
-        </div>
-
-        <div className="mt-16 flex min-h-[34.44rem] items-end justify-center rounded-xl bg-[url(/images/frame-2147223359.webp)] bg-cover bg-right-bottom bg-no-repeat p-[1.13rem] text-center text-white xs:min-h-0 xs:items-center xs:justify-start xs:bg-[url(/images/cta-blue.webp)] xs:p-[2.63rem] xs:text-left">
-          <div className="flex max-w-[19.875rem] flex-col items-stretch justify-start gap-6 xs:items-start">
-            <h2 className="text-(length:--text-fluid-h2) leading-[1.2] font-normal tracking-heading capitalize">{clinics.heading}</h2>
-            <div>{clinics.body}</div>
-            <div className="leading-[1.5] tracking-[-0.00875rem] text-orange-300">{clinics.note}</div>
           </div>
         </div>
       </Container>
