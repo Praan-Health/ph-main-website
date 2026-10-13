@@ -14,7 +14,7 @@ export function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <img src={asset('/assets/logo-white.svg')} alt="Praan Health" width="130" height="48" />
-          <p>Non-surgical, doctor-led care for chronic pain.</p>
+          <p>India's first holistic ecosystem for chronic pain management.</p>
           <ul className="footer__social" aria-label="Praan Health on social media">
             {SOCIAL_LINKS.map((link) => {
               const Icon = SOCIAL_ICONS[link.network]
