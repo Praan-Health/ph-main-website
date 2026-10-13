@@ -57,8 +57,8 @@ export const medicalTeam = {
   body: "Praan is guided by doctors and care specialists who understand that aging is a continuous progression. Our protocols are built on clinical experience and evidence-based practices.",
   doctor: {
     role: "Chief Medical Officer",
-    name: "Dr. Rachit Gulati",
-    image: { src: "/images/dr-rachit-gulati-circle.webp", width: 222, height: 222 },
+    name: "Dr. Prajwal Venugopal",
+    image: { src: "/images/dr-prajwal-venugopal-circle.webp", width: 222, height: 222 },
     quote:
       "We built Praan and its personalized care protocols to close the gap between routine check-ups and critical care. With proactive guidance and continuous monitoring, we help people stay healthier, and improve their quality of life.",
   },
@@ -107,11 +107,11 @@ export const aboutJsonLd = {
     employee: [
       {
         "@type": "Person",
-        name: "Dr. Rachit Gulati",
+        name: "Dr. Prajwal Venugopal",
         jobTitle: "Chief Medical Officer",
         image: {
           "@type": "ImageObject",
-          url: "https://cdn.prod.website-files.com/69f0a8db5b4b69ce0e543f8d/6a0b4894cdce9f2490a2a157_Dr.%20Rachit%20Gulati%20-%20circle.png",
+          url: "https://praan-health.github.io/ph-main-website/images/dr-prajwal-venugopal-circle.webp",
         },
         description:
           "We built Praan and its personalized care protocols to close the gap between routine check-ups and critical care. With proactive guidance and continuous monitoring, we help people stay healthier, and improve their quality of life.",

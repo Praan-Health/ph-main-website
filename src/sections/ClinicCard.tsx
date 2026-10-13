@@ -19,12 +19,23 @@ function StarIcon() {
   )
 }
 
-/** The clinic's location, shown as a card under the hero: photo, name and address, proof points and two actions. */
+/** The clinic's location, shown as a card under the hero: map, name and address, proof points and two actions. */
 export function ClinicCard() {
   return (
     <section className="clinic" id="visit" aria-labelledby="clinic-title">
       <div className="container clinic__card">
-        <img className="clinic__photo" src={CLINIC.photo} alt="A consultation room at the Praan Health clinic in Koramangala" width="720" height="480" loading="lazy" />
+        <div className="clinic__map">
+          <iframe
+            className="clinic__map-frame"
+            src={CLINIC.mapEmbedUrl}
+            title="Map showing the Praan Health clinic in Koramangala, Bengaluru"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            tabIndex={-1}
+          />
+          {/* The map is a picture; tapping it opens Google Maps (and a map in a card would otherwise trap page scrolling on phones). */}
+          <a className="clinic__map-link" href={CLINIC.mapUrl} target="_blank" rel="noopener noreferrer" aria-label="Open the clinic in Google Maps" />
+        </div>
 
         <div className="clinic__body">
           <h2 id="clinic-title" className="clinic__name">

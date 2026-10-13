@@ -110,7 +110,8 @@ export const CLINIC = {
   name: 'Praan Health Clinic',
   address: 'Koramangala, Bengaluru',
   mapUrl: 'https://maps.app.goo.gl/mfGBBa5FmC2hhXq98',
-  photo: asset('/assets/6a6acab5e27bb0574e45713d_header-image.jpg'),
+  // The embedded road map in the card, pinned to the clinic's Google place (cid). No API key is needed for this form.
+  mapEmbedUrl: 'https://maps.google.com/maps?cid=11633426917701294481&z=17&output=embed',
 } as const
 
 export const CLINIC_FACTS = [
@@ -118,17 +119,16 @@ export const CLINIC_FACTS = [
   { value: '7.5K+', label: 'Families served' },
 ] as const
 
-// TODO: add photos for Dr. Prajwal Venugopal and Dr. Yashvanth Gowda when they are ready; until then their
-// cards show initials on the same shape as the photos.
+// Doctor photos are 504x444 webp with the rounded corners baked in (see `Doctors.tsx`).
 const doctorPhoto = (slug: string) => asset(`/assets/doctors/${slug}.webp`)
 
 export const DOCTORS = [
-  { name: 'Dr. Prajwal Venugopal', role: 'Chief Medical Officer', photo: undefined as string | undefined },
+  { name: 'Dr. Prajwal Venugopal', role: 'Chief Medical Officer', photo: doctorPhoto('prajwal-venugopal') },
+  { name: 'Dr. Yashvanth R', role: 'Pain Physician', photo: doctorPhoto('yashvanth-r') },
+  { name: 'Dr. Nitish Mandal', role: 'Pain Specialist', photo: doctorPhoto('nitish-mandal') },
   { name: 'Dr. Anindya Debnath', role: 'FIPM Rehab Specialist', photo: doctorPhoto('anindya-debnath') },
   { name: 'Dr. Arpitha K', role: 'Pain Specialist', photo: doctorPhoto('arpitha-k') },
-  { name: 'Dr. Yashvanth Gowda', role: 'Pain Physician', photo: undefined as string | undefined },
   { name: 'Dr. Milan Prathipal', role: 'Internal Medicine', photo: doctorPhoto('milan-prathipal') },
-  { name: 'Dr. Nitish Mandal', role: 'Pain Specialist', photo: doctorPhoto('nitish-mandal') },
   { name: 'Dr. Nagasai Nihal', role: 'Lead Physiotherapist', photo: doctorPhoto('nagasai-nihal') },
   { name: 'Dr. Sri Chakra', role: 'Physiotherapist', photo: doctorPhoto('sri-chakra') },
 ] as const
@@ -153,7 +153,6 @@ export const JOURNEY_STEPS = [
 ] as const
 
 export const NUMBERS = [
-  { value: '108+', label: 'Cities' },
   { value: '1.2L+', label: 'Sessions delivered' },
   { value: '300+', label: 'Experts' },
   { value: '84%', label: 'Graduate to independent routines' },

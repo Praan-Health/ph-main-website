@@ -1,15 +1,15 @@
 [
   {
-    "id": "6a0d3cbb48a1afa95fb15d0f",
-    "slug": "dr-rachit-gulati",
-    "name": "Dr. Rachit Gulati",
+    "id": "prajwal-venugopal",
+    "slug": "dr-prajwal-venugopal",
+    "name": "Dr. Prajwal Venugopal",
     "role": "Doctor - leads the care plan",
     "image": {
-      "src": "/images/dr-rachit-gulati.png",
+      "src": "/images/dr-prajwal-venugopal.png",
       "alt": ""
     },
     "praanAcademyCertified": true,
-    "description": "<p>CMO, MBBS, MD (PM&amp;R), FIPM, Cert. In Rheumatology (EULAR), CCEBDM</p>"
+    "description": "<p>Chief Medical Officer</p>"
   },
   {
     "id": "6a0d3cb4afe0208ded81fc34",
@@ -96,18 +96,6 @@
     "description": "<p>Strength and conditioning specialist (TFA)</p>"
   },
   {
-    "id": "6a0b2f828ec683ccfd36bf2e",
-    "slug": "dr-shreshta-tripathi",
-    "name": "Dr. Shreshta Tripathi",
-    "role": "Doctor - leads the care plan",
-    "image": {
-      "src": "/images/dr-shreshta-tripathi.png",
-      "alt": ""
-    },
-    "praanAcademyCertified": true,
-    "description": "<p>MBBS, MD Medicine, DM Nephrology</p>"
-  },
-  {
     "id": "6a0b2f62c37b0ef7104055e1",
     "slug": "dr-nichenametla-nagasai",
     "name": "Dr. Nichenametla Nagasai",
@@ -130,18 +118,6 @@
     },
     "praanAcademyCertified": true,
     "description": "<p>M.A Clinical Psychology</p>"
-  },
-  {
-    "id": "6a0b2d8d3c8585c2ba246abb",
-    "slug": "harshita-shah",
-    "name": "Harshita Shah",
-    "role": "Nutritionist – improves dietary health",
-    "image": {
-      "src": "/images/harshita-shah.png",
-      "alt": ""
-    },
-    "praanAcademyCertified": true,
-    "description": "<p>M.Sc. in Nutrition and Dietitics</p>"
   },
   {
     "id": "6a0ae67e98ed419f248725ba",
