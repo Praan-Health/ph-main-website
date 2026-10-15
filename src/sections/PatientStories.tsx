@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { testimonials } from '../protocols/content/clinics'
 
 const GAP_PX = 20
-const SUBHEADING = 'Real people who came to Praan with lasting pain, and got back to what they love without surgery.'
+const SUBHEADING = 'Real people who came to Praan with lasting pain, and got back to what they love without surgery'
 
 function PlayIcon() {
   return (

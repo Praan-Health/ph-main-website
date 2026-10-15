@@ -15,9 +15,9 @@ export function Hero() {
               Relief from <span className="hero__typed">{typed}</span>
             </span>
           </span>
-          <h1 className="hero__title">India's first holistic ecosystem for chronic pain management.</h1>
+          <h1 className="hero__title">India's first holistic ecosystem for chronic pain management</h1>
           <p className="lead hero__sub">
-            Advanced, minimally invasive chronic pain treatments for knee, back, shoulder, hip, and spine, combined with holistic rehabilitation through physiotherapy, strength training, nutrition, and counseling, delivered at our clinic and in the comfort of your home.
+            Advanced, minimally invasive pain treatments combined with holistic rehabilitation, at our clinic or in the comfort of your home
           </p>
           <div className="hero__actions">
             <CallbackButton />

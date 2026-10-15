@@ -40,7 +40,7 @@ export const approach = {
 
 export const impact = {
   heading: "Our Impact",
-  body: "Evidence-backed care designed to create meaningful health outcomes.",
+  body: "Evidence-backed care designed to create meaningful health outcomes",
   // Flowbase count-up targets; the page HTML shows the final value until the animation starts.
   stats: [
     { target: "87", suffix: "%", label: "Improvement in medication adherence within 3 months" },
@@ -53,7 +53,7 @@ export const impact = {
 
 export const medicalTeam = {
   eyebrow: "From our medical team",
-  heading: "Rooted in medicine. Designed for everyday care.",
+  heading: "Rooted in medicine. Designed for everyday care",
   body: "Praan is guided by doctors and care specialists who understand that aging is a continuous progression. Our protocols are built on clinical experience and evidence-based practices.",
   doctor: {
     role: "Chief Medical Officer",

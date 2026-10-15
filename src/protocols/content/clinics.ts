@@ -11,14 +11,14 @@ export const clinicsMeta = {
 export const hero = {
   eyebrow: "Non-Surgical Pain Care · Koramangala, Bengaluru",
   title: "Non-surgical treatment for lasting relief from chronic pain",
-  lead: "Safe, evidence-based treatments that target the root cause of knee, back, shoulder, and joint pain — so you can walk, climb stairs, and move comfortably again, without surgery.",
+  lead: "Safe, evidence-based treatments that target the root cause of knee, back, shoulder, and joint pain — so you can walk, climb stairs, and move comfortably again, without surgery",
   background: "/images/hero-section-image.webp",
 };
 
 export const callback = {
   button: "Request a Callback",
   heading: "Request a Callback",
-  intro: "We just need a few details and we'll call you back to book your appointment.",
+  intro: "We just need a few details and we'll call you back to book your appointment",
   formName: "Contact Form",
   success: "Thank you! Our team will reach out to you in 24-48 hours for a consultation.",
   error: "Oops! Something went wrong while submitting the form.",
@@ -62,7 +62,7 @@ export const rootCause = {
 export const testimonials = {
   eyebrow: "Patient stories",
   heading: "Hear it from our patients",
-  sub: "Real people who came to Praan with lasting pain — and got back to what they love, without surgery.",
+  sub: "Real people who came to Praan with lasting pain — and got back to what they love, without surgery",
   /** YouTube video ids, in live order. */
   videos: ["2Fd0yczqhNE", "MzF50N3R0GU", "0Gea_wh-n4A", "aopovphajIc", "P7pF5VmxlS4", "pQ33VJp452Q", "4ZcVPSZqTeM"],
 };
@@ -73,7 +73,7 @@ const clinicRoom: ClinicImage = { src: "/images/header-image.jpg", width: 2752, 
 export const whatIs = {
   eyebrow: "A safer alternative to surgery",
   heading: "What is non-surgical pain treatment?",
-  sub: "A medical approach to relieving pain without an operation, hospital stay, or long recovery. Instead of cutting or replacing parts of the joint, it reduces pain, calms inflammation, and fixes the underlying cause — helping the body heal rather than just numbing the pain.",
+  sub: "A medical approach to relieving pain without an operation, hospital stay, or long recovery. Instead of cutting or replacing parts of the joint, it reduces pain, calms inflammation, and fixes the underlying cause — helping the body heal rather than just numbing the pain",
   checks: [
     "Targets the root cause of pain, not just the symptoms",
     "Reduces chronic inflammation and nerve irritation",
@@ -92,7 +92,7 @@ const treatmentImage = (file: string, height = 800): ClinicImage => ({ src: `/im
 export const treatments = {
   eyebrow: "Our treatments",
   heading: "Proven non-surgical pain treatments",
-  sub: "Every plan is personalised to your diagnosis and activity level. Our interventional pain specialists select the right combination of the following procedures.",
+  sub: "Every plan is personalised to your diagnosis and activity level. Our interventional pain specialists select the right combination of the following procedures",
   cards: [
     { tag: "Joint inflammation", title: "Intra-Articular Injections", text: "Calm swelling and pain in the knee, shoulder, hip, and smaller joints to restore mobility.", image: treatmentImage("intra-articular-injection.webp") },
     { tag: "Joint lubrication", title: "Hyaluronic Acid (Gel Shot)", text: "Restores cushioning and lubrication inside the joint. Ideal for knee osteoarthritis.", image: treatmentImage("hyaluronic-acid.webp") },
@@ -124,7 +124,7 @@ export const whoFor = {
 export const conditions = {
   eyebrow: "Conditions we treat",
   heading: "Relief for pain across the body",
-  sub: "From joints to spine to nerves — our non-surgical protocols are tailored to the conditions most common after 50.",
+  sub: "From joints to spine to nerves — our non-surgical protocols are tailored to the conditions most common after 50",
   cards: [
     { title: "Knee osteoarthritis & joint pain", text: "Steroid, gel-shot, and PRP injections to calm knee pain and restore movement.", image: { src: "/images/condition-knee-pain-v2.png", width: 500, height: 500, alt: "Knee pain" } },
     { title: "Back & neck pain", text: "Injections, traction, and physiotherapy for chronic back, neck, and spondylosis pain.", image: { src: "/images/condition-back-pain.png", width: 1024, height: 1024, alt: "Back and neck pain" } },
@@ -139,7 +139,7 @@ const stepImage = (file: string, alt: string): ClinicImage => ({ src: `/images/$
 export const steps = {
   eyebrow: "How it works",
   heading: "A step-by-step path to pain-free movement",
-  sub: "We don't guess. We follow a clinically proven, three-step protocol so your recovery is precise and lasting.",
+  sub: "We don't guess. We follow a clinically proven, three-step protocol so your recovery is precise and lasting",
   cards: [
     { num: "1", title: "Root-cause identification", text: "A 360° diagnosis of posture, muscle balance, and nerve function to find what triggers your pain.", image: stepImage("step-1.webp", "Diagnosis") },
     { num: "2", title: "Targeted intervention", text: "Advanced, image-guided procedures to stop pain signals or repair damaged tissue.", image: stepImage("step-2.webp", "Treatment") },
@@ -150,7 +150,7 @@ export const steps = {
 export const outcome = {
   eyebrow: "The outcome",
   heading: "Life beyond pain feels possible again",
-  sub: "Non-surgical treatment is about more than lower pain scores — it's about getting back to living normally, with lasting function instead of short-term relief.",
+  sub: "Non-surgical treatment is about more than lower pain scores — it's about getting back to living normally, with lasting function instead of short-term relief",
   checks: [
     "Reduces or removes the need for repeated painkillers",
     "Helps you return to walking, workouts, and sport safely",
@@ -165,7 +165,7 @@ export const outcome = {
 export const whyPraan = {
   eyebrow: "Why Praan",
   heading: "World-class expertise, integrated care",
-  sub: "Standard pain treatment often fails because it's fragmented — pills from one doctor, exercises from another, with no coordination. At Praan, every part of your care works together.",
+  sub: "Standard pain treatment often fails because it's fragmented — pills from one doctor, exercises from another, with no coordination. At Praan, every part of your care works together",
   features: [
     { title: "More effective", text: "Clinical research shows our integrated methodology outperforms traditional single-mode treatment." },
     { title: "Multidisciplinary team", text: "Pain specialists, physiotherapists, nutritionists, and care managers work together on your case." },
@@ -189,7 +189,7 @@ export const careTeam = {
 export const recovery = {
   eyebrow: "Recovery & aftercare",
   heading: "Back to daily life without long downtime",
-  sub: "Treatment is designed to fit into real life, not interrupt it.",
+  sub: "Treatment is designed to fit into real life, not interrupt it",
   cards: [
     { icon: "🏠", teal: false, title: "Same-day return", text: "No hospital stay. You return home the same day and recover in your own space — no bed rest required." },
     { icon: "⚡", teal: true, title: "Back to routine quickly", text: "Most patients resume light activities like desk work or walking within 24–48 hours." },
@@ -236,5 +236,5 @@ export const visit = {
 
 export const cta = {
   heading: "Start your pain free journey",
-  body: "Praan Clinics extend your health journey with expert doctors, diagnostics, and lifestyle guidance in one dedicated space.",
+  body: "Praan Clinics extend your health journey with expert doctors, diagnostics, and lifestyle guidance in one dedicated space",
 };

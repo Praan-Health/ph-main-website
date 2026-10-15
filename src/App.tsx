@@ -1,4 +1,5 @@
 import { CallbackModal } from './components/CallbackModal'
+import { CookieBanner } from './components/CookieBanner'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Doctors } from './sections/Doctors'
@@ -32,6 +33,7 @@ export default function App() {
       </main>
       <Footer />
       <CallbackModal />
+      <CookieBanner />
     </>
   )
 }

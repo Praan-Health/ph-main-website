@@ -140,7 +140,7 @@ export const contactPage = {
 export const supportPage = {
   breadcrumb: "Support",
   heading: "How can we help?",
-  intro: "Tell us what's going on and our support team will get back to you within 1 business day.",
+  intro: "Tell us what's going on and our support team will get back to you within 1 business day",
 };
 
 export const thankyouPage = {
@@ -174,7 +174,7 @@ export const thankyouPage = {
   },
   cta: {
     heading: ["Take Control of Your", "Health"] as const,
-    body: "Praan Clinics extend your health journey with expert doctors, diagnostics, and lifestyle guidance in one dedicated space.",
+    body: "Praan Clinics extend your health journey with expert doctors, diagnostics, and lifestyle guidance in one dedicated space",
     button: { label: "Book Free Consultation", href: "https://cal.id/team/advisor/consultation-with-praan" },
   },
 };
