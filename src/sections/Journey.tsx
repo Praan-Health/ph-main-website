@@ -16,7 +16,7 @@ export function Journey() {
           <h2 id="journey-title">
             Your journey to <span className="accent">lasting pain relief</span>
           </h2>
-          <p className="lead">We are with you every step of the way.</p>
+          <p className="lead">We are with you every step of the way</p>
         </div>
 
         <ol ref={ref} className="timeline">

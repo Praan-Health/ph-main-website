@@ -11,7 +11,7 @@ export function HowWeHelp() {
               <h2 id="how-title">
                 Treating the <span className="accent">cause</span>, not just the pain
               </h2>
-              <p className="lead">We treat the pain and the underlying condition.</p>
+              <p className="lead">We treat the pain and the underlying condition</p>
             </div>
           }
         />

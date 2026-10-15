@@ -5,7 +5,7 @@ export const hero = {
   headingAfter: "Under Control",
   // Non-breaking spaces keep multi-word conditions on one line while they animate.
   conditions: ["Diabetes", "Blood Pressure", "Thyroid", "Heart Disease", "Menopause", "Sarcopenia", "High Cholesterol", "Arthritis"],
-  body: "Through a dedicated doctor managing their exercise, diet, and medicines - extending care beyond your presence.",
+  body: "Through a dedicated doctor managing their exercise, diet, and medicines - extending care beyond your presence",
   cta: { label: "Book Free Consultation", href: "https://cal.id/team/advisor/consultation-with-praan" },
   image: { src: "/images/daddi.webp", width: 986, height: 1316, alt: "" },
   bubbles: [
@@ -17,8 +17,8 @@ export const hero = {
 export const familiar = {
   eyebrow: "Sounds Familiar?",
   heading: "You already know something's",
-  headingAccent: "not right.",
-  body: "You hear it every week. But you're never completely sure.",
+  headingAccent: "not right",
+  body: "You hear it every week. But you're never completely sure",
   images: [
     { src: "/images/container-3.webp", width: 580, height: 616, alt: "" },
     { src: "/images/container-2-2.webp", width: 553, height: 545, alt: "" },
@@ -35,8 +35,8 @@ export const results = {
 export const howItWorks = {
   eyebrow: "How it works",
   headingLines: ["One doctor runs", "everything. The team"],
-  headingAccent: "delivers it.",
-  body: "In person and online, wherever your parent is.",
+  headingAccent: "delivers it",
+  body: "In person and online, wherever your parent is",
   cards: [
     {
       title: "Strength Training",
@@ -66,7 +66,7 @@ export const team = {
   eyebrow: "Your parent's team",
   heading: "Faces, not just",
   headingAccent: "credentials",
-  body: "In person and online, wherever your parent is.",
+  body: "In person and online, wherever your parent is",
 };
 
 export const stats = [
@@ -82,7 +82,7 @@ export const findYourPlan = {
   eyebrow: "Find your plan",
   headingLines: ["Is Praan Health the", "right fit"],
   headingAccent: "for you?",
-  body: "Book a consultation with our Praan Advisor and get started.",
+  body: "Book a consultation with our Praan Advisor and get started",
   calLink: "team/advisor/consultation-with-praan",
 };
 
@@ -115,6 +115,6 @@ export const faq = {
 export const cta = {
   heading: ["Take Control of Your", "Health"] as const,
   // Same copy as the Praan Clinics card above; kept as on live.
-  body: "Praan Clinics extend your health journey with expert doctors, diagnostics, and lifestyle guidance in one dedicated space.",
+  body: "Praan Clinics extend your health journey with expert doctors, diagnostics, and lifestyle guidance in one dedicated space",
   button: { label: "Book Free Consultation", href: "https://cal.id/team/advisor/consultation-with-praan" },
 };
