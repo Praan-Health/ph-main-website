@@ -27,8 +27,10 @@ function PillarMedia({ poster, position, video, isFront }: PillarMediaProps) {
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (isFront) void el.play().catch(() => undefined)
-    else el.pause()
+    if (isFront) {
+      el.currentTime = 0
+      void el.play().catch(() => undefined)
+    } else el.pause()
   }, [isFront])
 
   if (video) {

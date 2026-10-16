@@ -61,12 +61,12 @@ export const FOOTER_QUICK_LINKS = [
 // Same details as the live footer. The email address shown is care@, but the live site mails support@.
 export const FOOTER_CONTACT = [
   { kind: 'whatsapp', label: '+91 73494 32805', href: 'https://wa.me/917349432805' },
-  { kind: 'email', label: 'care@praan.health', href: 'mailto:support@praan.health?subject=You%20have%20an%20email%20from%20Website' },
+  { kind: 'email', label: 'support@praan.health', href: 'mailto:support@praan.health?subject=You%20have%20an%20email%20from%20Website' },
 ] as const
 
 // The clinic's four pillars, as on its signboard: Pain, Mobility, Strength, Rehab. They show as a Focus Shift
-// (one large card, three small ones). The cards are text only for now; give a pillar a `poster` (and optionally a
-// `posterPosition` or `video`) to show a picture or looping video on its card.
+// (one large card, three small ones). Each card has a looping, muted video named after it
+// (public/assets/pillars/<id>.mp4, with <id>-poster.webp as its still); a pillar without a `poster` is text only.
 export interface Pillar {
   id: string
   tab: string
@@ -77,30 +77,39 @@ export interface Pillar {
   video?: string
 }
 
+const pillarMedia = (id: string) => ({
+  poster: asset(`/assets/pillars/${id}-poster.webp`),
+  video: asset(`/assets/pillars/${id}.mp4`),
+})
+
 export const PILLARS: readonly Pillar[] = [
   {
     id: 'pain',
     tab: 'Pain',
     title: 'Pain',
     body: 'We find the root cause and relieve it, with minimally invasive treatment when needed.',
+    ...pillarMedia('pain'),
   },
   {
     id: 'mobility',
     tab: 'Mobility',
     title: 'Mobility',
     body: 'We assess how you move and restore your range of motion, so everyday movement feels easy again.',
+    ...pillarMedia('mobility'),
   },
   {
     id: 'strength',
     tab: 'Strength',
     title: 'Strength',
     body: 'Guided strength training builds the muscle and stability that protect your joints.',
+    ...pillarMedia('strength'),
   },
   {
     id: 'rehab',
     tab: 'Rehab',
     title: 'Rehab',
     body: 'Physiotherapy, nutrition and counselling help the pain stay away for good.',
+    ...pillarMedia('rehab'),
   },
 ]
 
@@ -143,13 +152,13 @@ export const CARE_TEAM = [
   { id: 'counsellor', role: 'Counsellor', does: 'Mind, mood and motivation', x: 16, y: 36 },
 ] as const
 
-// The patient's path, in order, shown as a timeline with roman numerals. Text only.
+// The patient's path, in order, shown as columns with an icon each (see journeyIcons.ts).
 export const JOURNEY_STEPS = [
-  { id: 'consultation', numeral: 'I', title: 'Consultation with the doctor', why: 'To understand your pain' },
-  { id: 'assessment', numeral: 'II', title: 'Functional assessment', why: 'To assess your pain, muscle strength and limitations' },
-  { id: 'procedure', numeral: 'III', title: 'Minimally invasive procedures, if needed', why: 'For instant relief from pain' },
-  { id: 'physio', numeral: 'IV', title: 'Physiotherapy', why: 'To rehabilitate and treat the affected area' },
-  { id: 'relief', numeral: 'V', title: 'Long-term pain relief', why: 'Through personalised protocols, strength training and nutrition' },
+  { id: 'consultation', title: 'Consult our Pain Specialist', why: 'To review your conditions and history, and understand your pain' },
+  { id: 'assessment', title: 'Get a Functional Assessment', why: 'To assess your pain, muscle strength and limitations' },
+  { id: 'procedure', title: 'Minimally invasive procedures, if needed', why: 'To reduce inflammation and relieve pain instantly' },
+  { id: 'physio', title: 'Start Guided Physiotherapy', why: 'To restore movement and rebuild strength' },
+  { id: 'relief', title: 'Build Long‑term Pain Relief', why: 'With strength, nutrition and counselling to keep pain away' },
 ] as const
 
 export const NUMBERS = [
