@@ -7,7 +7,6 @@ import { asset } from '../lib/asset'
 export const CAL_URL = 'https://cal.id/team/advisor/consultation-with-praan'
 
 // Pain areas the hero eyebrow types through.
-export const HERO_PAIN_AREAS = ['back pain', 'knee pain', 'shoulder pain', 'neck pain'] as const
 
 // Nutrition is sold on the shop; the Nutrition section's CTA and the nav link open it.
 export const SHOP_URL = 'https://shop.praan.health'

@@ -228,9 +228,9 @@ export const faq = {
 export const visit = {
   eyebrow: "Visit the clinic",
   heading: "Come see us in Koramangala",
-  mapSrc: "https://maps.google.com/maps?q=The%20Fifty%2B%20Clinic%20by%20Praan%20Health&z=16&output=embed",
-  mapTitle: "The Fifty+ Clinic by Praan Health",
-  address: "The Fifty+ Clinic by Praan Health · Koramangala, Bengaluru",
+  mapSrc: "https://maps.google.com/maps?cid=11633426917701294481&z=17&output=embed",
+  mapTitle: "Praan Health Clinic",
+  address: "Praan Health Clinic · Koramangala, Bengaluru",
   directions: { label: "Get directions →", href: "https://maps.app.goo.gl/mfGBBa5FmC2hhXq98" },
 };
 

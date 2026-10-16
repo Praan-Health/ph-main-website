@@ -34,7 +34,7 @@ export const results = {
 
 export const howItWorks = {
   eyebrow: "How it works",
-  headingLines: ["One doctor runs", "everything. The team"],
+  headingLines: ["One doctor runs", "everything The team"],
   headingAccent: "delivers it",
   body: "In person and online, wherever your parent is",
   cards: [
