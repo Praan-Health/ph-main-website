@@ -28,6 +28,7 @@ jobs:
         env:
           VITE_BASE: /ph-main-website/
           VITE_FORMS_ENDPOINT: https://ph-website-forms-973824197278.asia-south1.run.app/api/forms
+          VITE_N8N_WEBHOOK_URL: https://praan.app.n8n.cloud/webhook/incoming-leads
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

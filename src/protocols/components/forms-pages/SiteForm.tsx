@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { submitForm } from "@/lib/forms";
+import { phoneProblem } from "@/lib/lead";
 import { cn } from "@/lib/cn";
 import type { FormDef } from "@/content/forms-pages";
 import { UtmHiddenInputs, useUtmFields } from "./useUtmFields";
@@ -46,6 +47,11 @@ export function SiteForm({ form, formClassName, children }: { form: FormDef; for
     const { fields, error } = collectFields(event.currentTarget);
     if (error) {
       window.alert(error);
+      return;
+    }
+    const phoneIssue = fields.Phone ? phoneProblem(fields.Phone) : null;
+    if (phoneIssue) {
+      window.alert(phoneIssue);
       return;
     }
     // Like webflow.js, only the submit button is disabled while sending (its wrapper fades to 50%).

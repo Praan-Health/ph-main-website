@@ -2,6 +2,7 @@
 
 import { useId, useRef, useState } from "react";
 import { submitForm } from "@/lib/forms";
+import { phoneProblem } from "@/lib/lead";
 import { cn } from "@/lib/cn";
 import { callback } from "@/content/clinics";
 import {
@@ -55,6 +56,11 @@ export function CallbackForm({
       window.alert(
         `Please fill out the required field: ${encodeURIComponent(blank[1])}`,
       );
+      return;
+    }
+    const phoneIssue = phoneProblem(value("Phone-Number"));
+    if (phoneIssue) {
+      window.alert(phoneIssue);
       return;
     }
     const utm: Record<string, string> = {};

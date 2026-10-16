@@ -1,43 +1,92 @@
 import { captureUtmParams } from "../components/forms-pages/useUtmFields";
+import { getAttribution } from "./attribution";
+import { buildLeadParams } from "./lead";
 
 type Submission = {
   formName: string;
   fields: Record<string, string>;
 };
 
-// Pages has no server, so the endpoint points at the forms Cloud Run service (VITE_FORMS_ENDPOINT, set in the deploy workflow).
-const FORMS_ENDPOINT = (import.meta as { env?: Record<string, string | undefined> }).env?.VITE_FORMS_ENDPOINT || "/api/forms";
+type Env = Record<string, string | undefined>;
+const env = (import.meta as { env?: Env }).env ?? {};
 
-const cookie = (name: string): string => {
-  const match = document.cookie.split("; ").find((part) => part.startsWith(`${name}=`));
-  return match ? decodeURIComponent(match.slice(name.length + 1)) : "";
-};
+// Pages has no server. The forms service keeps a copy of every submission in Firestore; the lead itself goes straight
+// from the browser to n8n so Meta's conversion API sees the visitor's IP, not a server's.
+const FORMS_ENDPOINT = env.VITE_FORMS_ENDPOINT || "/api/forms";
+const N8N_WEBHOOK_URL = env.VITE_N8N_WEBHOOK_URL || "";
 
-/** One id per submission; the same id on the browser pixel's Lead event lets Meta count it once. */
-const newEventId = (): string => `lead_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+// Forms whose submissions are leads for the sales pipeline; the rest (support requests) only get the Firestore copy.
+const LEAD_FORMS = ["Contact Form"];
 
-/**
- * Client helper for site forms. Adds the landing page's UTM tags (kept in sessionStorage), an event id and Meta's
- * _fbp/_fbc cookies, then posts to the forms service, which stores the lead in Firestore and forwards it to n8n.
- * Returns true when the service accepted it.
- */
-export async function submitForm({ formName, fields }: Submission): Promise<boolean> {
+const nonEmpty = (values: Record<string, string>): Record<string, string> =>
+  Object.fromEntries(Object.entries(values).filter(([, value]) => value !== ""));
+
+async function saveCopy(formName: string, fields: Record<string, string>, eventId: string, fbp: string, fbc: string): Promise<boolean> {
   try {
     const res = await fetch(FORMS_ENDPOINT, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         formName,
-        fields: { ...captureUtmParams(), ...fields },
+        fields,
         pagePath: window.location.pathname,
         pageUrl: window.location.href,
-        eventId: newEventId(),
-        fbp: cookie("_fbp"),
-        fbc: cookie("_fbc"),
+        eventId,
+        fbp,
+        fbc,
       }),
     });
     return res.ok;
   } catch {
     return false;
   }
+}
+
+/** Fire and forget: with no-cors the response cannot be read, so success only means the request left the browser. */
+async function sendLead(params: Record<string, string>): Promise<boolean> {
+  if (!N8N_WEBHOOK_URL) return false;
+  try {
+    await fetch(N8N_WEBHOOK_URL, {
+      method: "POST",
+      body: new URLSearchParams(params),
+      mode: "no-cors",
+      credentials: "omit",
+      keepalive: true,
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Client helper for site forms. Saves a copy through the forms service and, for lead forms, posts the lead to the
+ * n8n Incoming Leads webhook. Returns true when either delivery went through, so one being down never loses the lead.
+ */
+export async function submitForm({ formName, fields }: Submission): Promise<boolean> {
+  const attribution = getAttribution();
+  const eventId = crypto.randomUUID();
+  const copyFields = { ...nonEmpty(captureUtmParams() as Record<string, string>), ...nonEmpty(fields) };
+
+  const copy = saveCopy(formName, copyFields, eventId, attribution.fbp ?? "", attribution.fbc ?? "");
+  const lead = LEAD_FORMS.includes(formName)
+    ? sendLead(
+        buildLeadParams({
+          formName,
+          fields,
+          attribution,
+          env: {
+            href: window.location.href,
+            pathname: window.location.pathname,
+            referrer: document.referrer,
+            userAgent: navigator.userAgent,
+            now: new Date().toISOString(),
+            eventId,
+          },
+        }),
+      )
+    : Promise.resolve(false);
+
+  const [copied, sent] = await Promise.all([copy, lead]);
+  return copied || sent;
 }

@@ -3,6 +3,7 @@ import type { FormEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { callback } from '../protocols/content/clinics'
 import { submitForm } from '../protocols/lib/forms'
+import { phoneProblem } from '../protocols/lib/lead'
 import { onOpenCallback } from '../lib/callback'
 
 type Status = 'idle' | 'sending' | 'done' | 'fail'
@@ -14,6 +15,7 @@ export function CallbackModal() {
   const [isOpen, setIsOpen] = useState(false)
   const [status, setStatus] = useState<Status>('idle')
   const [formKey, setFormKey] = useState(0)
+  const [phoneError, setPhoneError] = useState('')
   const headingId = useId()
   const dialogRef = useRef<HTMLDivElement>(null)
   const firstFieldRef = useRef<HTMLInputElement>(null)
@@ -22,6 +24,7 @@ export function CallbackModal() {
   const open = useCallback(() => {
     returnFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null
     setStatus('idle')
+    setPhoneError('')
     setFormKey((k) => k + 1)
     setIsOpen(true)
   }, [])
@@ -66,6 +69,9 @@ export function CallbackModal() {
     if (status === 'sending') return
     const data = new FormData(event.currentTarget)
     const value = (name: string) => String(data.get(name) ?? '').trim()
+    const problem = phoneProblem(value('Phone-Number'))
+    setPhoneError(problem ?? '')
+    if (problem) return
     setStatus('sending')
     const ok = await submitForm({
       formName: callback.formName,
@@ -134,6 +140,11 @@ export function CallbackModal() {
                   ))}
                 </select>
               </label>
+              {phoneError && (
+                <p className="modal__error" role="alert">
+                  {phoneError}
+                </p>
+              )}
               <button type="submit" className="btn btn--primary modal__submit" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending…' : 'Submit'}
               </button>

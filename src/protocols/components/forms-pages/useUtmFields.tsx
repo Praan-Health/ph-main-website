@@ -2,6 +2,7 @@
 
 import { useEffect, type RefObject } from "react";
 import { utmFieldNames } from "@/content/forms-pages";
+import { captureAttribution } from "@/lib/attribution";
 
 /**
  * The live site's footer script, run on every page: a value in the URL query is saved to
@@ -32,6 +33,7 @@ export function captureUtmParams(): Partial<Record<(typeof utmFieldNames)[number
 export function UtmCapture() {
   useEffect(() => {
     captureUtmParams();
+    captureAttribution();
   }, []);
   return null;
 }
