@@ -16,10 +16,13 @@ export function Hero() {
           <div className="relative mx-auto text-center md:mr-auto md:ml-0">
             <h1 className="relative z-1 mx-auto flex flex-col items-center text-[2rem] leading-[1.4] font-normal tracking-heading text-balance text-navy-700 xs:flow-root xs:text-center xs:text-(length:--text-fluid-h1) xs:leading-none md:mr-auto md:ml-0 md:text-left">
               {hero.headingBefore}{" "}
+              {/* Keeps the changing word on its own line, however short it is; below xs the heading is a stacked flex column already. */}
+              <br className="max-xs:hidden" />
               <RotatingWord
                 words={hero.conditions}
                 className="-top-[0.2rem] mb-[-0.3em] h-[3.63rem] items-center justify-center rounded-[0.56rem] py-2 pr-3 pl-0 text-center font-serif italic xs:top-[0.2rem] xs:mb-0 xs:h-[4.5rem] xs:justify-start xs:rounded-[0.63rem] xs:text-left"
               />{" "}
+              <br className="max-xs:hidden" />
               {hero.headingAfter}
             </h1>
           </div>

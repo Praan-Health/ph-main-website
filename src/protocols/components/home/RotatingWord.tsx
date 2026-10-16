@@ -8,7 +8,8 @@ const LETTER_STAGGER_MS = 100;
 
 /**
  * Cycles through words letter by letter: every 3s the next word's letters slide up into view
- * (0.8s each, 100ms apart) while the previous word's letters slide up and out. The box eases
+ * (0.8s each, 100ms apart) while the previous word's letters slide up and out. Parked letters sit a
+ * full 1.5 to 1.6 line heights away so descenders (g, p, y) never peek into the clipped box. The box eases
  * to the width of the incoming word. Mirrors the jQuery animation on the Webflow site.
  */
 export function RotatingWord({ words, className }: { words: string[]; className?: string }) {
@@ -82,10 +83,10 @@ export function RotatingWord({ words, className }: { words: string[]; className?
                 data-char={letter}
                 className={cn(
                   "relative inline-block text-navy-700 not-italic before:content-[attr(data-char)]",
-                  state === "idle" && "translate-y-[120%]",
+                  state === "idle" && "translate-y-[150%]",
                   state !== "idle" && "transition-transform duration-800",
                   state === "in" && "translate-y-0",
-                  state === "out" && "-translate-y-[120%]",
+                  state === "out" && "-translate-y-[160%]",
                 )}
                 style={state !== "idle" && previous !== null ? { transitionDelay: `${i * LETTER_STAGGER_MS}ms` } : undefined}
               />
