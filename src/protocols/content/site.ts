@@ -16,6 +16,7 @@ export const navigation: NavLink[] = [
     children: [
       { label: "Clinics", href: "/clinics" },
       { label: "Protocols", href: "/protocols" },
+      { label: "Conditions", href: "/protocols/conditions" },
       { label: "Nutrition", href: "https://shop.praan.health", external: true, badge: "New" },
     ],
   },

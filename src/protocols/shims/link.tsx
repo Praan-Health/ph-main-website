@@ -4,13 +4,15 @@ const LIVE_SITE = "https://praan.health";
 const BASE = import.meta.env.BASE_URL;
 
 /** Pages built in this project; every other internal route still lives on the live site. */
-const LOCAL_ROUTES: Record<string, string> = { "/": BASE, "/protocols": `${BASE}protocols/`, "/clinics": `${BASE}clinics/`, "/about": `${BASE}about/`, "/tnc": `${BASE}tnc/`, "/privacy": `${BASE}privacy/`, "/refund-policy": `${BASE}refund-policy/`, "/contact": `${BASE}contact/`, "/team-support": `${BASE}team-support/` };
+const LOCAL_ROUTES: Record<string, string> = { "/": BASE, "/protocols": `${BASE}protocols/`, "/protocols/conditions": `${BASE}protocols/conditions/`, "/clinics": `${BASE}clinics/`, "/about": `${BASE}about/`, "/tnc": `${BASE}tnc/`, "/privacy": `${BASE}privacy/`, "/refund-policy": `${BASE}refund-policy/`, "/contact": `${BASE}contact/`, "/team-support": `${BASE}team-support/` };
 
 export function resolveHref(href: string): string {
   if (!href.startsWith("/") || href.startsWith("//")) return href;
   const [path, rest = ""] = href.split(/(?=[?#])/);
   const suffix = rest;
-  const local = LOCAL_ROUTES[path.replace(/\/$/, "") || "/"];
+  const clean = path.replace(/\/$/, "") || "/";
+  const conditionPage = clean.match(/^\/protocols\/conditions\/([a-z0-9-]+)$/);
+  const local = conditionPage ? `${BASE}protocols/conditions/${conditionPage[1]}/` : LOCAL_ROUTES[clean];
   return local ? `${local}${suffix}` : `${LIVE_SITE}${href}`;
 }
 

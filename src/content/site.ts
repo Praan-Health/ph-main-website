@@ -30,6 +30,7 @@ export const NAV_LINKS: readonly NavLink[] = [
     children: [
       { label: 'Clinics', href: asset('/clinics/') },
       { label: 'Protocols', href: asset('/protocols/') },
+      { label: 'Conditions', href: asset('/protocols/conditions/') },
       { label: 'Nutrition', href: SHOP_URL, tag: 'New', external: true },
     ],
   },
