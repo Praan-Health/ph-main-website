@@ -11,6 +11,7 @@ export function LegalPage({ title, html, extraTopSpace = false }: { title: strin
         <div aria-hidden="true" className="h-(--spacing-margin)" />
         <Container>
           <Breadcrumbs current={title} />
+          <h1 className="sr-only">{title}</h1>
         </Container>
         <SectionSpacer size="md" />
       </section>

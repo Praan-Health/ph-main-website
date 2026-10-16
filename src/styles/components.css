@@ -212,7 +212,9 @@
   left: var(--space-3);
   display: grid;
   gap: var(--space-2);
+  max-height: calc(100svh - 2 * var(--space-3));
   padding: var(--space-4);
+  overflow-y: auto;
   border-radius: var(--r-lg);
   background: var(--white);
   box-shadow: 0 2px 50px rgb(0 0 0 / 0.3);
@@ -220,9 +222,17 @@
 }
 .cookie__title { font-size: 1.5rem; line-height: 1.2; }
 .cookie__text { font-size: var(--fs-small); line-height: 1.5; color: var(--ink-body); }
-.cookie__text a { color: var(--blue); text-decoration: underline; }
-.cookie__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-1); }
+.cookie__policy { justify-self: start; font-size: var(--fs-small); color: var(--blue); text-decoration: underline; }
+.cookie__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); margin-top: var(--space-1); }
+.cookie__choose { padding: 0.5rem 0.25rem; border: 0; background: none; color: var(--ink-body); font: inherit; cursor: pointer; }
+.cookie__choose:hover { text-decoration: underline; }
+.cookie__options { display: grid; gap: var(--space-3); justify-items: start; margin-top: var(--space-2); animation: cookie-rise 0.3s var(--ease); }
+.cookie__grid { display: grid; gap: var(--space-2) var(--space-4); grid-template-columns: 1fr; width: 100%; }
+.cookie__option { display: flex; align-items: center; gap: 0.6rem; font-size: var(--fs-small); color: var(--ink-body); cursor: pointer; }
+.cookie__option input { width: 1.125rem; height: 1.125rem; margin: 0; accent-color: var(--orange); cursor: pointer; }
+.cookie__option input:disabled { cursor: not-allowed; }
 @keyframes cookie-rise { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: none; } }
 @media (min-width: 640px) {
-  .cookie { left: auto; right: var(--space-5); bottom: var(--space-5); width: min(100% - 2 * var(--space-5), 37.5rem); }
+  .cookie { left: auto; right: var(--space-5); bottom: var(--space-5); width: min(100% - 2 * var(--space-5), 37.5rem); max-height: calc(100svh - 2 * var(--space-5)); }
+  .cookie__grid { grid-template-columns: 1fr 1fr; }
 }

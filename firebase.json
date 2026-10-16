@@ -48,6 +48,16 @@
         "source": "/search",
         "destination": "/",
         "type": 301
+      },
+      {
+        "source": "/careers",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/careers/**",
+        "destination": "/",
+        "type": 301
       }
     ],
     "rewrites": [

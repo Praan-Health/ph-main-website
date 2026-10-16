@@ -12,7 +12,7 @@ export function SupportFormSection() {
       <div aria-hidden="true" className="h-(--spacing-margin)" />
       <Container>
         <Breadcrumbs current={supportPage.breadcrumb} />
-        <SectionHeading className="mt-6 text-center text-wrap">{supportPage.heading}</SectionHeading>
+        <SectionHeading as="h1" className="mt-6 text-center text-wrap">{supportPage.heading}</SectionHeading>
         <p className="mt-5 py-1 text-center leading-[1.5] tracking-[0em] text-pretty">{supportPage.intro}</p>
         <div className="mt-7">
           <div className="mx-auto flex w-full flex-row md:w-1/2">

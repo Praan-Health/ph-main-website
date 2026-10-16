@@ -80,17 +80,16 @@ export function RotatingWord({ words, className }: { words: string[]; className?
             {[...word].map((letter, i) => (
               <em
                 key={i}
+                data-char={letter}
                 className={cn(
-                  "relative inline-block text-navy-700 not-italic",
+                  "relative inline-block text-navy-700 not-italic before:content-[attr(data-char)]",
                   state === "idle" && "translate-y-[150%]",
                   state !== "idle" && "transition-transform duration-800",
                   state === "in" && "translate-y-0",
                   state === "out" && "-translate-y-[160%]",
                 )}
                 style={state !== "idle" && previous !== null ? { transitionDelay: `${i * LETTER_STAGGER_MS}ms` } : undefined}
-              >
-                {letter}
-              </em>
+              />
             ))}
           </strong>
         );

@@ -101,11 +101,12 @@
 @media (max-width: 1180px) { .stories__nav--prev { left: 0.25rem; } .stories__nav--next { right: 0.25rem; } }
 /* Phones keep the arrows (bigger, for thumbs) since swiping is not obvious. */
 @media (max-width: 560px) { .stories__nav { width: 2.75rem; height: 2.75rem; } .stories__nav--prev { left: 0.5rem; } .stories__nav--next { right: 0.5rem; } }
-.stories__dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: var(--space-4); }
-.stories__dot { position: relative; width: 0.5rem; height: 0.5rem; padding: 0; border: 0; border-radius: 50%; background: rgb(0 0 0 / 0.18); cursor: pointer; transition: background var(--dur) var(--ease), scale var(--dur) var(--ease); }
-.stories__dot::before { content: ''; position: absolute; inset: -0.9rem -0.4rem; } /* tap area */
-.stories__dot:hover { background: rgb(0 0 0 / 0.32); }
-.stories__dot.is-active { background: var(--orange); scale: 1.25; }
+.stories__dots { display: flex; justify-content: center; margin-top: var(--space-4); }
+/* 24px touch target; the visible dot is drawn inside it. */
+.stories__dot { position: relative; width: 1.5rem; height: 1.5rem; padding: 0; border: 0; background: none; cursor: pointer; }
+.stories__dot::after { content: ''; position: absolute; inset: 0; margin: auto; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: rgb(0 0 0 / 0.18); transition: background var(--dur) var(--ease), scale var(--dur) var(--ease); }
+.stories__dot:hover::after { background: rgb(0 0 0 / 0.32); }
+.stories__dot.is-active::after { background: var(--orange); scale: 1.25; }
 @media (prefers-reduced-motion: reduce) { .story__thumb, .story__play { transition: none; } .story:hover .story__thumb { transform: none; } }
 
 /* Desktop: the body figure spans the heading block and the chips, so its top lines up with the top of the heading. */
