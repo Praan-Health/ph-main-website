@@ -1,6 +1,7 @@
 /**
  * The lead the browser posts to the n8n "Incoming Leads" webhook, in the field names and allowed values that
- * workflow documents (phone as E.164, `knownConditions` from a fixed label list, `protocol=home` for routing).
+ * workflow documents (phone as E.164, `knownConditions` from a fixed label list). Which route a lead takes, and
+ * who it is for, is decided inside n8n; the site only says where it came from with `label`.
  * Pure functions only, so they can be unit tested.
  */
 
@@ -63,10 +64,13 @@ interface LeadInput {
 const present = (object: Record<string, string | undefined>): Record<string, string> =>
   Object.fromEntries(Object.entries(object).filter((entry): entry is [string, string] => Boolean(entry[1])));
 
+/** Identifies this site to the n8n pipeline. */
+const LABEL = "main-homepage";
+
 /**
- * Flat form-encoded params for the webhook; empty values are left out. Our forms are completed by the patient
- * themselves, hence exploringFor "Myself". The page's own `source`/`ref`/`campaign` query values are not sent
- * because the webhook routes on `source`, and a stray value could send a lead to an unrelated campaign.
+ * Flat form-encoded params for the webhook; empty values are left out. The page's own `source`/`ref`/`campaign`
+ * query values are not sent because the webhook routes on `source`, and a stray value could send a lead to an
+ * unrelated campaign.
  */
 export function buildLeadParams({ fields, attribution, env }: LeadInput): Record<string, string> {
   const site = (fields["Site of Pain"] ?? "").trim();
@@ -79,10 +83,9 @@ export function buildLeadParams({ fields, attribution, env }: LeadInput): Record
     lastName: (fields["Last Name"] ?? "").trim(),
     email: (fields.Email ?? "").trim().toLowerCase(),
     phone,
-    exploringFor: "Myself",
     knownConditions: knownConditionFor(site),
     conditionDescription: details,
-    protocol: "home",
+    label: LABEL,
     landingPage: env.pathname,
     event_source_url: env.href,
     referrer: env.referrer,

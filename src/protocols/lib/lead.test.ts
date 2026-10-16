@@ -54,9 +54,8 @@ describe("buildLeadParams", () => {
       firstName: "Asha",
       lastName: "Rao",
       phone: "+919845012345",
-      exploringFor: "Myself",
       knownConditions: "Joint Pain / Arthritis",
-      protocol: "home",
+      label: "main-homepage",
       landingPage: "/clinics/",
       event_source_url: "https://praan.health/clinics/?utm_source=google",
       referrer: "https://www.google.com/",
@@ -84,7 +83,8 @@ describe("buildLeadParams", () => {
     expect(params.phone).toBe("+919845012345");
     expect(params.email).toBe("a@b.co");
     expect("knownConditions" in params).toBe(false);
-    expect(params.exploringFor).toBe("Myself");
+    expect("exploringFor" in params).toBe(false);
+    expect("protocol" in params).toBe(false);
   });
 
   it("does not send a route-key-like source or the page's own source param", () => {
