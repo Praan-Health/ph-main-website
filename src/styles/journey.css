@@ -1,46 +1,18 @@
-/* Journey: a vertical timeline. The line draws as you scroll; each step lights up when the line reaches it. */
+/* Journey: hairline-divided columns, an icon on top and the step at the foot. */
 .journey { padding-block: var(--section-y); background: var(--linen); }
+.journey__title { max-width: 18ch; }
+.journey__sub { margin-top: var(--space-3); }
 
-.timeline { --dot: 1.1rem; margin: var(--space-6) 0 0; padding: 0; list-style: none; }
-.timeline__step { position: relative; display: grid; gap: 0 var(--space-4); padding-bottom: var(--space-6); opacity: 0.5; transition: opacity 0.5s var(--ease); }
-.timeline__step:last-child { padding-bottom: 0; }
-.timeline__step.is-active { opacity: 1; }
+.journey__list { display: grid; margin: var(--space-6) 0 0; padding: 0; list-style: none; grid-template-columns: 1fr; }
+.journey__item { display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-4); padding: var(--space-1) var(--space-4); border-left: 1px solid rgb(48 56 128 / 0.22); }
+.journey__icon { width: 2.75rem; height: 2.75rem; color: var(--blue); }
+.journey__text h3 { min-height: 2.5em; font-size: 1.25rem; line-height: 1.25; font-weight: 400; }
+.journey__text p { min-height: 4.5em; margin-top: var(--space-2); font-size: var(--fs-small); line-height: 1.5; color: var(--ink-body); }
 
-/* The segment from this step's dot down to the next one, grey underneath and orange as it fills. */
-.timeline__step::before,
-.timeline__step::after { content: ''; position: absolute; width: 2px; top: calc(var(--dot) / 2 + 0.35rem); bottom: calc(-1 * (var(--dot) / 2 + 0.35rem)); border-radius: 2px; }
-.timeline__step::before { background: rgb(48 56 128 / 0.16); }
-.timeline__step::after { background: var(--orange); transform-origin: 50% 0; transform: scaleY(var(--seg, 0)); }
-.timeline__step:last-child::before, .timeline__step:last-child::after { display: none; }
-
-.timeline__dot { position: relative; z-index: 1; width: var(--dot); height: var(--dot); margin-top: 0.35rem; border: 2px solid rgb(48 56 128 / 0.3); border-radius: 50%; background: var(--linen); transition: background 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease); }
-.timeline__step.is-active .timeline__dot { background: var(--orange); border-color: var(--orange); transform: scale(1.15); }
-
-.timeline__numeral { font-family: var(--font-accent); font-style: italic; font-size: 1.5rem; line-height: 1.2; color: var(--orange); }
-.timeline__title { font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem); line-height: 1.25; letter-spacing: var(--tracking-heading); color: var(--blue); }
-.timeline__why { margin-top: 0.4rem; max-width: 28rem; font-size: 1rem; line-height: 1.5; color: var(--ink-body); }
-
-/* Phones: the line runs down the left; numeral, title and line of text sit to its right. */
-@media (max-width: 899px) {
-  .timeline__step { grid-template-columns: var(--dot) 1fr; grid-template-areas: "dot numeral" "dot text"; }
-  .timeline__step::before, .timeline__step::after { left: calc(var(--dot) / 2 - 1px); }
-  .timeline__dot { grid-area: dot; }
-  .timeline__numeral { grid-area: numeral; }
-  .timeline__text { grid-area: text; }
-}
-
-/* Desktop: the line is centred; steps alternate sides, with the numeral opposite the text. */
-@media (min-width: 900px) {
-  .timeline__step { grid-template-columns: 1fr var(--dot) 1fr; align-items: start; }
-  .timeline__step::before, .timeline__step::after { left: calc(50% - 1px); }
-  .timeline__dot { grid-column: 2; grid-row: 1; }
-  .timeline__step.is-left .timeline__text { grid-column: 1; grid-row: 1; text-align: right; justify-self: end; }
-  .timeline__step.is-left .timeline__numeral { grid-column: 3; grid-row: 1; }
-  .timeline__step.is-right .timeline__numeral { grid-column: 1; grid-row: 1; text-align: right; }
-  .timeline__step.is-right .timeline__text { grid-column: 3; grid-row: 1; }
-  .timeline__step.is-left .timeline__why { margin-left: auto; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .timeline__step, .timeline__dot { transition: none; }
+@media (min-width: 640px) { .journey__list { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-5); } }
+@media (min-width: 1100px) {
+  .journey__list { grid-template-columns: repeat(5, 1fr); }
+  .journey__item { min-height: 15rem; }
+  /* No divider before the first column; its content lines up with the heading instead. */
+  .journey__item:first-child { padding-left: 0; border-left: 0; }
 }

@@ -231,7 +231,7 @@ export const visit = {
   mapSrc: "https://maps.google.com/maps?q=The%20Fifty%2B%20Clinic%20by%20Praan%20Health&z=16&output=embed",
   mapTitle: "The Fifty+ Clinic by Praan Health",
   address: "The Fifty+ Clinic by Praan Health · Koramangala, Bengaluru",
-  directions: { label: "Get directions →", href: "https://maps.app.goo.gl/SygxUyW48Fzc6XsJA" },
+  directions: { label: "Get directions →", href: "https://maps.app.goo.gl/mfGBBa5FmC2hhXq98" },
 };
 
 export const cta = {

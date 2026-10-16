@@ -27,6 +27,7 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE: /ph-main-website/
+          VITE_FORMS_ENDPOINT: https://ph-website-forms-973824197278.asia-south1.run.app/api/forms
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

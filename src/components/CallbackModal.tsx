@@ -2,19 +2,12 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { callback } from '../protocols/content/clinics'
-import { utmFieldNames } from '../protocols/content/forms-pages'
 import { submitForm } from '../protocols/lib/forms'
 import { onOpenCallback } from '../lib/callback'
 
 type Status = 'idle' | 'sending' | 'done' | 'fail'
 
 const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-
-/** Attribution fields carried on every site form, read from the page's query string. */
-function readUtm(): Record<string, string> {
-  const params = new URLSearchParams(window.location.search)
-  return Object.fromEntries(utmFieldNames.map((name) => [name, params.get(name) ?? '']))
-}
 
 /** The "Request a Callback" popup. Mounted once; any CallbackButton opens it. */
 export function CallbackModal() {
@@ -77,7 +70,6 @@ export function CallbackModal() {
     const ok = await submitForm({
       formName: callback.formName,
       fields: {
-        ...readUtm(),
         'First Name': value('First-Name'),
         'Last Name': value('Last-Name'),
         'Phone Number': value('Phone-Number'),

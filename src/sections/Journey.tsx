@@ -1,38 +1,25 @@
-import type { CSSProperties } from 'react'
+import { JOURNEY_ICON_PATHS } from '../components/journeyIcons'
 import { JOURNEY_STEPS } from '../content/site'
-import { useScrollProgress } from '../hooks/useScrollProgress'
 
-const GAPS = JOURNEY_STEPS.length - 1
-
+/** The patient journey as hairline-divided columns: an icon on top, the step and why at the foot. */
 export function Journey() {
-  const { ref, progress } = useScrollProgress<HTMLOListElement>()
-  // How far the line has drawn, in steps: 0 at the first dot, GAPS at the last.
-  const reached = progress * GAPS
-
   return (
     <section className="journey" id="journey" aria-labelledby="journey-title">
       <div className="container">
-        <div className="section-head section-head--center">
-          <h2 id="journey-title">
-            Your journey to <span className="accent">lasting pain relief</span>
-          </h2>
-          <p className="lead">We are with you every step of the way</p>
-        </div>
+        <h2 id="journey-title" className="journey__title">
+          Your journey to <span className="accent">lasting pain relief</span>
+        </h2>
+        <p className="lead journey__sub">We are with you every step of the way</p>
 
-        <ol ref={ref} className="timeline">
-          {JOURNEY_STEPS.map((step, i) => (
-            <li
-              key={step.id}
-              className={`timeline__step ${i % 2 === 0 ? 'is-left' : 'is-right'} ${reached >= i - 0.02 ? 'is-active' : ''}`}
-              style={{ '--seg': Math.min(1, Math.max(0, reached - i)) } as CSSProperties}
-            >
-              <span className="timeline__numeral" aria-hidden="true">
-                {step.numeral}.
-              </span>
-              <span className="timeline__dot" aria-hidden="true" />
-              <div className="timeline__text">
-                <h3 className="timeline__title">{step.title}</h3>
-                <p className="timeline__why">{step.why}</p>
+        <ol className="journey__list">
+          {JOURNEY_STEPS.map((step) => (
+            <li key={step.id} className="journey__item">
+              <svg className="journey__icon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                <path d={JOURNEY_ICON_PATHS[step.id]} />
+              </svg>
+              <div className="journey__text">
+                <h3>{step.title}</h3>
+                <p>{step.why}</p>
               </div>
             </li>
           ))}

@@ -48,13 +48,8 @@ export type FormDef = {
 const SUCCESS = "Thank you! Your submission has been received!";
 const ERROR = "Oops! Something went wrong while submitting the form.";
 
-// Both live forms redirect to the Health Pass payment page on success (their `data-redirect`), not to
-// /thankyou. That is a live bug, reproduced here; change `redirect` to "/thankyou" to fix it.
-const LIVE_REDIRECT = "https://pages.razorpay.com/healthpass";
-
 export const contactForm: FormDef & { fields: FormFieldDef[] } = {
   formName: "Contact Form",
-  redirect: LIVE_REDIRECT,
   submitLabel: "Submit",
   successText: SUCCESS,
   errorText: ERROR,
@@ -71,7 +66,6 @@ export const contactForm: FormDef & { fields: FormFieldDef[] } = {
 // own name here so support requests can be told apart.
 export const supportForm: FormDef & { fields: FormFieldDef[]; details: FormFieldDef } = {
   formName: "Team Support Form",
-  redirect: LIVE_REDIRECT,
   submitLabel: "Submit Request",
   successText: SUCCESS,
   errorText: ERROR,
@@ -132,8 +126,7 @@ export const contactPage = {
   cta: {
     heading: "Start caring with clarity",
     body: "Give your parents the structured, doctor-guided support they need - without the uncertainty.",
-    // Live links to "#" in a new tab (the button was wired to a popup that isn't on this page).
-    button: { label: "Start Your Journey", href: "#" },
+    button: { label: "Start Your Journey", href: "https://cal.id/team/advisor/consultation-with-praan" },
   },
 };
 

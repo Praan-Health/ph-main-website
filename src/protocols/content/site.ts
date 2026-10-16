@@ -54,10 +54,9 @@ export const footer = {
     { label: "Refund Policy", href: "/refund-policy" },
   ],
   contact: [
-    // The live site links the phone number to an email address; it dials here instead.
-    { kind: "phone", label: "+91 73494 32805", href: "tel:+917349432805" },
-    // Shows care@ but emails support@ on the live site; kept until the team confirms which is intended.
-    { kind: "email", label: "care@praan.health", href: "mailto:support@praan.health?subject=You%20have%20an%20email%20from%20Website" },
+    // Opens WhatsApp, the same as the homepage footer.
+    { kind: "phone", label: "+91 73494 32805", href: "https://wa.me/917349432805" },
+    { kind: "email", label: "support@praan.health", href: "mailto:support@praan.health?subject=You%20have%20an%20email%20from%20Website" },
     { kind: "location", label: "Bangalore, India" },
   ] as { kind: "phone" | "email" | "location"; label: string; href?: string }[],
   copyright: "© 2026 Praan Healthcare. All rights reserved.",
