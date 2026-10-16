@@ -1,0 +1,15 @@
+{
+  "name": "ph-website-forms",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Receives praan.health form submissions, stores them in Firestore and forwards leads to the n8n Incoming Leads webhook.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^7.11.0"
+  }
+}
