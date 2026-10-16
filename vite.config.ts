@@ -2,7 +2,8 @@ import { existsSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
+import { readTrackingConfig, trackingHead } from './tracking/snippet.ts'
 
 const fromRoot = (path: string) => fileURLToPath(new URL(path, import.meta.url))
 
@@ -14,9 +15,16 @@ const conditionPages = Object.fromEntries(
 )
 
 // GitHub Pages serves this repo under /ph-main-website/ (set VITE_BASE in CI).
-export default defineConfig({
+export default defineConfig(({ mode }) => {
+  const tracking = trackingHead(readTrackingConfig(loadEnv(mode, process.cwd(), 'VITE_')))
+  return {
   base: process.env.VITE_BASE ?? '/',
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    // Consent defaults on every page; the GTM / GA4 / Meta loaders too when VITE_TRACKING=on.
+    { name: 'tracking-head', transformIndexHtml: () => [{ tag: 'script', injectTo: 'head-prepend', children: tracking.replace(/^<script>|<\/script>$/g, '') }] },
+  ],
   resolve: {
     alias: [
       // The Protocols page is ported from a Next.js app; these stand in for next/*.
@@ -42,4 +50,5 @@ export default defineConfig({
       },
     },
   },
+}
 })
