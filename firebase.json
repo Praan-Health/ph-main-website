@@ -16,12 +16,12 @@
       },
       {
         "source": "/condition",
-        "destination": "/protocols/",
+        "destination": "/protocols/conditions/",
         "type": 301
       },
       {
-        "source": "/conditions/**",
-        "destination": "/protocols/",
+        "source": "/conditions/:slug",
+        "destination": "/protocols/conditions/:slug/",
         "type": 301
       },
       {

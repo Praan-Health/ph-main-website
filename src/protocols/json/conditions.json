@@ -1,0 +1,1016 @@
+[
+  {
+    "id": "6a0ef77daa7c11173bca19e1",
+    "slug": "frozen-shoulder",
+    "name": "Frozen Shoulder",
+    "summary": "Gradually restore shoulder range of motion and reduce stiffness through structured physiotherapy-led care.",
+    "icon": {
+      "src": "/images/seatbelt.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Frozen shoulder is a gradually reversible condition where the shoulder joint capsule gradually thickens and tightens, leading to progressive pain and significant restriction of movement.</p><p>It typically develops slowly, often beginning with mild pain that worsens over time, followed by increasing stiffness that limits even basic movements like lifting the arm or reaching behind the back. It commonly follows injury, surgery, or periods of immobilization, and is more frequent in people with diabetes.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Regular assessment of shoulder mobility and recovery progress</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Targeted mobility and strengthening plans for better movement</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Treatment review and recovery support by specialists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Coaching to improve daily movement and prevent stiffness</p>"
+      }
+    ],
+    "improvements": [
+      "Restored shoulder mobility and range of motion",
+      "Reduced stiffness and movement limitations",
+      "Increased strength and return to daily life",
+      "Improved posture and upper body function"
+    ],
+    "quote": "<p>Frozen shoulder gradually limits movement while causing impact on long term strength and posture.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Gradual onset of shoulder pain without clear injury<br>- Increasing difficulty lifting the arm or reaching overhead<br>- Stiffness while performing daily tasks like dressing or combing hair<br>- Pain that worsens at night or when lying on the affected side<br>- Slow but progressive loss of shoulder movement<br>- Noticeable restriction in shoulder rotation (like reaching behind the back)</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Frozen shoulder occurs when the connective tissue around the shoulder joint becomes inflamed and thickened, causing the joint capsule to tighten.</p><p>This tightening reduces available space for movement, leading to pain and a gradual loss of mobility over time.</p><p>It often develops after periods of immobility, injury, surgery, or in metabolic conditions like diabetes, where tissue inflammation and healing responses are altered.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Prolonged shoulder immobility or reduced movement<br>- Previous shoulder injury or trauma<br>- Post-surgical recovery involving the shoulder region<br>- Diabetes and metabolic disorders<br>- Inflammatory response in the joint capsule<br>- Age-related connective tissue changes<br>- Thyroid or hormonal imbalances in some individuals</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Without proper management, frozen shoulder can significantly limit upper limb function, including:</p><p>- Severe restriction in shoulder movement in all directions<br>- Persistent pain, especially at night or during activity<br>- Difficulty performing basic tasks like dressing or reaching<br>- Prolonged stiffness lasting many months<br>- Compensatory strain on neck and opposite shoulder<br>- Gradual loss of upper body functional capacity</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- People with gradual shoulder pain and stiffness<br>- Those recovering from shoulder injury or surgery<br>- Individuals with diabetes or thyroid conditions<br>- People with prolonged shoulder immobility<br>- Those unable to lift or rotate the arm normally</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0ef697b077892662cc872f",
+    "slug": "spondylitis",
+    "name": "Spondylitis",
+    "summary": "Reduce spinal stiffness and improve mobility through anti-inflammatory, movement-focused clinical care.",
+    "icon": {
+      "src": "/images/bone-2.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Spondylitis is a chronic inflammatory condition affecting the spine and surrounding joints, leading to persistent pain, stiffness, and reduced flexibility, especially in the lower back and neck.</p><p>Symptoms often feel worse after rest or in the morning and may ease slightly with movement. Over time, ongoing inflammation can limit spinal mobility, affect posture, and make everyday activities increasingly restricted.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Ongoing tracking of mobility, pain, and physical comorbidities</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Movement and strength plans designed to improve flexibility</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Treatment review and symptom optimization by specialists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Guidance on posture and strength for prolonged quality of life</p>"
+      }
+    ],
+    "improvements": [
+      "Improved flexibility and spinal mobility",
+      "Reduced stiffness and movement restrictions",
+      "Better strength and functional capacity",
+      "Improved comfort in daily activities"
+    ],
+    "quote": "<p>Stiffness and reduced mobility is the first symptom before it turns into a long-term concern of spondylitis.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Persistent stiffness in the lower back or neck, especially in the morning<br>- Pain that improves slightly with movement but worsens with rest<br>- Reduced flexibility in spine or difficulty bending<br>- Deep, dull ache in the back or hips<br>- Disrupted sleep due to back discomfort<br>- Gradual change in posture or stooping over time</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Spondylitis develops due to chronic inflammation in the spine and surrounding joints, often driven by an overactive immune response.</p><p>This inflammation causes pain, stiffness, and gradual restriction in spinal movement, particularly in the lower back and sacroiliac joints.</p><p>Over time, repeated inflammation can lead to structural changes in the spine, reducing flexibility and affecting posture and mobility.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Autoimmune-driven inflammation of spinal joints<br>- Genetic predisposition (HLA-B27 association in some cases)<br>- Chronic inflammatory activity in the body<br>- Long periods of inactivity or poor posture<br>- Environmental triggers influencing immune response<br>- Family history of inflammatory spine conditions</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>If inflammation is not controlled, spondylitis can progressively affect spinal health, including:</p><p>- Increasing stiffness and chronic back pain<br>- Reduced spinal flexibility and mobility<br>- Postural changes and spinal rigidity over time<br>- Fatigue due to chronic inflammation<br>- Difficulty performing daily physical movements<br>- Long-term restriction in functional independence</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- People with chronic back stiffness, especially mornings<br>- Those whose pain improves with movement<br>- Younger adults with persistent back pain<br>- Individuals with family history of inflammatory spine disease<br>- People with reduced spinal flexibility</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0ef56d3e9ed8b159e47cc4",
+    "slug": "sciatica",
+    "name": "Sciatica",
+    "summary": "Relieve nerve compression symptoms and improve functional movement through targeted rehabilitation approaches.",
+    "icon": {
+      "src": "/images/lightning.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Sciatica is a nerve-related pain condition caused by irritation or compression of the sciatic nerve, which runs from the lower spine through the buttocks and down the leg.</p><p>It typically causes sharp, shooting pain, tingling, numbness, or weakness along the affected side, often worsening with prolonged sitting, bending, or sudden movements. </p><p>In many cases, it is linked to underlying spinal or postural issues that place pressure on the nerve.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Reviews of pain and overall mobility improvements</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Targeted movement and strengthening plans for symptom relief</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Progress reviews and recovery optimization by specialists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Guidance on posture and strength for prolonged quality of life</p>"
+      }
+    ],
+    "improvements": [
+      "Reduced pain and movement limitations",
+      "Improved flexibility and mobility",
+      "Better strength and posture support",
+      "Improved ability to perform daily activities"
+    ],
+    "quote": "<p>Sciatic pain may come and go, but the underlying issue often persists over time.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Sharp or shooting pain starting in the lower back and radiating to the leg<br>- Tingling or “pins and needles” sensation down one leg<br>- Numbness in the buttock, thigh, or calf area<br>- Pain that worsens while sitting for long periods<br>- Discomfort when bending, lifting, or twisting<br>- Weakness in one leg during movement or walking</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Sciatica occurs when the sciatic nerve becomes irritated or compressed, often due to structural changes in the lower spine.</p><p>Common causes include a slipped or herniated disc, spinal degeneration, or muscle tightness that places pressure on the nerve pathway.</p><p>This compression disrupts normal nerve signaling, leading to pain, tingling, or numbness that radiates down the leg.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Herniated or slipped spinal disc<br>- Age-related spinal degeneration<br>- Poor posture and prolonged sitting<br>- Muscle tightness in lower back and hips<br>- Obesity increasing spinal load<br>- Previous spinal injury or strain<br>- Sedentary lifestyle and weak core support</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>If nerve compression persists, sciatica can lead to ongoing functional issues, including:</p><p>- Chronic radiating pain from lower back to leg<br>- Persistent tingling, numbness, or burning sensation<br>- Difficulty in walking, sitting, or bending for long periods<br>- Muscle weakness in the affected leg<br>- Reduced mobility and activity tolerance<br>- Sleep disturbance due to pain flare-ups</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- People with long sitting hours or desk jobs<br>- Those with lower back pain radiating to the leg<br>- Individuals with poor posture or weak core<br>- People with past disc issues or spinal strain<br>- Those with tingling or numbness in one leg</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0ef473a01830521b7d6ea3",
+    "slug": "osteoporosis",
+    "name": "Osteoporosis",
+    "summary": "Support bone strength and control progressive bone loss through targeted, evidence-based intervention.",
+    "icon": {
+      "src": "/images/person.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Osteoporosis is a condition where bones gradually lose density, becoming weak and more prone to fractures even with minor falls or strain.</p><p>This occurs when bone breakdown outpaces bone formation, leading to fragile bone structure, commonly affecting the spine, hips, and wrists.</p><p>It develops due to ageing, hormonal changes (especially post-menopause), low calcium and vitamin D, inactivity, steroid use, and genetics.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Regular bone health and mobility assessment tracking</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Nutrition and strength plans designed to support bone density</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Treatment review and bone health optimization by specialists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Lifestyle coaching to improve mobility and reduce fall risk</p>"
+      }
+    ],
+    "improvements": [
+      "Improved strength, balance, and mobility",
+      "Better bone-health supporting habits and nutrition",
+      "Reduced fall and fracture risk",
+      "Improved confidence in everyday movement"
+    ],
+    "quote": "<p>Stiffness and discomfort often progress long before they disrupt daily life.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Gradual loss of height over time<br>- Back pain, especially due to minor strain or compression<br>- Bones that feel more sensitive to minor bumps or falls<br>- Stooped posture or increasing curvature of the upper back<br>- Fractures occurring from low-impact injuries or falls<br>- Reduced grip strength or overall skeletal fragility feeling<br>- Subtle decline in mobility or confidence in movement</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Osteoporosis occurs when the natural process of bone breakdown begins to outpace new bone formation, leading to progressively weaker and more fragile bones.</p><p>As bone density reduces over time, the internal structure of bones becomes porous, making them more vulnerable to fractures even with minor stress or falls.</p><p>This imbalance is commonly driven by ageing, hormonal changes (especially reduced estrogen after menopause), low calcium and vitamin D intake, inactivity, long-term steroid use, and genetic factors.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Ageing and post-menopausal hormonal changes<br>- Low calcium and vitamin D intake<br>- Physical inactivity and low weight-bearing exercise<br>- Long-term steroid or certain medication use<br>- Family history of bone fragility or fractures<br>- Low body weight or poor nutritional status<br>- Smoking and excessive alcohol consumption</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Over time, osteoporosis can significantly weaken the skeletal system, leading to:</p><p>- Increased risk of fractures even from minor falls or stress<br>- Gradual loss of height and spinal compression changes<br>- Back pain due to vertebral weakening<br>- Stooped posture and reduced spinal alignment<br>- Reduced mobility and confidence in movement<br>- Long-term loss of independence in severe cases</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Post-menopausal women and older adults<br>- People with low calcium or vitamin D intake<br>- Those with fractures from minor falls or strain<br>- Individuals on long-term steroids or similar medications<br>- People with low body weight or inactive lifestyle</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0ef217d59084b69204133a",
+    "slug": "post-surgery-weakness",
+    "name": "Post Surgery Weakness",
+    "summary": "Accelerate recovery of strength, mobility, stamina and confidence through clinical rehabilitation and guidance.",
+    "icon": {
+      "src": "/images/facemask.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Post-surgery weakness is a common reduction on strength, mobility, and energy following a surgical procedure while the body is in the process of healing.</p><p>Muscles may weaken, joints may stiffen, and endurance may drop during recovery, making structured rehabilitation important for regaining function.</p><p>Symptoms primarily vary depending on surgery type, immobilization duration, nutrition, age, and baseline fitness.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Ongoing recovery, strength, and functional progress tracking</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Personalized nutrition and rehabilitation-focused plan</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Recovery assessment and treatment optimization by clinicians</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Guidance to build confidence and restore everyday activity</p>"
+      }
+    ],
+    "improvements": [
+      "Improved recovery, strength, and physical function",
+      "Better mobility and return to everyday activities",
+      "Increased confidence with movement and independence",
+      "Faster progression toward recovery goals"
+    ],
+    "quote": "<p>Healing doesn’t end when you leave the hospital. It often requires continuous care.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Persistent fatigue even after adequate rest<br>- Reduced strength in previously normal muscle groups<br>- Stiffness or limited movement around the operated area<br>- Difficulty returning to routine activities <br>- Swelling or discomfort that lingers longer than expected recovery timelines<br>- Hesitation or fear while resuming movement due to discomfort or instability</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Post-surgery weakness happens because the body diverts significant energy and resources toward healing tissues, which often leads to temporary loss of strength, stamina, and mobility.</p><p>Muscles around the affected area may weaken due to reduced movement, while inflammation and pain can further limit normal activity patterns during recovery.</p><p>The extent and duration are influenced by the type of surgery, pre-surgery fitness levels, duration of immobilization, nutritional status, age, and presence of other health conditions.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Extent and type of surgical procedure<br>- Duration of bed rest or immobilization<br>- Pre-surgery muscle strength and fitness levels<br>- Post-operative pain and inflammation<br>- Nutritional status during recovery<br>- Age and overall health condition<br>- Presence of other chronic illnesses (e.g., diabetes)</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Delayed or incomplete recovery can affect multiple aspects of function, including:</p><p>- Persistent weakness and low physical endurance<br>- Limited mobility around the operated area<br>- Stiffness and reduced range of motion<br>- Difficulty returning to normal daily activities<br>- Prolonged fatigue and slow healing response<br>- Increased risk of secondary complications due to inactivity</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Older adults recovering from major surgery<br>- People with diabetes or delayed healing response<br>- Those with low pre-surgery fitness or strength<br>- Individuals with prolonged bed rest or immobility<br>- People struggling to resume daily activities</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0eefcaaaeb4c0d227c3fe0",
+    "slug": "parkinsons-disease",
+    "name": "Parkinson's Disease",
+    "summary": "Support movement control, balance, and independence through comprehensive neurological care.",
+    "icon": {
+      "src": "/images/brain.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Parkinson's is a progressive neurological condition caused by the gradual loss of dopamine-producing cells in the brain, which affects movement control and coordination.</p><p>It often begins subtly with tremors in one hand, mild stiffness, or slower movements, and gradually progresses to affect balance, posture, facial expression, and speech. As it advances, daily activities like walking, writing, or buttoning clothes can become more challenging. Symptoms vary widely between individuals and evolve over time.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Continuous tracking of mobility, strength, and symptoms</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Movement and nutrition plans designed to maintain function</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Treatment review and symptom optimization by specialists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Support for sustainable routines that improve daily functioning</p>"
+      }
+    ],
+    "improvements": [
+      "Improved mobility, balance, and movement confidence",
+      "Better strength and day-to-day functioning",
+      "Improved ability to perform everyday activities",
+      "Enhanced quality of life and independence"
+    ],
+    "quote": "<p>While degenerative, progressive guidance, training and nutrition can retain mobility and independence.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Mild tremor in one hand, often at rest<br>- Slower movement or reduced hand/arm swing while walking<br>- Stiffness in muscles or joints without clear injury<br>- Subtle changes in handwriting (smaller, cramped writing)<br>- Reduced facial expressions or “mask-like” face<br>- Softening of voice or reduced speech clarity<br>- Slight balance issues or feeling less steady while turning</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Dopamine is essential for smooth and coordinated movement, so its decline directly affects motor control, causing Parkinson's disease.</p><p>As dopamine levels drop, communication between brain regions becomes less efficient, leading to symptoms like tremors, stiffness, and slowed movement.</p><p>The exact cause is not fully understood, but it is linked to a combination of genetic susceptibility, age-related changes in the brain, and environmental factors that may contribute to nerve cell damage over time.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Ageing and natural neurodegenerative changes<br>- Genetic susceptibility in some individuals<br>- Environmental toxin exposure over time<br>- Oxidative stress and cellular damage in the brain<br>- Reduced dopamine-producing neuron function<br>- Family history of Parkinson’s disease (in a subset of cases)</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>As Parkinson’s progresses, it can affect multiple layers of function, including:</p><p>Increasing difficulty with movement, balance, and coordination<br>Progressive slowing of daily activities<br>Speech and handwriting changes becoming more pronounced<br>Higher risk of falls and mobility limitations<br>Reduced facial expression and communication ability<br>Decline in independence for routine tasks</p><p>‍</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Adults above 60 with tremors or stiffness<br>- People with subtle changes in movement or coordination<br>- Those with family history of Parkinson’s disease<br>- Individuals with balance issues or slower movements<br>- People with reduced facial expression or handwriting changes</p><p>‍</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0eee006df39af8dd4f661b",
+    "slug": "sarcopenia",
+    "name": "Sarcopenia",
+    "summary": "Rebuild muscle strength and restore physical resilience through progressive guidance, training and nutrition.",
+    "icon": {
+      "src": "/images/person.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Sarcopenia is the gradual loss of muscle mass, strength, and performance that happens with ageing, and becoming more noticeable later in life. It is not just “weakness with age,” but a measurable decline in muscle quality and function.</p><p>As muscle reduces, everyday tasks like waling long distances, climbing stairs, carrying weight begins to feel harder.</p><p>It is driven by a combination of reduced physical activity, lower protein utilization, hormonal changes, chronic inflammation, and long periods of sedentary behavior. Without intervention, it can gradually reduce mobility, balance, and independence over time.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Strength, mobility, and muscle health progress monitoring</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Personalized protein, nutrition, and resistance training plans</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Clinical review to optimize recovery and physical function</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Coaching to build sustainable movement and nutrition habits</p>"
+      }
+    ],
+    "improvements": [
+      "Increased muscle strength and functional capacity",
+      "Improved balance and physical performance",
+      "Better mobility and independence in daily activities",
+      "Improved energy and overall quality of life"
+    ],
+    "quote": "<p>Slowly declining strength makes everyday activities harder over time. Progressive care can help restore it.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Feeling weaker while doing routine physical tasks<br>- Difficulty getting up from a chair without support<br>- Reduced walking speed or shorter walking distance tolerance<br>- Noticeable loss of muscle tone in arms or legs<br>- Increased fatigue after mild physical activity<br>- Poor balance or higher tendency to feel unsteady<br>- Slower recovery after exertion or exercise</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Sacropenia happens because muscle protein synthesis becomes less efficient with age, while factors like insufficient physical activity and poor nutrition further accelerate muscle breakdown. Over time, even everyday movements provide less stimulus for maintaining muscle.</p><p>It is driven by ageing, reduced physical activity, inadequate protein intake, hormonal changes, chronic inflammation, and long periods of sedentary living.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Age-related decline in muscle protein synthesis<br>- Sedentary lifestyle and lack of resistance activity<br>- Inadequate protein intake over time<br>- Chronic inflammation or long-term illness<br>- Hormonal changes (testosterone, growth hormone decline)<br>- Prolonged bed rest or physical inactivity<br>- Poor overall nutritional status</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Progressive muscle loss can impact overall physical resilience, including:</p><p>- Reduced strength for daily activities like walking or lifting<br>- Slower movement and reduced walking speed<br>- Higher risk of falls and injury<br>- Increased fatigue with minimal exertion<br>- Loss of balance and coordination<br>- Gradual decline in independence and functional capacity</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Older adults noticing reduced strength or slower movement<br>- People with low protein intake or poor nutrition<br>- Those with sedentary, desk-based routines<br>- Individuals recovering from illness or prolonged inactivity<br>- People who feel fatigued during light activity</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0ee9a3b2b9c76bf23de24e",
+    "slug": "rheumatoid-arthritis",
+    "name": "Rheumatoid Arthritis",
+    "summary": "Manage inflammation early to preserve mobility, strength and quality of life.",
+    "icon": {
+      "src": "/images/bone-2.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Rheumatoid arthritis (RA) is an autoimmune condition where the immune system mistakenly attacks healthy joint tissues, causing persistent inflammation.</p><p>Unlike age-related wear and tear, RA often affects multiple joints simultaneously and commonly appears symmetrically — affecting both hands, wrists, knees or feet together.</p><p>Over time, inflammation can damage joints, reduce flexibility and affect energy levels, making early recognition and ongoing management important.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Active symptom monitoring and mobility reviews</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Movement and strength-focused guidance</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Inflammation-focused lifestyle interventions</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Specialist care coordination and habit-building for prolonged health</p>"
+      }
+    ],
+    "improvements": [
+      "Reduced flare frequency",
+      "Significantly improved mobility and strength",
+      "Improved confidence and overally quality of life",
+      "Better day-to-day body functioning"
+    ],
+    "quote": "<p>Inflammation affects far more than just your joints. It leads to lifestyle-restricting complications.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Morning stiffness lasting over 30 minutes<br>- Joint swelling or warmth<br>- Pain in hands and feet<br>- Reduced grip strength<br>- Persistent fatigue<br>- Persistent low-grade fever<br>- Difficulty performing everyday tasks<br>- General body aches without exerting excessive strain</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>In Rheumatoid Arthritis, the immune system mistakenly attacks the lining of the joints (synovium), leading to chronic inflammation. This causes swelling, pain, stiffness, and progressive joint damage over time.</p><p>Over time, persistent inflammation can erode cartilage and bone, leading to deformity and reduced joint function. In some cases, inflammation can also affect other organs like the lungs and blood vessels.</p><p>It develops due to a combination of genetic susceptibility and immune dysregulation, often triggered by environmental factors such as smoking, infections, and hormonal influences.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Autoimmune dysfunction<br>- Family history<br>- Smoking<br>- Hormonal influences<br>- Environmental triggers<br>- Obesity<br>- Chronic inflammation</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Poorly managed RA can cause physical difficulties like:<br>‍</p><p>- Joint deformities<br>- Reduced mobility and flexibility<br>- Chronic body and joint pain<br>- Gradual muscle weakness<br>- Cardiovascular complications<br>- Reduced overall quality of life</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Women are more prone <br>- Adults aged 30-60<br>- Individuals with existing autoimmune conditions<br>- People with family history of arthritis or autoimmunice conditions</p><p>‍</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0ee9759b4a6a65994de526",
+    "slug": "pcos",
+    "name": "PCOS",
+    "summary": "Restore hormonal and metabolic health through individualized, evidence-based lifestyle and clinical strategies.",
+    "icon": {
+      "src": "/images/genderfemale.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>PCOS, is a rapidly rising ailment among women. It is a hormonal and metabolic condition where the ovaries do not function regularly, often leading to disrupted ovulation and imbalanced reproductive hormones.</p><p>It commonly presents with irregular or missed periods, weight gain (especially around the abdomen), acne, and excess hair growth. Many women also experience insulin resistance, which can further worsen hormonal imbalance and increase long-term metabolic risks such as diabetes if not managed.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Regular monitoring of metabolic and hormonal health markers</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Nutrition and fitness plans designed for hormonal balancing</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Treatment review and medication optimization by specialists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Behavioral coaching for sustainable lifestyle improvements</p>"
+      }
+    ],
+    "improvements": [
+      "Gradual stability in hormonal and metabolic health markers",
+      "Better energy levels and overall wellbeing",
+      "Improved weight management and physical fitness",
+      "Reduced long-term risk of metabolic complications"
+    ],
+    "quote": "<p>PCOS impacts multiple aspects of health, and require a lifestyle-centric approach to reverse.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Irregular, delayed, or missed menstrual cycles<br>- Gradual weight gain, especially around the abdomen<br>- Increased acne or oily skin beyond typical patterns<br>- Noticeable hair growth on face, chest, or abdomen<br>- Thinning hair on the scalp<br>- Difficulty in maintaining weight despite routine efforts<br>- Signs of insulin resistance such as sugar cravings or fatigue after meals</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>PCOS develops due to a complex imbalance in reproductive hormones, where ovulation becomes irregular or absent. This hormonal disruption affects how the ovaries function and how eggs are released.</p><p>A key underlying factor in many cases is insulin resistance, which increases insulin levels and can further stimulate excess androgen (male hormone) production, disrupting the menstrual cycle.</p><p>It is influenced by genetics, metabolic health, lifestyle factors, and hormonal sensitivity, which together affect reproductive and metabolic balance.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Insulin resistance and metabolic dysfunction<br>- Genetic and family history factors<br>- Hormonal imbalance affecting ovulation<br>- Sedentary lifestyle and excess abdominal fat<br>- Chronic stress and sleep disruption<br>- Inflammatory and metabolic triggers</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>If not managed well, PCOS can extend beyond menstrual irregularities, including:</p><p>- Worsening insulin resistance and metabolic imbalance<br>- Increased risk of type 2 diabetes over time<br>- Persistent weight gain and difficulty losing weight<br>- Fertility challenges due to irregular ovulation<br>- Skin and hair-related concerns becoming more pronounced<br>- Long-term cardiovascular and hormonal risk increase</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Women with irregular or missed periods<br>- Those with abdominal weight gain<br>- Individuals with acne, hair thinning, or excess hair growth<br>- Women with insulin resistance or sugar cravings<br>- Those with family history of PCOS or hormonal imbalance</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0e9768f1db89c3a6b5878e",
+    "slug": "diabetes",
+    "name": "Diabetes",
+    "summary": "Reduce medication dependency and restore metabolic health through evidence-based protocols.",
+    "icon": {
+      "src": "/images/drop.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": {
+        "src": "/images/diabetes-desktop-banner.png",
+        "alt": ""
+      },
+      "mobile": {
+        "src": "/images/diabetes-mobile-banner.png",
+        "alt": ""
+      }
+    },
+    "overview": "<p>Diabetes is a metabolic condition that affects how the body regulates blood sugar (glucose), its primary source of energy.</p><p>‍</p><p>When the body cannot produce enough insulin or use it effectively, sugar builds up in the bloodstream over time. If left unmanaged, this can affect the heart, kidneys, nerves, eyes, and overall health.</p><p>‍</p><p>Type 2 diabetes is the most common form among Indians. While conditions like prediabetes and gestational diabetes can often be reversed, Type 2 diabetes can also be effectively managed, and in many cases, brought into long-term remission through structured care and lifestyle changes.</p><p>‍</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Continuous glucose monitoring and data-driven insights</p>"
+      },
+      {
+        "heading": "Personalized Care Plan",
+        "body": "<p>Personalized nutrition plans with glycemic index optimization</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Medication review and dosage optimization by endocrinologists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Behavioral coaching for sustainable lifestyle changes</p>"
+      }
+    ],
+    "improvements": [
+      "Average HbA1c reduction of 1.5-2.5% in 6 months",
+      "Reduced dependency on insulin for Type 2 patients",
+      "Improved energy levels and daily functioning",
+      "Lower risk of diabetes-related complications"
+    ],
+    "quote": "<p>Check-ups alone aren’t enough for diabetes. It needs continuous care every day.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Frequent urination, especially at night<br>- Increased thirst or dry mouth<br>- Unexplained fatigue or low energy<br>- Sudden weight changes<br>- Increased hunger after meals<br>- Blurred vision<br>- Slow wound healing<br>- Tingling or numbness in hands and feet<br>- Frequent infections or skin issues<br>- Darkening of skin around the neck or underarms (a sign of insulin resistance)</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>In Type 2 diabetes, the body’s cells become less responsive to insulin, the hormone that helps move glucose from the blood into cells for energy. As a result, glucose builds up in the bloodstream.</p><p>The pancreas tries to compensate by producing more insulin, but over time it cannot keep up, leading to rising blood sugar levels that start damaging various organs.</p><p>This develops due to genetic risk and factors like excess abdominal fat, inactivity, poor sleep, stress, and ageing. South Asians are naturally at higher risk due to higher insulin resistance and central fat at lower body weight.</p><p>‍</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Family history of diabetes<br>- Excess abdominal fat or obesity<br>- Sedentary lifestyle and low muscle mass<br>- High intake of processed foods and refined carbohydrates<br>- Poor sleep quality and chronic stress<br>- Smoking and alcohol consumption<br>- Hypertension and high cholesterol<br>- PCOS and hormonal imbalances<br>- Ageing and reduced metabolic flexibility</p><p>‍</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Poorly controlled diabetes can silently affect multiple organs and systems over time.</p><p>Potential complications include:<br>- Heart disease and stroke<br>- Kidney damage (diabetic nephropathy)<br>- Vision loss and retinal damage<br>- Nerve damage causing pain or numbness<br>- Poor circulation and delayed wound healing<br>- Increased risk of infections<br>- Fatty liver disease<br>- Cognitive decline and reduced quality of life</p><p>Many complications develop gradually and may remain unnoticed until significant damage has occurred, making continuous monitoring and early intervention essential.</p><p>‍</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>Common patterns noticed among people becoming diabetic include:<br>- Adults above 35 years of age<br>- Individuals with a family history of diabetes<br>- People with abdominal obesity or weight gain around the waist<br>- Those with high blood pressure or cholesterol<br>- Women with PCOS or a history of gestational diabetes<br>- Individuals with sedentary work routines<br>- People experiencing chronic stress, poor sleep, or burnout</p><p>‍</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0d306139fd9bfd46506618",
+    "slug": "heart-disease",
+    "name": "Heart Disease",
+    "summary": "Strengthen overall cardiovascular function and reduce long-term risk through structured, evidence-based care.",
+    "icon": {
+      "src": "/images/heartbeat.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Heart disease refers to conditions affecting the heart’s structure and function, most often due to reduced blood flow from narrowed or blocked arteries.</p><p>When blood supply to the heart is restricted, it can cause chest pain, breathlessness, reduced stamina, or in severe cases, heart attacks. Over time, the heart may also weaken and struggle to pump efficiently.</p><p>It develops gradually due to factors such as high blood pressure, high cholesterol, diabetes, smoking, obesity, stress, and sedentary lifestyle.</p><p>‍</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Monitoring of heart health markers and risk factors</p><p>‍</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Nutrition and activity plan focused on cardiovascular health</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Cardiology-led review of risk factors and plan optimization</p>"
+      },
+      {
+        "heading": "Habit and lifestyle support",
+        "body": "<p>Coaching for movement, stress control, and heart-healthy habits</p>"
+      }
+    ],
+    "improvements": [
+      "Improved cardiovascular fitness and endurance",
+      "Better blood pressure and heart health markers",
+      "Improved energy levels and daily functioning",
+      "Reduced risk factors associated with future cardiac events"
+    ],
+    "quote": "<p>Small habits and choices often build up silently before leading to a serious heart disease.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Chest discomfort, pressure, or heaviness during activity or stress<br>- Shortness of breath that feels out of proportion to exertion<br>- Unusual fatigue during routine daily tasks<br>- Discomfort radiating to the left arm, jaw, or upper back<br>- Irregular or noticeably fast heartbeats (palpitations)<br>- Dizziness or light-headed episodes during exertion<br>- Reduced exercise tolerance compared to earlier levels</p><p>‍</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Heart disease usually develops when the blood vessels supplying the heart gradually become narrowed or blocked due to plaque buildup (fat, cholesterol, and other substances). This reduces blood flow to the heart muscle over time.</p><p>When the heart doesn’t receive enough oxygen-rich blood, it starts working harder, which can eventually weaken its function or trigger acute events like heart attacks.</p><p>This process is driven by long-term factors such as high blood pressure, high cholesterol, diabetes, smoking, inactivity, chronic stress, and genetic predisposition.</p><p>‍</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- High blood pressure and high cholesterol<br>- Diabetes or insulin resistance<br>- Smoking and tobacco exposure<br>- Sedentary lifestyle and low fitness levels<br>- Excess abdominal weight or obesity<br>- Chronic stress and poor sleep quality<br>- Family history of cardiovascular disease<br>- Diet high in processed foods, salt, and unhealthy fats</p><p>‍</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Over time, heart disease can impact several vital systems, including:<br>- Chest pain, breathlessness, and reduced exercise capacity<br>- Increased risk of heart attack or heart failure<br>- Irregular heart rhythms and cardiovascular instability<br>- Reduced blood flow affecting brain and kidney function<br>- Fatigue and reduced daily functional ability<br>- Gradual decline in overall physical stamina</p><p>‍</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- People with diabetes, high blood pressure, or high cholesterol<br>- Those with low stamina, breathlessness, or reduced exercise capacity<br>- Individuals with family history of heart disease or early cardiac events<br>- People with smoking habits, chronic stress, or sedentary lifestyle<br>- Individuals with abdominal obesity or metabolic imbalance</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0d302ff15769930134ebd6",
+    "slug": "hypertension",
+    "name": "Hypertension",
+    "summary": "Improve blood pressure control and restore vascular health through evidence-based clinical and lifestyle protocols.",
+    "icon": {
+      "src": "/images/pulse.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Hypertension is a chronic condition where the force of blood against artery walls remains consistently elevated.</p><p>Over time, this increased pressure makes the heart work harder and damages blood vessels, increasing risk to the heart, brain, kidneys, and eyes.</p><p>It is often called a “silent condition” because it usually has no obvious symptoms until complications develop.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Regular BP monitoring with lifestyle-based trend analysis</p><p>‍</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Sodium stabilizing nutrition and cardiovascular strengthening</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Progressive exercise and medication optimization</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Stress management and sleep improvement routines</p>"
+      }
+    ],
+    "improvements": [
+      "Progressive reduction in systolic and diastolic blood pressure",
+      "Improved vascular health and reduced arterial strain",
+      "Better exercise tolerance and endurance",
+      "Reduced medication dosage in some patients"
+    ],
+    "quote": "<p>Often asymptomatic, but quietly strains and damages the heart, brain, and kidneys.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Frequent headaches<br>- Dizziness or light-headedness<br>- Blurred vision<br>- Shortness of breath on exertion<br>- Chest discomfort<br>- Fatigue without clear cause<br>- Nosebleeds (in some cases)</p><p>‍</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>In Hypertension, the pressure exerted by blood against artery walls remains consistently elevated, forcing the heart to work harder than normal.</p><p>Over time, this increased pressure damages blood vessels and strains vital organs such as the heart, kidneys, brain, and eyes, increasing the risk of heart attack and stroke.</p><p>It develops due to a combination of genetic predisposition and lifestyle factors such as high salt intake, excess body weight, physical inactivity, chronic stress, alcohol consumption, and ageing.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- High salt intake and poor diet quality<br>- Excess body weight, especially abdominal fat<br>- Lack of physical activity<br>- Chronic stress and poor sleep<br>- Smoking and alcohol use<br>- Family history of hypertension<br>- Diabetes and insulin resistance<br>- Ageing and vascular stiffness</p><p>‍</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Uncontrolled blood pressure can silently damage multiple organs, including:</p><p>- Increased risk of stroke and heart attack<br>- Kidney damage and reduced renal function<br>- Vision changes due to retinal vessel damage<br>- Heart strain leading to thickening or weakening of the heart muscle<br>- Cognitive decline and vascular-related brain changes<br>- Persistent headaches, dizziness, or fatigue in advanced stages</p><p>‍</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Individuals with obesity or abdominal fat<br>- People with diabetes or high cholesterol<br>- Smokers and regular alcohol consumers<br>- Those with high stress lifestyles or sedentary jobs<br>- Individuals with family history of hypertension</p><p>‍</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0c1b727cb6154c9c9c64e6",
+    "slug": "thyroid",
+    "name": "Thyroid Disorder",
+    "summary": "Improve hormonal balance through early identification and sustainable lifestyle guidance.",
+    "icon": {
+      "src": "/images/pill.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>The thyroid gland controls metabolism, heart rate, temperature, sleep, mood, weight and multiple body functions. When hormone levels are imbalanced, it can slow down or speed up the body’s processes, affecting overall health, weight and wellbeing.</p><p>Symptoms often develop gradually and may resemble normal ageing or stress, making them easy to overlook.</p><p>With appropriate medical treatment and monitoring, thyroid function can usually be well controlled, though long-term management is often required.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Monitoring energy, symptoms and diagnostics</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Nutrition and strength support for thyroid and metabolic wellbeing</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Medication regulation under clinical supervision</p>"
+      },
+      {
+        "heading": "Habit and lifestyle support",
+        "body": "<p>Focus on sleep, stress and lifestyle improvement</p>"
+      }
+    ],
+    "improvements": [
+      "Stabilization of TSH, T3, and T4 levels",
+      "Reduction in symptoms like sudden fatigue, weight change",
+      "Improved energy levels, mental clarity, and daily functioning",
+      "Nullified risk of long-term complications"
+    ],
+    "quote": "<p>Thyroid imbalance is often benign in the beginning, but it gradually affects various body systems.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Unexplained fatigue or low energy<br>- Sudden weight gain or weight loss<br>- Sensitivity to cold or heat<br>- Hair thinning or hair loss<br>- Irregular heart rate or palpitations<br>- Mood changes, anxiety, or depression<br>- Constipation or digestive changes<br>- Swelling in the neck area<br>- Irregular menstrual cycles</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>In Thyroid Disorders, the thyroid gland produces either too much or too little thyroid hormone, which regulates the body’s metabolism.</p><p>In hypothyroidism, low hormone levels slow down body functions, leading to fatigue, weight gain, cold intolerance, and slowed heart rate. In hyperthyroidism, excess hormone speeds up metabolism, causing weight loss, palpitations, heat intolerance, and anxiety.</p><p>These conditions commonly arise from autoimmune processes, iodine imbalance, or thyroid inflammation, with higher risk in women and individuals with family history.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Autoimmune conditions (Hashimoto’s, Graves’)<br>- Iodine imbalance in diet<br>- Genetic predisposition<br>- Chronic stress<br>- Hormonal changes (especially in women)<br>- Certain medications<br>- Ageing and metabolic changes</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Thyroid disorders can affect multiple systems over time, including:</p><p>- Heart rhythm irregularities<br>- Fertility and menstrual cycle disruptions<br>- Weight and metabolic disturbances<br>- Fertility and menstrual health issues<br>- Mood disorders and cognitive slowing<br>- Muscle weakness and fatigue<br>- Bone health changes (in long-standing cases)</p><p>‍</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Women, especially above 30<br>- Individuals with family history of thyroid disease<br>- People with unexplained fatigue or weight changes<br>- Those with autoimmune conditions<br>- Individuals with irregular menstrual cycles or fertility concerns</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0c1b6c8ed7260ebe0fe33f",
+    "slug": "osteoarthritis",
+    "name": "Osteoarthritis",
+    "summary": "Reduce symptom burden and improve joint function through evidence-based movement, strength, and weight management protocols.",
+    "icon": {
+      "src": "/images/bone.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>In osteoarthritis, the protective cartilage that cushions the ends of bones within joints gradually breaks down over time.</p><p>As cartilage wears away, bones begin to rub against each other, leading to pain, stiffness, inflammation, and reduced joint mobility. The knees, hips, hands, and spine are among the most commonly affected joints.</p><p>It develops due to a combination of ageing, joint wear and tear, excess body weight, previous injuries, repetitive stress on joints, muscle weakness, and genetic factors.</p><p>‍</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Monitoring pain levels, mobility and strength gain</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Low-impact exercises, weight management, joint-support nutrition</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Inflammation and pain focused protocol modification</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Strength and mobility routines, and long-term joint protection</p>"
+      }
+    ],
+    "improvements": [
+      "Reduction in joint pain during daily activities",
+      "Improved joint mobility, flexibility, and range of motion",
+      "Increased muscle strength supporting affected joints",
+      "Better walking, stair climbing, and functional capacity"
+    ],
+    "quote": "<p>Osteoarthritis is not just ageing. It is progressive joint wear that can be controlled with early care.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Joint pain during or after movement<br>- Morning stiffness lasting a short time<br>- Reduced flexibility<br>- Mild swelling around joints<br>- Grinding or clicking sensation in joints<br>- Difficulty in climbing stairs or walking long distances</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Osteoarthritis develops when the cartilage that cushions joints gradually wears down over time, reducing the smooth movement between bones.</p><p>As cartilage thins, the joint becomes less protected, leading to friction, inflammation, pain, and stiffness. The body may also respond by forming extra bone, which can further restrict movement.</p><p>It is driven by ageing, excess joint load (especially from obesity), previous injuries, repetitive stress, muscle weakness, and genetic predisposition.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Ageing and natural wear-and-tear of joints<br>- Excess body weight increasing joint load<br>- Previous joint injuries or trauma<br>- Repetitive stress on specific joints<br>- Muscle weakness and poor joint support<br>- Genetic predisposition<br>- Long-term joint misalignment or poor biomechanics</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Osteoarthritis can progressively affect joint and functional health, including:</p><p>- Chronic joint pain and stiffness<br>- Reduced mobility and range of motion<br>- Difficulty in walking, climbing stairs, or daily movement<br>- Joint swelling and inflammation flare-ups<br>- Muscle weakness due to reduced activity<br>- Loss of independence in advanced stages</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Individuals with knee, hip, or spine pain<br>- People with obesity or high joint load<br>- Those with previous joint injuries<br>- Sedentary individuals or those with weak muscle support<br>- Individuals with family history of arthritis</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0c1b6578c4fa50b832f312",
+    "slug": "high-cholesterol",
+    "name": "High Cholesterol",
+    "summary": "Reduce medication dependency and support lipid balance through evidence-based metabolic and dietary protocols.",
+    "icon": {
+      "src": "/images/handheart.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>High cholesterol refers to elevated levels of fats (lipids) in the blood, particularly LDL (“bad cholesterol”) and triglycerides. Cholesterol is a waxy, fat-like substance that plays an important role in building cells and producing hormones, but excess levels can become harmful.</p><p>When cholesterol levels are high, fatty deposits (plaques) can gradually build up in blood vessels, narrowing them and increasing the risk of cardiovascular disease such as heart attack and stroke. </p><p>It is usually asymptomatic and is commonly detected through routine blood tests such as a lipid profile.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Periodic lipid profile checks to assess trends and body response</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Diet and metabolic support for lipid balance</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Medication review and treatment optimization by specialists</p>"
+      },
+      {
+        "heading": "Habit & lifestyle support",
+        "body": "<p>Coaching to build sustainable heart-healthy habits</p>"
+      }
+    ],
+    "improvements": [
+      "Reduction in LDL (“bad cholesterol”) and triglyceride levels",
+      "Better metabolic and liver lipid handling over time",
+      "Reduced progression of arterial plaque formation",
+      "Lowered long-term cardiovascular risk"
+    ],
+    "quote": "<p>Usually hidden until its too late and causes long-term cardiovascular complications.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>High cholesterol typically has no direct symptoms, but indirect indicators may include:</p><p>- Chest discomfort during exertion<br>- Fatigue with reduced stamina<br>- Yellowish deposits around eyes or joints (in some cases)<br>- Signs of cardiovascular strain in advanced stages</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>High cholesterol develops when there is an imbalance between the production, intake, and clearance of fats in the blood, leading to excess LDL and triglycerides circulating in the bloodstream.</p><p>Over time, these lipids can deposit in blood vessel walls, contributing to plaque formation and narrowing of arteries, even before any symptoms appear.</p><p>It is influenced by diet high in saturated and trans fats, sedentary lifestyle, genetics, insulin resistance, obesity, smoking, and metabolic conditions like diabetes.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Diet high in saturated and trans fats<br>- Sedentary lifestyle and low physical activity<br>- Obesity, especially abdominal fat accumulation<br>- Genetic lipid metabolism disorders<br>- Diabetes and insulin resistance<br>- Smoking and alcohol consumption<br>- Age-related metabolic slowdown</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Persistently elevated cholesterol levels can lead to progressive vascular complications, including:</p><p>- Narrowing of arteries (atherosclerosis)<br>- Increased risk of heart attack and stroke<br>- Reduced blood flow to limbs causing pain or discomfort<br>- Long-term strain on cardiovascular system<br>- Reduced organ perfusion affecting heart, brain, and kidneys<br>- Gradual decline in cardiovascular efficiency</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- People with high intake of fried or processed foods<br>- Those with sedentary lifestyle and low physical activity<br>- Individuals with diabetes, obesity, or insulin resistance<br>- People with family history of lipid disorders or heart disease<br>- Those who have never done routine lipid testing</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  },
+  {
+    "id": "6a0c1b5ee75b05deef6d37cc",
+    "slug": "menopause",
+    "name": "Menopause",
+    "summary": "Ease transition-related symptoms and restore long-term metabolic and hormonal health through guided, evidence-based care.",
+    "icon": {
+      "src": "/images/pulse.svg",
+      "alt": ""
+    },
+    "banner": {
+      "desktop": null,
+      "mobile": null
+    },
+    "overview": "<p>Menopause is the natural biological transition that marks the end of menstrual cycles, driven by a gradual decline in estrogen and other reproductive hormones.</p><p>This hormonal shift can lead to symptoms such as hot flashes, night sweats, sleep disturbances, mood fluctuations, and changes in energy levels. Over time, it can also affect bone density, muscle mass, and cardiovascular health, making long-term metabolic support important.</p>",
+    "approach": [
+      {
+        "heading": "Continuous tracking",
+        "body": "<p>Ongoing monitoring of transitionary symptoms</p>"
+      },
+      {
+        "heading": "Personalized care plan",
+        "body": "<p>Strength training and diet tailored to the changing body</p>"
+      },
+      {
+        "heading": "Doctor-led adjustments",
+        "body": "<p>Symptom review and management guided by specialists</p>"
+      },
+      {
+        "heading": "Habit and lifestyle support",
+        "body": "<p>Support to build healthy routines and emotional wellbeing</p>"
+      }
+    ],
+    "improvements": [
+      "Better energy, strength, and overall wellbeing",
+      "Improved physical function and daily activity levels",
+      "Better symptom management and quality of life",
+      "Increased confidence in long-term health"
+    ],
+    "quote": "<p>While a natural process, it requires active care to retain physical, emotional, and metabolic health.</p>",
+    "faqs": [
+      {
+        "question": "Early signs to notice",
+        "answer": "<p>- Irregular or changing menstrual cycle patterns<br>- Sudden episodes of heat (hot flashes) or night sweats<br>- Sleep disruption or waking up frequently at night<br>- Mood swings, irritability, or emotional sensitivity<br>- Unexplained weight gain or shift in fat distribution<br>- Vaginal dryness or reduced comfort<br>- Gradual reduction in energy or recovery capacity</p>"
+      },
+      {
+        "question": "Why it happens",
+        "answer": "<p>Menopause happens as the ovaries gradually reduce and eventually stop producing reproductive hormones, especially estrogen and progesterone.</p><p>This natural decline affects multiple systems in the body, including temperature regulation, sleep, mood, metabolism, and bone maintenance.</p><p>It is primarily driven by age-related depletion of ovarian follicles, but genetic factors and overall health can influence when and how symptoms appear and their intensity.</p>"
+      },
+      {
+        "question": "Common contributing factors",
+        "answer": "<p>- Natural age-related decline in ovarian function<br>- Depletion of ovarian follicles over time<br>- Genetic factors influencing timing of menopause<br>- Lifestyle factors affecting symptom intensity (stress, sleep, diet)<br>- History of medical or surgical ovarian interventions (in some cases)</p>"
+      },
+      {
+        "question": "If not managed well",
+        "answer": "<p>Unmanaged menopausal changes can gradually affect overall health, including:</p><p>- Persistent sleep disturbances and fatigue<br>- Increased risk of bone density loss and fractures<br>- Mood changes and emotional instability<br>- Weight gain and metabolic slowdown<br>- Reduced muscle mass and physical strength</p><p>‍</p>"
+      },
+      {
+        "question": "Who should pay closer attention",
+        "answer": "<p>- Women in mid-40s to 50s<br>- Those with irregular cycles or early hormonal shifts<br>- Individuals with hot flashes or sleep issues<br>- Women with mood changes or slowing metabolism<br>- Those with family history of early menopause</p>"
+      }
+    ],
+    "featuredStory": "chandrasekhar-m"
+  }
+]

@@ -1,9 +1,17 @@
+import { existsSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 const fromRoot = (path: string) => fileURLToPath(new URL(path, import.meta.url))
+
+// protocols/conditions/ (index) and protocols/conditions/<slug>/ pages are written by scripts/generate-condition-pages.mjs.
+const conditionPages = Object.fromEntries(
+  ['', ...(existsSync(fromRoot('./protocols/conditions')) ? readdirSync(fromRoot('./protocols/conditions')) : [])]
+    .filter((slug) => existsSync(fromRoot(`./protocols/conditions/${slug}/index.html`)))
+    .map((slug) => [`conditions-${slug || 'index'}`, fromRoot(`./protocols/conditions/${slug}/index.html`)]),
+)
 
 // GitHub Pages serves this repo under /ph-main-website/ (set VITE_BASE in CI).
 export default defineConfig({
@@ -30,6 +38,7 @@ export default defineConfig({
         refundpolicy: fromRoot('./refund-policy/index.html'),
         contact: fromRoot('./contact/index.html'),
         teamsupport: fromRoot('./team-support/index.html'),
+        ...conditionPages,
       },
     },
   },
