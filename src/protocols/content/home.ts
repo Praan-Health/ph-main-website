@@ -4,7 +4,7 @@ export const hero = {
   headingBefore: "Get Your Parents'",
   headingAfter: "Under Control",
   // Non-breaking spaces keep multi-word conditions on one line while they animate.
-  conditions: ["Diabetes", "Blood Pressure", "Thyroid", "Heart Disease", "Menopause", "Sarcopenia", "High Cholesterol", "Arthritis"],
+  conditions: ["Pain", "Diabetes", "Blood Pressure", "Thyroid", "Heart Disease", "Menopause", "Sarcopenia", "High Cholesterol", "Arthritis"],
   body: "Through a dedicated doctor managing their exercise, diet, and medicines - extending care beyond your presence",
   cta: { label: "Book Free Consultation", href: "https://cal.id/team/advisor/consultation-with-praan" },
   image: { src: "/images/daddi.webp", width: 986, height: 1316, alt: "" },
