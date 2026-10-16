@@ -10,12 +10,62 @@
     <link rel="icon" type="image/png" sizes="512x512" href="%BASE_URL%favicon/icon-512.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="%BASE_URL%favicon/apple-touch-icon.png" />
     <meta name="theme-color" content="#fd7118" />
-    <meta name="description" content="Non-surgical, doctor-led treatment for back, knee, shoulder and neck pain, from diagnosis to long-term rehab at Praan Health." />
+    <meta name="description" content="Advanced, minimally invasive pain treatments combined with holistic rehabilitation, at our Koramangala, Bengaluru clinic or in the comfort of your home." />
+    <link rel="canonical" href="https://praan.health/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Praan Health" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="Praan Health | India's first holistic ecosystem for chronic pain management" />
+    <meta property="og:description" content="Advanced, minimally invasive pain treatments combined with holistic rehabilitation, at our Koramangala, Bengaluru clinic or in the comfort of your home." />
+    <meta property="og:url" content="https://praan.health/" />
+    <meta property="og:image" content="https://praan.health/images/og-share.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Praan Health Clinic storefront in Koramangala, Bengaluru" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Praan Health | India's first holistic ecosystem for chronic pain management" />
+    <meta name="twitter:description" content="Advanced, minimally invasive pain treatments combined with holistic rehabilitation, at our Koramangala, Bengaluru clinic or in the comfort of your home." />
+    <meta name="twitter:image" content="https://praan.health/images/og-share.jpg" />
     <title>Praan Health | India's first holistic ecosystem for chronic pain management</title>
+    <!-- The hero photo is what paints the first screen: fetch it straight away, a smaller file on phones. -->
+    <link rel="preload" as="image" href="%BASE_URL%assets/clinic-front-960.webp" media="(max-width: 899px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="%BASE_URL%assets/clinic-front-wide.webp" media="(min-width: 900px)" fetchpriority="high" />
     <!-- Font experiment: Anek Latin replaces Aeonik. To revert, restore the Aeonik preload and --font-sans in tokens.css. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300..800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300..800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300..800&display=swap" /></noscript>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Praan Health Clinic",
+  "url": "https://praan.health/",
+  "logo": "https://praan.health/favicon/icon-512.png",
+  "image": "https://praan.health/images/og-share.jpg",
+  "description": "Advanced, minimally invasive pain treatments combined with holistic rehabilitation, at our Koramangala, Bengaluru clinic or in the comfort of your home.",
+  "telephone": "+91 73494 32805",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Site No. 11, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560047",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.9334378,
+    "longitude": 77.6309536
+  },
+  "hasMap": "https://maps.app.goo.gl/mfGBBa5FmC2hhXq98",
+  "sameAs": [
+    "https://www.linkedin.com/company/praanhealth",
+    "https://www.instagram.com/praan_health",
+    "https://youtube.com/@praan_health/"
+  ]
+}
+    </script>
   </head>
   <body>
     <div id="root"></div>

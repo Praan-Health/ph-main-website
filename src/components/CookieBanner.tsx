@@ -1,74 +1,65 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
+import { CONSENT_OPTIONS, everyOption, hasStoredChoice, saveConsent } from '../lib/consent'
+import type { ConsentKey, ConsentSelection } from '../lib/consent'
 import { asset } from '../lib/asset'
 
 /**
- * First-visit cookie banner. Same storage key and shape as the banner on the inner pages
- * (src/protocols/components/layout/CookieConsent.tsx), a Google Consent Mode object, so a choice
- * made on any page applies everywhere and the banner only ever shows once.
+ * First-visit cookie banner, as on the live site: Accept All, Reject all, or "I want to choose" to pick categories.
+ * The choice is stored the same way as on the inner pages (see lib/consent.ts), so it is asked once for the whole site.
  */
-const STORAGE_KEY = 'consentMode'
-
-const CONSENT_KEYS = [
-  'functionality_storage',
-  'analytics_storage',
-  'ad_storage',
-  'ad_user_data',
-  'ad_personalization',
-  'personalization_storage',
-  'security_storage',
-] as const
-
-type ConsentKey = (typeof CONSENT_KEYS)[number]
-type ConsentMode = Record<ConsentKey, 'granted' | 'denied'>
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
-
-function hasStoredChoice(): boolean {
-  try {
-    return localStorage.getItem(STORAGE_KEY) !== null
-  } catch {
-    // Storage blocked: treat as no choice yet so the visitor can still answer.
-    return false
-  }
-}
-
-function saveConsent(acceptAll: boolean): void {
-  const mode = Object.fromEntries(
-    CONSENT_KEYS.map((key) => [key, key === 'functionality_storage' || acceptAll ? 'granted' : 'denied']),
-  ) as ConsentMode
-  window.gtag?.('consent', 'update', mode)
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(mode))
-  } catch {
-    // Private mode: the choice still applies for this page view.
-  }
-}
-
 export function CookieBanner() {
   const [isOpen, setIsOpen] = useState(() => !hasStoredChoice())
+  const [isChoosing, setIsChoosing] = useState(false)
+  // Every category starts ticked, as on the live site; functionality is always on.
+  const [selection, setSelection] = useState<ConsentSelection>(() => everyOption(true))
+  const titleId = useId()
+  const optionsId = useId()
 
   if (!isOpen) return null
 
-  const choose = (acceptAll: boolean) => {
-    saveConsent(acceptAll)
+  const finish = (chosen: ConsentSelection) => {
+    saveConsent(chosen)
     setIsOpen(false)
   }
+  const toggle = (key: ConsentKey, checked: boolean) => setSelection((current) => ({ ...current, [key]: checked }))
 
   return (
-    <div className="cookie" role="dialog" aria-labelledby="cookie-title">
-      <h2 className="cookie__title" id="cookie-title">Cookie settings</h2>
+    <div className="cookie" role="dialog" aria-labelledby={titleId}>
+      <h2 className="cookie__title" id={titleId}>Cookie Settings</h2>
       <p className="cookie__text">
-        We use cookies to give you the best experience and to understand how the site is used, so we can keep improving it.{' '}
-        <a href={asset('/privacy/')}>See our Privacy Policy</a>
+        We use cookies to provide you with the best possible experience. They also allow us to analyze user behavior in order to constantly improve the website for you.
       </p>
+      <a className="cookie__policy" href={asset('/privacy/')}>See our Privacy Policy</a>
+
       <div className="cookie__actions">
-        <button type="button" className="btn btn--primary" onClick={() => choose(true)}>Accept all</button>
-        <button type="button" className="btn btn--secondary" onClick={() => choose(false)}>Reject all</button>
+        <button type="button" className="btn btn--primary" onClick={() => finish(everyOption(true))}>Accept All</button>
+        <button type="button" className="btn btn--secondary" onClick={() => finish(everyOption(false))}>Reject all</button>
+        <button type="button" className="cookie__choose" aria-expanded={isChoosing} aria-controls={optionsId} onClick={() => setIsChoosing(true)}>
+          I want to choose
+        </button>
       </div>
+
+      {isChoosing && (
+        <div className="cookie__options" id={optionsId}>
+          <div className="cookie__grid">
+            {CONSENT_OPTIONS.map(({ key, label }) => {
+              const isLocked = key === 'functionality_storage'
+              return (
+                <label className="cookie__option" key={key}>
+                  <input
+                    type="checkbox"
+                    checked={isLocked || selection[key]}
+                    disabled={isLocked}
+                    onChange={(event) => toggle(key, event.target.checked)}
+                  />
+                  <span>{label}</span>
+                </label>
+              )
+            })}
+          </div>
+          <button type="button" className="btn btn--primary" onClick={() => finish(selection)}>Accept selection</button>
+        </div>
+      )}
     </div>
   )
 }

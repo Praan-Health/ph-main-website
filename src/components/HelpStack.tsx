@@ -23,19 +23,29 @@ interface PillarMediaProps {
 /** Poster image, or a looping muted video that only plays on the front card. */
 function PillarMedia({ poster, position, video, isFront }: PillarMediaProps) {
   const ref = useRef<HTMLVideoElement>(null)
+  const [isNear, setIsNear] = useState(false)
+
+  // Nothing is downloaded until the card is close to the screen; the poster shows meanwhile.
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => setIsNear(entry.isIntersecting), { rootMargin: '300px' })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (isFront) {
+    if (isFront && isNear) {
       el.currentTime = 0
       void el.play().catch(() => undefined)
     } else el.pause()
-  }, [isFront])
+  }, [isFront, isNear])
 
   if (video) {
     return (
-      <video ref={ref} className="stack-card__media" src={video} poster={poster} muted loop playsInline preload="metadata" />
+      <video ref={ref} className="stack-card__media" src={video} poster={poster} muted loop playsInline preload={isNear ? 'metadata' : 'none'} />
     )
   }
   return <img className="stack-card__media" src={poster} alt="" style={{ objectPosition: position }} loading="lazy" />

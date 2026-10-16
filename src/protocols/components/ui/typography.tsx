@@ -13,9 +13,9 @@ export function Eyebrow({ children, className }: { children: React.ReactNode; cl
   );
 }
 
-/** Section heading: fluid 2–2.625rem, regular weight, navy, Title Case (as every h2 on the site renders). */
-export function SectionHeading({ className, ...rest }: React.ComponentProps<"h2">) {
-  return <h2 className={cn("text-(length:--text-fluid-h2) leading-[1.3] font-normal tracking-heading text-navy-700 capitalize", className)} {...rest} />;
+/** Section heading: fluid 2–2.625rem, regular weight, navy, Title Case (as every h2 on the site renders). `as="h1"` for a page's main heading. */
+export function SectionHeading({ className, as: Tag = "h2", ...rest }: React.ComponentProps<"h2"> & { as?: "h1" | "h2" }) {
+  return <Tag className={cn("text-(length:--text-fluid-h2) leading-[1.3] font-normal tracking-heading text-navy-700 capitalize", className)} {...rest} />;
 }
 
 /** Libre Baskerville italic phrase inside a heading. */

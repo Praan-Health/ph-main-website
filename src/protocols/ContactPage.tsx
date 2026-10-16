@@ -15,7 +15,7 @@ export default function ContactPage() {
         <Navbar />
         <main className="flex flex-1 flex-col">
           <>
-            <FounderSection />
+            <FounderSection headingAs="h1" />
             <InvestorsSection />
             <ContactFormSection />
             <Cta section="contact-cta" heading={contactPage.cta.heading} body={contactPage.cta.body} action={contactPage.cta.button} />

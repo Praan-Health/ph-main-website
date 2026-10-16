@@ -6,7 +6,7 @@ import { contactPage } from "@/content/forms-pages";
 // Founder note and investor strip, shared by /about and /contact.
 
 /** "From Our Founder": heading and intro beside the founder's YouTube video, on the blue gradient. */
-export function FounderSection() {
+export function FounderSection({ headingAs = "h2" }: { headingAs?: "h1" | "h2" }) {
   const { founder } = contactPage;
   return (
     <section
@@ -24,7 +24,7 @@ export function FounderSection() {
                 </div>
               </div>
             </div>
-            <SectionHeading className="!text-slate-100 text-wrap">{founder.heading}</SectionHeading>
+            <SectionHeading as={headingAs} className="!text-slate-100 text-wrap">{founder.heading}</SectionHeading>
             <div className="max-w-[21.5rem]">
               <p className="py-2 text-(length:--text-fluid-body) leading-[1.5] tracking-[0em] !text-balance text-slate-100">{founder.body}</p>
             </div>
