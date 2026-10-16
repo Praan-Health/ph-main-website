@@ -102,7 +102,7 @@ export const aboutJsonLd = {
     },
     slogan: "Building continuous care for every home",
     telephone: "+91 98765 43210",
-    email: "care@praan.health",
+    email: "support@praan.health",
     address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressCountry: "IN" },
     employee: [
       {
