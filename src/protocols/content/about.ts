@@ -53,7 +53,7 @@ export const impact = {
 
 export const medicalTeam = {
   eyebrow: "From our medical team",
-  heading: "Rooted in medicine. Designed for everyday care",
+  heading: "Rooted in medicine Designed for everyday care",
   body: "Praan is guided by doctors and care specialists who understand that aging is a continuous progression. Our protocols are built on clinical experience and evidence-based practices.",
   doctor: {
     role: "Chief Medical Officer",

@@ -16,12 +16,12 @@
       },
       {
         "source": "/condition",
-        "destination": "/clinics/",
+        "destination": "/protocols/",
         "type": 301
       },
       {
         "source": "/conditions/**",
-        "destination": "/clinics/",
+        "destination": "/protocols/",
         "type": 301
       },
       {

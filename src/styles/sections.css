@@ -12,14 +12,9 @@
 }
 .hero__grid { width: 100%; }
 .hero__copy { display: grid; gap: var(--space-4); justify-items: start; max-width: 38rem; }
-.hero__eyebrow { margin-bottom: -0.625rem; }
 .hero__title { font-size: clamp(2.125rem, 1.25rem + 3.3vw, 3.625rem); line-height: 1.12; }
 .hero__sub { max-width: 36rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
-/* Typed pain area in the eyebrow, with a blinking caret. */
-.hero__typed::after { content: ''; display: inline-block; width: 2px; height: 0.95em; margin-left: 2px; vertical-align: -0.12em; background: currentColor; animation: caret 1s steps(1) infinite; }
-@keyframes caret { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .hero__typed::after { display: none; } }
 
 @media (min-width: 900px) {
   .hero { min-height: max(34rem, calc(100svh - var(--header-h))); }
